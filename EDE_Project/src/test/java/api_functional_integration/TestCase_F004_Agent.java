@@ -213,13 +213,13 @@ public class TestCase_F004_Agent extends BaseTest {
 		String s010AQuestion = Utility.getFromTextProperties("s010AQuestion");
 		String s010ADrawerHeading = Utility.getFromTextProperties("s010ADrawerHeading");
 		String s010ADrawerContent = Utility.getFromTextProperties("s010ADrawerContent");
-		String s026Question = "What’s" + " " + applicantFullName + "'s" + " "
+		String s026Question = "Whatï¿½s" + " " + applicantFullName + "'s" + " "
 				+ Utility.getFromTextProperties("s026Question");
-		String s026QuestionFirstChild = "What’s" + " " + firstChildFullName + "'s" + " "
+		String s026QuestionFirstChild = "Whatï¿½s" + " " + firstChildFullName + "'s" + " "
 				+ Utility.getFromTextProperties("s026Question");
-		String s026QuestionFourthChild = "What’s" + " " + fourthChildFullName + "'s" + " "
+		String s026QuestionFourthChild = "Whatï¿½s" + " " + fourthChildFullName + "'s" + " "
 				+ Utility.getFromTextProperties("s026Question");
-		String s026QuestionFifthChild = "What’s" + " " + fifthChildFullName + "'s" + " "
+		String s026QuestionFifthChild = "Whatï¿½s" + " " + fifthChildFullName + "'s" + " "
 				+ Utility.getFromTextProperties("s026Question");
 		String s026DrawerContent = Utility.getFromTextProperties("s026DrawerContent");
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
@@ -1403,7 +1403,7 @@ public class TestCase_F004_Agent extends BaseTest {
 		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.clickSaveAndContinueButton();
-
+//
 		// S084
 		ExtentTestManager.getTest().info("---------------------SCREEN S084----------------------------");
 		//Wait.wait5Second();
