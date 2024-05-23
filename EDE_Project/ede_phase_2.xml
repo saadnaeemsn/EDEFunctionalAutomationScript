@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="leafedout" parallel="none">
+	<listeners>
+		<listener class-name="listeners.TestListener" />
+	</listeners>
+
+	<test name="Login">
+		<classes>
+			<!-- <class name="ede_qa_tests.TestCase2_A" /> -->
+			<class name="ede_ph_2.TestCase2_B" />
+			<class name="ede_ph_2.TestCase2_D" />
+			<class name="ede_ph_2.TestCase2_E" />
+			<class name="ede_ph_2.TestCase2_F" />
+			<class name="ede_ph_2.TestCase2_G" />
+			<class name="ede_ph_1.TestCase1_L" />
+			<class name="ede_ph_1.TestCase1_O" />
+
+		</classes>
+	</test>
+</suite>
