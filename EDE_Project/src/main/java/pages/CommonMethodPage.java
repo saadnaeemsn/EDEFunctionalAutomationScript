@@ -20,6 +20,50 @@ import webelements.OR;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 public class CommonMethodPage extends BasePage {
+	public String enterDOB_S010(String age, String count)throws InterruptedException {
+		WebElement element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[2]"),60);
+		
+		String dob = ESTTimeZone.getDobFromAge(age);
+		//Wait.waitForElement(getWebDriver(), element);
+		//sendKeysToElement(element, dob, " Date of birth");
+		ExtentTestManager.getTest().info("Second Person Age Selected: " + age);
+		
+		if (count.contains("2")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[4]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Third Person Age Selected: " + age );
+		}
+		
+		if (count.contains("3")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[6]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Fourth Person Age Selected: " + age );
+		}
+		
+		if (count.contains("4")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[8]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Fifth Person Age Selected: " + age );
+		}
+		
+		if (count.contains("5")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[10]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Fifth Person Age Selected: " + age );
+		}
+		
+		if (count.contains("6")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[12]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Sixth Person Age Selected: " + age );
+		}
+		return dob;
+	}
 	public void clickToCancelSessionOutBtn() throws InterruptedException {
 		WebElement element1 = null;
 		WebElement element2 = null;

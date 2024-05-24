@@ -63,6 +63,16 @@ public class TestCase2_B_2 extends BaseTest{
 		String childDob = ESTTimeZone.getPreviousDate("75", "MM/dd/yyyy");
 		String childRelationShip = Utility.getDate_TestCase2B("childRelationShip");
 		String plan = Utility.getDate_TestCase2B("plan");
+		String state = Utility.getDate_TestCase2B("state");
+		String age = Utility.getDate_TestCase2B("age");
+		String female = Utility.getValue("female");
+		String streetAddress = Utility.getDate_TestCase2B("streetAddress");
+		String city = Utility.getDate_TestCase2B("city");
+		String zipCode = Utility.getDate_TestCase2B("zipCode");
+		String county = Utility.getDate_TestCase2B("county");
+		String phoneNumber = Utility.getDate_TestCase2B("phoneNumber");
+		String phoneType = Utility.getDate_TestCase2B("phoneType");
+		String noticeMedium = Utility.getValue("noticeMedium");
 
 		// Get data from text.properties
 		String mailingDrawerHeading = Utility.getFromTextProperties("mailingDrawerHeading");
@@ -189,46 +199,57 @@ public class TestCase2_B_2 extends BaseTest{
 		
 		loginEdeQa(userName, password, url);
 		CommonMethodPage commonMethodPage = new CommonMethodPage();
-		
-		
-		
-		ExtentTestManager.getTest().info("---------------------TESTCASE 2.B.2----------------------------");
-
+		LoginPage loginPage = new LoginPage();
+		commonMethodPage.clickToCancelSessionOutBtn();
 		commonMethodPage.clickAgreeConntinueBtn();
-		
-		commonMethodPage.clickApplication();
-		commonMethodPage.clickReportLifeChangeLink();
-		commonMethodPage.clickReportLifeChangeButton();
-		commonMethodPage.clickContinueBtn();
-		ExtentTestManager.getTest().info("---------------------START CIC----------------------------");
+//		commonMethodPage.selectYear(ESTTimeZone.getCurrentYear());
+		commonMethodPage.selectState(state);
+		commonMethodPage.clickApplyOrRenew();
+		commonMethodPage.clickNext();
 		commonMethodPage.clickIAgreeCheckBox();
 		commonMethodPage.clickIUnderstandCheckBox();
 		commonMethodPage.clickIAllowCheckBox();
 		commonMethodPage.clickSaveAndContinueButton();
+		
 
 		// Contact Info
-
 		ExtentTestManager.getTest().info("---------------------SCREEN S001----------------------------");
-
+		commonMethodPage.needCoverage(yes, "1");
 		commonMethodPage.verifyS001(s001Question);
+		commonMethodPage.enterFirstName(firstName);
+		String dob = commonMethodPage.enterDob(age);
+		commonMethodPage.enterMiddleName("");
+		commonMethodPage.enterLastName(lastName);
+		commonMethodPage.selectGender(female);
+
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Address
 		ExtentTestManager.getTest().info("---------------------SCREEN S002----------------------------");
+		commonMethodPage.enterStreetAddress(streetAddress);
 		commonMethodPage.verifyS002(s002Question);
-
-		// refreshPage();
+		commonMethodPage.selectStateInContactInfo(state);
+		commonMethodPage.enterCity(city);
+		commonMethodPage.enterZipCode(zipCode);
+		commonMethodPage.clickCountyDropDown();
+		commonMethodPage.selectCounty(county);
 		commonMethodPage.clickSaveAndContinueButton();
-		commonMethodPage.selectAddress();
+		if (!state.equals("WI")) {
+			//commonMethodPage.selectAddress();
+		}
 
 		// Mail Address
 		ExtentTestManager.getTest().info("---------------------SCREEN S003----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.selectMailingAddress(yes);
 		commonMethodPage.verifyScreen_s003(linkMailingDrawer, mailingDrawerHeading, s003Question, drawerContent);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Phone and email
 		ExtentTestManager.getTest().info("---------------------SCREEN S004----------------------------");
+		commonMethodPage.enterPhoneNumber_S004(phoneNumber);
 		commonMethodPage.verifyS004(s004Question);
+		commonMethodPage.selectPhoneType(phoneType);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Spoken and written language
@@ -239,6 +260,7 @@ public class TestCase2_B_2 extends BaseTest{
 		// notice medium
 		ExtentTestManager.getTest().info("---------------------SCREEN S006----------------------------");
 		commonMethodPage.verifyS006(s006Question);
+		commonMethodPage.selectNoticeMedium(noticeMedium);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// professional help
@@ -249,6 +271,7 @@ public class TestCase2_B_2 extends BaseTest{
 
 		// Financial coverage
 		ExtentTestManager.getTest().info("---------------------SCREEN S008----------------------------");
+		commonMethodPage.selectHelpPayingForCoverage(yes);
 		commonMethodPage.verifyS008(s008Question);
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -260,7 +283,7 @@ public class TestCase2_B_2 extends BaseTest{
 		// Add Second person
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "3");
-		commonMethodPage.enterAgainDob(childDob);
+		commonMethodPage.enterDOB_S010(childDob,"2");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);

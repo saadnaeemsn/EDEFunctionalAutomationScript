@@ -335,6 +335,7 @@ public class TestCase1_O extends BaseTest {
 		CommonMethodPage commonMethodPage = new CommonMethodPage();
 		LoginPage loginPage = new LoginPage();
 		Wait.wait2Second();
+		commonMethodPage.clickToCancelSessionOutBtn();
 		commonMethodPage.clickAgreeConntinueBtn();
 		Wait.wait2Second();
 		commonMethodPage.selectState(state);
@@ -371,7 +372,7 @@ public class TestCase1_O extends BaseTest {
 		commonMethodPage.selectCounty(county);
 		commonMethodPage.clickSaveAndContinueButton();
 		if (!state.equals("WI")) {
-			commonMethodPage.selectAddress();
+			//commonMethodPage.selectAddress();
 		}
 
 		// Mail Address
@@ -422,7 +423,7 @@ public class TestCase1_O extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(age);
+		commonMethodPage.enterDOB_S010(age,"2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -431,7 +432,7 @@ public class TestCase1_O extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "3");
-		commonMethodPage.enterDob(firstChildAge);
+		commonMethodPage.enterDOB_S010(firstChildAge,"3");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(female);
@@ -440,7 +441,7 @@ public class TestCase1_O extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "4");
-		commonMethodPage.enterDob(secondChildAge);
+		commonMethodPage.enterDOB_S010(secondChildAge,"4");
 		commonMethodPage.enterFirstName(secondChildFirstName);
 		commonMethodPage.enterLastName(secondChildLastName);
 		commonMethodPage.selectGender(female);
@@ -449,7 +450,7 @@ public class TestCase1_O extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "5");
-		commonMethodPage.enterDob(thirdChildAge);
+		commonMethodPage.enterDOB_S010(thirdChildAge,"5");
 		commonMethodPage.enterFirstName(thirdChildFirstName);
 		commonMethodPage.enterLastName(thirdChildLastName);
 		commonMethodPage.selectGender(female);
@@ -458,7 +459,7 @@ public class TestCase1_O extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "6");
-		commonMethodPage.enterDob(fourthChildAge);
+		commonMethodPage.enterDOB_S010(fourthChildAge,"6");
 		commonMethodPage.enterFirstName(fourthChildFirstName);
 		commonMethodPage.enterLastName(fourthChildLastName);
 		commonMethodPage.selectGender(female);
@@ -467,7 +468,7 @@ public class TestCase1_O extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "7");
-		commonMethodPage.enterDob(fifthChildAge);
+		commonMethodPage.enterDOB_S010(fifthChildAge,"7");
 		commonMethodPage.enterFirstName(fifthChildFirstName);
 		commonMethodPage.enterLastName(fifthChildLastName);
 		commonMethodPage.selectGender(male);
@@ -476,7 +477,7 @@ public class TestCase1_O extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "8");
-		commonMethodPage.enterDob(sixthChildAge);
+		commonMethodPage.enterDOB_S010(sixthChildAge,"8");
 		commonMethodPage.enterFirstName(sixthChildFirstName);
 		commonMethodPage.enterLastName(sixthChildLastName);
 		commonMethodPage.selectGender(male);
@@ -485,7 +486,7 @@ public class TestCase1_O extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "9");
-		commonMethodPage.enterDob(seventhChildAge);
+		commonMethodPage.enterDOB_S010(seventhChildAge,"9");
 		commonMethodPage.enterFirstName(seventhChildFirstName);
 		commonMethodPage.enterLastName(seventhChildLastName);
 		commonMethodPage.selectGender(male);

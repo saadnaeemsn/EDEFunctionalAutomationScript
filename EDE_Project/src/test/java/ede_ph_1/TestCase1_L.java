@@ -239,6 +239,7 @@ public class TestCase1_L extends BaseTest {
 		CommonMethodPage commonMethodPage = new CommonMethodPage();
 		LoginPage loginPage = new LoginPage();
 		Wait.wait2Second();
+		commonMethodPage.clickToCancelSessionOutBtn();
 		commonMethodPage.clickAgreeConntinueBtn();
 		Wait.wait2Second();
 		commonMethodPage.selectState(state);
@@ -274,12 +275,12 @@ public class TestCase1_L extends BaseTest {
 		commonMethodPage.selectCounty(county);
 		commonMethodPage.clickSaveAndContinueButton();
 		if (!state.equals("WI")) {
-			commonMethodPage.selectAddress();
+			//commonMethodPage.selectAddress();
 		}
 
 		// Mail Address
 		ExtentTestManager.getTest().info("---------------------SCREEN S003----------------------------");
-		Wait.wait3Second();
+		Wait.wait1Second();
 		commonMethodPage.selectMailingAddress(yes);
 		commonMethodPage.verifyScreen_s003(linkMailingDrawer, mailingDrawerHeading, s003Question, drawerContent);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -324,7 +325,7 @@ public class TestCase1_L extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "3");
-		commonMethodPage.enterDob(firstChildAge);
+		commonMethodPage.enterDOB_S010(firstChildAge,"2");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(male);
@@ -333,16 +334,16 @@ public class TestCase1_L extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "4");
-		commonMethodPage.enterDob(secondChildAge);
+		commonMethodPage.enterDOB_S010(secondChildAge,"3");
 		commonMethodPage.enterFirstName(secondChildFirstName);
 		commonMethodPage.enterLastName(secondChildLastName);
 		commonMethodPage.selectGender(male);
-		commonMethodPage.selectRelation1_L(childRelationShip,brotherRelation, "not applicable", "not applicable",
-				"2");
+		commonMethodPage.selectRelation1_L(childRelationShip,brotherRelation, "not applicable", "not applicable", "2");
 
+		Wait.wait2Second();
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "5");
-		commonMethodPage.enterDob(thirdChildAge);
+		commonMethodPage.enterDOB_S010(thirdChildAge,"4");
 		commonMethodPage.enterFirstName(thirdChildFirstName);
 		commonMethodPage.enterLastName(thirdChildLastName);
 		commonMethodPage.selectGender(male);
@@ -680,14 +681,14 @@ public class TestCase1_L extends BaseTest {
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		Wait.wait3Second();
 		//commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Employer of spouse
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		Wait.wait3Second();
 		//commonMethodPage.verifyS074(s074QuestionSpouse);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S083

@@ -111,22 +111,23 @@ public class TestCase2_A extends BaseTest {
 		String s084DrawerHeading = Utility.getFromTextProperties("s084DrawerHeading");
 		String reviewDrawerHeading = Utility.getFromTextProperties("reviewDrawerHeading");
 		String reviewDrawerContent = Utility.getFromTextProperties("reviewDrawerContent");
-		
-		
+
 		// Open Browser and execute URL
 		loginEdeQa(userName, password, url);
 		CommonMethodPage commonMethodPage = new CommonMethodPage();
+		commonMethodPage.clickToCancelSessionOutBtn();
 		commonMethodPage.clickAgreeConntinueBtn();
-		commonMethodPage.selectYear(ESTTimeZone.getCurrentYear());
+		//commonMethodPage.selectYear(ESTTimeZone.getCurrentYear());
 		commonMethodPage.selectState(state);
 		commonMethodPage.clickApplyOrRenew();
 		commonMethodPage.clickNext();
 		commonMethodPage.clickIAgreeCheckBox();
 		commonMethodPage.clickIUnderstandCheckBox();
 		commonMethodPage.clickIAllowCheckBox();
-		boolean executeNext = commonMethodPage.clickSaveAndContinueButton();
+		commonMethodPage.clickSaveAndContinueButton();
 
-		if(executeNext) {
+		// Contact Info
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S001----------------------------");
 		commonMethodPage.needCoverage(yes,"1");
 		commonMethodPage.verifyS001(s001Question);
@@ -135,6 +136,7 @@ public class TestCase2_A extends BaseTest {
 		commonMethodPage.enterMiddleName("");
 		commonMethodPage.enterLastName(lastName);
 		commonMethodPage.selectGender(male);
+
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Address
@@ -147,13 +149,12 @@ public class TestCase2_A extends BaseTest {
 		commonMethodPage.clickCountyDropDown();
 		commonMethodPage.selectCounty(county);
 		commonMethodPage.clickSaveAndContinueButton();
-		if(!state.equals("WI")) {
+//		if(!state.equals("WI")) {
 //			commonMethodPage.selectAddress();
-			}
+//			}
 
 		// Mail Address
 		ExtentTestManager.getTest().info("---------------------SCREEN S003----------------------------");
-		Wait.wait3Second();
 		commonMethodPage.selectMailingAddress(yes);
 		commonMethodPage.verifyScreen_s003(linkMailingDrawer, mailingDrawerHeading, s003Question, drawerContent);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -187,14 +188,13 @@ public class TestCase2_A extends BaseTest {
 		commonMethodPage.selectHelpPayingForCoverage(no);
 		commonMethodPage.verifyS008(s008Question);
 		commonMethodPage.clickSaveAndContinueButton();
+		Wait.wait2Second();
 
 		// S010 Applicant detail
 		ExtentTestManager.getTest().info("---------------------SCREEN S010----------------------------");
-		Wait.wait2Second();
 		//commonMethodPage.verifyS010(medicaidDrawerHeading, notToIncludeDrawerHeading, removeSomeOneDrawerHeading,
 				//medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		commonMethodPage.clickSaveAndContinueScrolled();
-//		commonMethodPage.clickSaveAndContinueButton();
 		
 		// SSN
 		ExtentTestManager.getTest().info("---------------------SCREEN S012----------------------------");
@@ -211,21 +211,25 @@ public class TestCase2_A extends BaseTest {
 
 		// dreived or naturalize
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
-		commonMethodPage.refreshPage();
-		// commonMethodPage.verifyS017(s017Question, s017DrawerHeading, s017DrawerContent);
 		Wait.wait2Second();
-		commonMethodPage.selectNaturalizedOrDrived(yes, s017DocumentQuestion, s017DocumentDrawerHeading, s017DocumentDrawerContent);
+		//commonMethodPage.verifyS017(s017Question, s017DrawerHeading, s017DrawerContent);
+		commonMethodPage.selectNaturalizedOrDrived(yes, s017DocumentQuestion, s017DocumentDrawerHeading,
+				s017DocumentDrawerContent);
 		Wait.wait2Second();
-		commonMethodPage.selectDocumentType(document, s017DocumentSubQuestion, s017DocumentSubDrawerHeading, s017DocumentSubDrawerContent);
+		commonMethodPage.selectDocumentType(document, s017DocumentSubQuestion, s017DocumentSubDrawerHeading,
+				s017DocumentSubDrawerContent);
 		commonMethodPage.enterAlienNumber(alienNumber);
 		commonMethodPage.enterNaturalizedNumber(naturalizeNumber);
+		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
-
-//		commonMethodPage.clickContinueBtn();
+		//commonMethodPage.clickContinueBtn();
 		
 		// optional
-//		commonMethodPage.clickSaveAndContinueButton();
-//		commonMethodPage.refreshPage();
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		commonMethodPage.clickSaveAndContinueButton();
+
+		// optional
+		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S050A
@@ -236,39 +240,28 @@ public class TestCase2_A extends BaseTest {
 
 		// s069D
 		ExtentTestManager.getTest().info("---------------------SCREEN S069D----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.verifyS069D(s069DQuestion, s069DDrawerHeading, s069DDrowerContent);
 		commonMethodPage.haveICHRAandQSEHRA_S069D(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
-		Wait.wait3Second();
+		Wait.wait2Second();
 		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
 		//commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S084
 		ExtentTestManager.getTest().info("---------------------SCREEN S084----------------------------");
-		commonMethodPage.loseQualifyingHealthCovUpcoming_S084(noneOfThese);
-	//	commonMethodPage.verifyS084(s084Question, s084DrawerHeading);
-		commonMethodPage.clickSaveAndContinueButton();
-		
-		/*
-		// S084
-		ExtentTestManager.getTest().info("---------------------SCREEN S084----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.loseQualifyingHealthCovUpcoming_S084(noneOfThese);
 	//	commonMethodPage.verifyS084(s084Question, s084DrawerHeading);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S085
 		ExtentTestManager.getTest().info("---------------------SCREEN S085----------------------------");
-		commonMethodPage.recentChanges_S085(noneOfThese);
-	//	commonMethodPage.verifyS085(s085Question);
-		commonMethodPage.clickSaveAndContinueButton();
-		*/
-		
-		// S085
-		ExtentTestManager.getTest().info("---------------------SCREEN S085----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.recentChanges_S085(noneOfThese);
 	//	commonMethodPage.verifyS085(s085Question);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -286,17 +279,16 @@ public class TestCase2_A extends BaseTest {
 
 		// Signature
 		ExtentTestManager.getTest().info("---------------------SIGNATURE----------------------------");
-		commonMethodPage.agreeFive();
-		commonMethodPage.agreeFive();
+		commonMethodPage.agreeOne();
 		commonMethodPage.enterSignature(fullName);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		
 		commonMethodPage.downloadEligibilityReport();
-		commonMethodPage.clickLogoutDropDown();
-		
+//		commonMethodPage.clickLogoutDropDown();
+//		
 //		Wait.wait5Second();
-		}
+
 	}
 
 }
