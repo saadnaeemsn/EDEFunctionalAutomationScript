@@ -314,7 +314,7 @@ public class TestCase3_F extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Second person
-		commonMethodPage.clickAddPerson();
+		commonMethodPage.clickAddPerson2();
 		//commonMethodPage.needCoverage(yes, "2");
 		commonMethodPage.enterDob(childAge);
 		commonMethodPage.enterFirstName(childFirstName);
