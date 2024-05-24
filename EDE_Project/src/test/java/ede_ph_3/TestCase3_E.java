@@ -255,6 +255,7 @@ public class TestCase3_E extends BaseTest {
 		loginEdeQa(userName, password, url);
 		CommonMethodPage commonMethodPage = new CommonMethodPage();
 		LoginPage loginPage = new LoginPage();
+		commonMethodPage.clickToCancelSessionOutBtn();
 		commonMethodPage.clickAgreeConntinueBtn();
 		commonMethodPage.selectYear(ESTTimeZone.getCurrentYear());
 		commonMethodPage.selectState(applicationState);

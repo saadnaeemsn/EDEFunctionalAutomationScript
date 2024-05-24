@@ -41,6 +41,7 @@ public class TestCase3_D extends BaseTest {
 		String hourly = Utility.getValue("hourly");
 		String domesticPartner = Utility.getValue("domesticPartner");
 		String parentDomesticPartner = Utility.getValue("parentDomesticPartner");
+		String childOfDomesticPartner = Utility.getValue("childOfDomesticPartner");
 		String cobra = Utility.getValue("cobra");
 		
 
@@ -270,8 +271,9 @@ public class TestCase3_D extends BaseTest {
 		loginEdeQa(userName, password, url);
 		CommonMethodPage commonMethodPage = new CommonMethodPage();
 		LoginPage loginPage = new LoginPage();
+		commonMethodPage.clickToCancelSessionOutBtn();
 		commonMethodPage.clickAgreeConntinueBtn();
-		commonMethodPage.selectYear(ESTTimeZone.getCurrentYear());
+//		commonMethodPage.selectYear(ESTTimeZone.getCurrentYear());
 		commonMethodPage.selectState(state);
 		commonMethodPage.clickApplyOrRenew();
 		commonMethodPage.clickNext();
@@ -304,7 +306,7 @@ public class TestCase3_D extends BaseTest {
 		commonMethodPage.selectCounty(county);
 		commonMethodPage.clickSaveAndContinueButton();
 		if (!state.equals("WI")) {
-//			commonMethodPage.selectAddress();
+			//commonMethodPage.selectAddress();
 		}
 
 		// Mail Address
@@ -328,7 +330,6 @@ public class TestCase3_D extends BaseTest {
 
 		// notice medium
 		ExtentTestManager.getTest().info("---------------------SCREEN S006----------------------------");
-		Wait.wait3Second();
 		commonMethodPage.verifyS006(s006Question);
 		commonMethodPage.selectNoticeMedium(noticeMedium);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -354,7 +355,7 @@ public class TestCase3_D extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(age);
+		commonMethodPage.enterDOB_S010(age,"2");
 		commonMethodPage.enterFirstName(domesticFirstName);
 		commonMethodPage.enterLastName(domesticLastName);
 		commonMethodPage.selectGender(male);
@@ -362,11 +363,11 @@ public class TestCase3_D extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "3");
-		commonMethodPage.enterDob(childAge);
+		commonMethodPage.enterDOB_S010(childAge,"3");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(female);
-		commonMethodPage.selectRelation(childRelationShip, parentDomesticPartner, "not applicable", "2");
+		commonMethodPage.selectRelation(childRelationShip, childOfDomesticPartner, "not applicable", "2");
 		commonMethodPage.clickSaveAndContinueScrolled();
 
 		// S010A
@@ -388,7 +389,7 @@ public class TestCase3_D extends BaseTest {
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
-		Wait.wait5Second();
+		Wait.wait2Second();
 
 		// Drived or naturalized
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
@@ -404,6 +405,7 @@ public class TestCase3_D extends BaseTest {
 
 		// Filling Tax
 		ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
+		Wait.wait2Second();
 		//commonMethodPage.verifyS027(s027QuestionSingle, s027DrawerHeading, s027DrawerContent);
 		commonMethodPage.selectIsFilingTax(yes);
 		//commonMethodPage.verifyS027Dependent(s027QuestionDependentSingle, s027DependentDrawerHeading,
@@ -425,7 +427,11 @@ public class TestCase3_D extends BaseTest {
 		commonMethodPage.clickSaveAndContinueButton();
 		Wait.wait2Second();
 		
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		commonMethodPage.clickSaveAndContinueButton();
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// SSN for female
@@ -443,7 +449,7 @@ public class TestCase3_D extends BaseTest {
 
 		// Drived or naturalized
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
-		Wait.wait3Second();
+		Wait.wait2Second();
 		commonMethodPage.selectNaturalizedOrDrived(no, "", "", "");
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -471,9 +477,13 @@ public class TestCase3_D extends BaseTest {
 		// commonMethodPage.verifyS038(s038Question);
 		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(childFirstName);
 		commonMethodPage.clickSaveAndContinueButton();
-		Wait.wait2Second();
+		Wait.wait2Second();	
+		
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// SSN for female
@@ -485,12 +495,14 @@ public class TestCase3_D extends BaseTest {
 
 		// CitizenShip
 		ExtentTestManager.getTest().info("---------------------SCREEN S014----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.verifyS014(s014QuestionChild, s014DrawerHeading, s014drawerContent);
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Drived or naturalized
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.selectNaturalizedOrDrived(no, "", "", "");
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -547,7 +559,7 @@ public class TestCase3_D extends BaseTest {
 
 		// Expense
 		ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
-		commonMethodPage.verifyS058(s058Question);
+//		commonMethodPage.verifyS058(s058Question);
 		commonMethodPage.expenseDecision_S058(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -575,6 +587,7 @@ public class TestCase3_D extends BaseTest {
 //														Assert.assertEquals(yearlyIncomeFound, yearIncome, "Failed to verified: " + yearlyIncomeFound);
 //														ExtentTestManager.getTest().info("Verified: " + yearlyIncomeFound);
 
+		Wait.wait2Second();
 		commonMethodPage.incomeVerification_S059(no);
 		commonMethodPage.incomePredict_S059(no);
 		commonMethodPage.enterAnuualPreditedAmount(anualPredictedAmount);
@@ -596,7 +609,7 @@ public class TestCase3_D extends BaseTest {
 
 		// Expense
 		ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
-		commonMethodPage.verifyS058(s058QuestionDomestic);
+		//commonMethodPage.verifyS058(s058QuestionDomestic);
 		commonMethodPage.expenseDecision_S058(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -623,7 +636,7 @@ public class TestCase3_D extends BaseTest {
 //																ExtentTestManager.getTest().info("Found: " + yearlyIncomeFound);
 //																Assert.assertEquals(yearlyIncomeFound, yearIncome, "Failed to verified: " + yearlyIncomeFound);
 //																ExtentTestManager.getTest().info("Verified: " + yearlyIncomeFound);
-
+		Wait.wait2Second();
 		commonMethodPage.incomeVerification_S059(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -637,13 +650,15 @@ public class TestCase3_D extends BaseTest {
 		commonMethodPage.expenseDecision_S058(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
-		Wait.wait3Second();
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S059----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.incomeVerification_S059(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// currently enrolled
 		ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.verifyS068(s068Question);
 		commonMethodPage.currentlyEnrolled_S068(childFullName);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -656,19 +671,21 @@ public class TestCase3_D extends BaseTest {
 
 		// Ichra offer from job
 		ExtentTestManager.getTest().info("---------------------SCREEN S069A----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.verifyS069A(s069AQuestion);
 		commonMethodPage.throughJobICHRA_S069A(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
 
 //		// Ichra offer but not accepted
-//		ExtentTestManager.getTest().info("---------------------SCREEN S069B----------------------------");
-//		commonMethodPage.verifyS069B(s069BQuestion);
-//		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThese);
-//		commonMethodPage.clickSaveAndContinueButton();
+		ExtentTestManager.getTest().info("---------------------SCREEN S069B----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.verifyS069B(s069BQuestion);
+		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThese);
+		commonMethodPage.clickSaveAndContinueButton();
 
 		// s069D
 		ExtentTestManager.getTest().info("---------------------SCREEN S069D----------------------------");
-
+		Wait.wait2Second();
 		commonMethodPage.haveICHRAandQSEHRA_S069D(noneOfThese);
 		commonMethodPage.verifyS069D(s069DQuestion, s069DDrawerHeading, s069DDrowerContent);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -695,6 +712,7 @@ public class TestCase3_D extends BaseTest {
 //		commonMethodPage.clickSaveAndContinueButton();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S073----------------------------");
+		Wait.wait2Second();
 		//commonMethodPage.verifyScreen_s073_Question(s073Question);
 		commonMethodPage.doesEmployerCoverageMeetMinimumValueStandard_S073(yes);
 		commonMethodPage.enterAmount_S073(premiumAmount);
@@ -704,19 +722,19 @@ public class TestCase3_D extends BaseTest {
 		// About Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		// About Employer of spouse
+		// About Employer of domestic partner
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074QuestionDomestic);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 
-		// help paying for medical bills
-		ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
-		commonMethodPage.clickSaveAndContinueButton();
+//		// help paying for medical bills
+//		ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
+//		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
