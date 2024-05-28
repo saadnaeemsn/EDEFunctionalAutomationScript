@@ -20,7 +20,8 @@ public interface OR {
 	By iUnderstandCheckBox = By.xpath("//span[contains(text(),'I understand')]");
 	By iAllowCheckBox = By.xpath("//span[contains(text(),'I allow')]");
 	By saveAndContinueButton = By.xpath("//button[contains(text(),'SAVE & CONTINUE')]");
-
+	By enterDOBS035 = By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[2]");
+	
 	// Contact Information
 	By enterFirstName = By.xpath("//span[contains(text(),'First Name')]/../..//following-sibling::div//input");
 	By enterMiddleName = By.xpath("//span[contains(text(),'Middle Name ')]/../..//following-sibling::div//input");
@@ -65,7 +66,8 @@ public interface OR {
 	By selectWrittenLanguage = By.xpath("//select[contains(@aria-label,'Preferred written language')]");
 	By selectSpokenLanguage = By.xpath("//select[contains(@aria-label,'Preferred spoken language')]");
 
-	By clickAddPerson = By.xpath("//a[@class='btn theme-btn-secondary']");
+//	By clickAddPerson = By.xpath("//a[@class='btn theme-btn-secondary']");
+	By clickAddPerson = By.xpath("//a[@class='btn theme-btn']");
 	By clickAddPerson2 = By.xpath("//a[@class='btn theme-btn']");
 
 	By enterSSN = By.xpath("//span[contains(text(),'Social Security Number')]/../..//following-sibling::div//input");
@@ -136,8 +138,10 @@ public interface OR {
 	By startDateJobA = By.xpath("((//div[@class='flatpickr dp-block-ruby'])[1])//input");
 	By endDateJobA = By.xpath("((//div[@class='flatpickr dp-block-ruby'])[2])//input");
 	//By endDateJobA = By.xpath("//span[contains(text(),'End date')]/../..//following-sibling::div//input");
+	By enterEmployerNameS0692 = By.xpath("(//span[contains(text(),'Employer name')]//..//..//following-sibling::div//input)[2]");
 	By incomeEndDate = By.xpath("//input[@class='form-control flatpickr-input input w-80 datepicker masked active']"); 
 	By enterIchraAmountOffered = By.xpath("//input[contains(@inputmode,'numeric')]");
+	By enterOtherIncomeSourceS069 = By.xpath("(//span[contains(text(),'')]//..//following-sibling::div//input)[9]");
 	By selectIchraAmountPeriod = By.xpath("//select[contains(@aria-label,'How often would')]");
 	By enterHours = By.xpath("//input[contains(@aria-label,'How many hours')]");
 	By s042StreetAddress = By.xpath("//span[text()='Street address']/../..//following-sibling::div//input");
@@ -255,7 +259,7 @@ public interface OR {
 	By s041ADrawerLink = By.xpath("//a[contains(@onclick,'OpenDrawer')]");
 	By s041ADrawerContent = By.xpath("//div[@class='content mCustomScrollbar']");
 	By s041ADrawerHeading = By.xpath("//h1[@class='head']");
-	By s038Question = By.xpath("//span[contains(text(),'take care')]");
+//	By s038Question = By.xpath("//span[contains(text(),'take care')]");
 	By s038Question1 = By.xpath("//span[contains(text(),'person taking care')]");
 	By s046Question = By.xpath("//span[contains(text(),'Medicaid')]");
 	By s046DrawerLink = By.xpath("//a[contains(@onclick,'OpenDrawer')]");
@@ -273,6 +277,7 @@ public interface OR {
 	By s053DrawerContent = By.xpath("//div[@class='content mCustomScrollbar _mCS_1']");
 	By s053Question2 = By.xpath("//span[contains(text(),'expecting')]");
 	By selectBabyCount = By.xpath("//select[@class='form-control']");
+	By selectBabyCount2 = By.xpath("(//select[@class='form-control'])[2]");
 	By s057Question = By.xpath("//span[contains(text(),'income this month')]");
 	By selectJobType = By.xpath("//select[@class='form-control']");
 	By enterEmployerName = By.xpath("//span[contains(text(),'Employer name')]/../..//following-sibling::div//input");
@@ -280,7 +285,7 @@ public interface OR {
 	By enterIncomeAmount = By.xpath("//input[contains(@inputmode,'numeric')]");
 	By enterEducationExpenses = By.xpath("//span[contains(text(), 'used to pay for education expenses.')]//following::input[1]");
 	By enterEducationExpensesAmount_S057 = By.xpath("(//input[contains(@inputmode,'numeric')])[2]");
-	
+	By selectIchraAmountPeriodJobB = By.xpath("(//select[contains(@aria-label,'How often would')])[2]");
 	
 	By enterSelfPremiumAmount = By.xpath("(//input[@class='form-control'])[1]");
 	By enterFamilyPremiumAmount = By.xpath("(//input[@class='form-control'])[2]");
@@ -399,4 +404,7 @@ public interface OR {
 	// save and continue
 	// wait on go back to home button for screenshot
 
+	// Shahzad / Faizan
+	By selectGender_S027 = By.xpath("(//select[@class='form-control'])[2]");
+	By s038Question = By.xpath("//span[contains(text(),'taking care')]");
 }
