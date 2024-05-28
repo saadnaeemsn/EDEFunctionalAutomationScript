@@ -45,7 +45,6 @@ public class Utility {
 		}
 
 	}
-	
 		
 	public static String getInformationTable(ArrayList<String> label, ArrayList<String> value) {
 		StringBuilder builder = new StringBuilder();
@@ -337,12 +336,6 @@ public class Utility {
 	public static String getDate_TestCase162(String value) throws IOException {
 		Properties prop = new Properties();
 		FileReader reader=new FileReader("partner_162.properties");  
-		prop.load(reader);
-		return prop.getProperty(value);
-	}
-	public static String getDate_TestCase167(String value) throws IOException {
-		Properties prop = new Properties();
-		FileReader reader=new FileReader("partner_167.properties");  
 		prop.load(reader);
 		return prop.getProperty(value);
 	}
@@ -792,8 +785,261 @@ public class Utility {
 		prop.load(reader);
 		return prop.getProperty(value);
 	}
+	public static String getDate_TestCase183(String value) throws IOException {
+        Properties prop = new Properties();
+        FileReader reader=new FileReader("partner_183.properties");  
+        prop.load(reader);
+        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase184(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_184.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase185(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_185.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase186(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_186.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase187(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_187.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase188(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_188.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase189(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_189.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase190(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_190.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase45(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_45.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase47(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_47.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase49(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_49.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase50(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_50.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase51(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_51.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase52(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_52.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase53(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_53.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase54(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_54.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase55(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_55.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase57(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_57.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase58(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_58.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase59(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_59.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_161(String value) throws IOException {
+        Properties prop = new Properties();
+        FileReader reader=new FileReader("partner_161.properties");  
+        prop.load(reader);
+        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_162(String value) throws IOException {
+        Properties prop = new Properties();  
+        FileReader reader=new FileReader("partner_162.properties");  
+        prop.load(reader);
+        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_163(String value) throws IOException {
+        Properties prop = new Properties();
+        FileReader reader=new FileReader("partner_163.properties");  
+        prop.load(reader);
+        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_164(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_164.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_165(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_165.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_166(String value) throws IOException {
+        Properties prop = new Properties();
+        FileReader reader=new FileReader("partner_166.properties");  
+        prop.load(reader);
+        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase167(String value) throws IOException {
+		Properties prop = new Properties();
+		FileReader reader=new FileReader("partner_167.properties");  
+		prop.load(reader);
+		return prop.getProperty(value);
+	}
+	public static String getDate_TestCase168(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_168.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase169(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_169.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase170(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_170.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase181(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_181.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_207(String value) throws IOException {
+        Properties prop = new Properties();
+        FileReader reader=new FileReader("partner_207.properties");  
+        prop.load(reader);
+        return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_208(String value) throws IOException {
+	    Properties prop = new Properties();
+	    FileReader reader=new FileReader("partner_208.properties");  
+	    prop.load(reader);
+	    return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_209(String value) throws IOException {
+		Properties prop = new Properties();
+	    FileReader reader=new FileReader("partner_209.properties");  
+	    prop.load(reader);
+	    return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_200(String value) throws IOException {
+        Properties prop = new Properties();
+        FileReader reader=new FileReader("partner_200.properties");  
+        prop.load(reader);
+        return prop.getProperty(value);
+	}
 	
+	public static String getDate_TestCase_201(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_201.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
 	
+	public static String getDate_TestCase_202(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_202.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	
+	public static String getDate_TestCase_203(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_203.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	
+	public static String getDate_TestCase_204(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_204.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	
+	public static String getDate_TestCase_205(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_205.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+	
+	public static String getDate_TestCase_206(String value) throws IOException {
+	        Properties prop = new Properties();
+	        FileReader reader=new FileReader("partner_206.properties");  
+	        prop.load(reader);
+	        return prop.getProperty(value);
+	}
+
+	
+// **************** Amjad *********************************************************************
 	public static String getData_TestCase(String tcTestDataFile, String value) throws IOException {
 		Properties prop = new Properties();
 		FileReader reader=new FileReader(tcTestDataFile);  
