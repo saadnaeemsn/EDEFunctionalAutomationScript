@@ -407,4 +407,5 @@ public interface OR {
 	// Shahzad / Faizan
 	By selectGender_S027 = By.xpath("(//select[@class='form-control'])[2]");
 	By s038Question = By.xpath("//span[contains(text(),'taking care')]");
+	By clickAddPersonTwo = By.xpath("//a[@class='btn theme-btn-secondary']");
 }

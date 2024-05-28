@@ -7053,6 +7053,24 @@ public class CommonMethodPage extends BasePage {
         clickElement(element, decision + " for eligible to health service");
 	}
 	
+	/* Faizan */
+	public void isCurrentlyEnrolledThroughEmployer_S069D2(String decision) throws InterruptedException {
+		String path = "(//span//span[contains(text(),'" + decision + "')])[2]";
+		WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
+		Wait.waitForElement(getWebDriver(), element);
+		Wait.waitUntilPageIsLoaded(getWebDriver());
+		Wait.waitForElements(getWebDriver(), path);
+		Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+		clickElement(element, decision + " offers HRA");
+	}
+	public void clickAddPersonTwo() throws InterruptedException {
+		WebElement element = waitForElementToBeClickable(OR.clickAddPersonTwo, 60);
+		//Wait.waitForElement(getWebDriver(), element);
+		Utility.scrollToElement(element, getWebDriver());
+		clickElement(element, " add a person");
+	}
+	/* Faizan */
+	
 // **************** Amjad *********************************************************************
 	public void clickAnElement(String matchingContents, int option, int index) {
 		// option 1 for Equal
