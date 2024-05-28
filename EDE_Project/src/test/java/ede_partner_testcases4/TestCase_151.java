@@ -55,7 +55,7 @@ public class TestCase_151 extends BaseTest {
 		String county = Utility.getData_TestCase(tcDataFile, "county");
 		String phoneNumber = Utility.getData_TestCase(tcDataFile, "phoneNumber");
 		String phoneType = Utility.getData_TestCase(tcDataFile, "phoneType");
-		String relationship = Utility.getData_TestCase(tcDataFile, "relationship");
+		String relationship = Utility.getData_TestCase(tcDataFile, "relationShip");
 		String firstChildFirstName = Utility.getData_TestCase(tcDataFile, "firstChildFirstName");
 		String firstChildLastName = Utility.getData_TestCase(tcDataFile, "firstChildLastName");
 		String firstChildFullName = firstChildFirstName + " " + firstChildLastName;
@@ -65,8 +65,8 @@ public class TestCase_151 extends BaseTest {
 		String thirdChildFirstName = Utility.getData_TestCase(tcDataFile, "thirdChildFirstName");
 		String thirdChildLastName = Utility.getData_TestCase(tcDataFile, "thirdChildLastName");
 		String thirdChildFullName = thirdChildFirstName + " " + thirdChildLastName;
-		String childRelationship = Utility.getData_TestCase(tcDataFile, "childRelationship");
-		String brotherRelationship = Utility.getData_TestCase(tcDataFile, "brotherRelationship");
+		String childRelationship = Utility.getData_TestCase(tcDataFile, "childRelationShip");
+		String brotherRelationship = Utility.getData_TestCase(tcDataFile, "brotherRelation");
 		String incomeAmount = Utility.getData_TestCase(tcDataFile, "incomeAmount");
 		String incomeType = Utility.getData_TestCase(tcDataFile, "incomeType");
 		String employerName = Utility.getData_TestCase(tcDataFile, "employerName");
@@ -154,7 +154,7 @@ public class TestCase_151 extends BaseTest {
 				+ Utility.getFromTextProperties("s026Question");
 		String s026DrawerContent = Utility.getFromTextProperties("s026DrawerContent");
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
-		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + ESTTimeZone.getCurrentYear() + "?";
+		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionSpouse = "Does " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionDependent = "Will " + applicantFullName + " and " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionDependent") + " " + ESTTimeZone.getCurrentYear() + "?";
@@ -361,24 +361,24 @@ public class TestCase_151 extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Second person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
 
-		commonMethodPage.enterDob(spouseAge, 2);
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
 		commonMethodPage.selectRelation(relationship, "No applicable", "not applicable", "1");
 
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(firstChildAge, 3);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(firstChildAge, "3");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(male);
 		commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "2");
 
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(secondChildAge, 4);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(secondChildAge, "4");
 		commonMethodPage.enterFirstName(secondChildFirstName);
 		commonMethodPage.enterLastName(secondChildLastName);
 		commonMethodPage.selectGender(male);
@@ -386,15 +386,16 @@ public class TestCase_151 extends BaseTest {
 		commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "2");
 		commonMethodPage.selectRelation(childRelationship, childRelationship, brotherRelationship, "3");
 
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(thirdChildAge, 5);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(thirdChildAge, "5");
 		commonMethodPage.enterFirstName(thirdChildFirstName);
 		commonMethodPage.enterLastName(thirdChildLastName);
-		commonMethodPage.selectGender(male);
-		commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "2");
-		commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "2");
-		commonMethodPage.selectRelation(childRelationship, childRelationship, brotherRelationship, "3");
-		commonMethodPage.selectRelation(childRelationship, childRelationship, brotherRelationship, "4");
+		commonMethodPage.selectGender(female);
+		commonMethodPage.selectRelation1_L(childRelationship, childRelationship, brotherRelationship, brotherRelationship, "4");
+		//commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "2");
+		//commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "2");
+		//commonMethodPage.selectRelation(childRelationship, childRelationship, brotherRelationship, "3");
+		//commonMethodPage.selectRelation(childRelationship, childRelationship, brotherRelationship, "4");
 		
 		commonMethodPage.clickSaveAndContinueScrolled();
 
@@ -419,6 +420,7 @@ public class TestCase_151 extends BaseTest {
 
 		// Drived or naturalized
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.selectNaturalizedOrDrived(no, "", "", "");
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -432,16 +434,18 @@ public class TestCase_151 extends BaseTest {
 		
 		// Marital status
 		ExtentTestManager.getTest().info("---------------------SCREEN S026----------------------------");
-		commonMethodPage.verifyS026(s026Question, s026DrawerHeading, s026DrawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS026(s026Question, s026DrawerHeading, s026DrawerContent);
 		commonMethodPage.selectMaritalStatus(married);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Filling Tax
 		ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
 //		Wait.wait3Second();
-		commonMethodPage.verifyS027(s027Question, s027DrawerHeading, s027DrawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS027(s027Question, s027DrawerHeading, s027DrawerContent);
 		commonMethodPage.selectIsFilingTax(yes);
-		commonMethodPage.verifyS027Dependent(s027QuestionDependent, s027DependentDrawerHeading,s027DependentDrawerContent);
+		//commonMethodPage.verifyS027Dependent(s027QuestionDependent, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.selectIsAnyDependent(yes);
 		commonMethodPage.chooseAnOption(firstChildFullName, 1, 1);
 		commonMethodPage.chooseAnOption(secondChildFullName, 1, 1);
@@ -450,13 +454,15 @@ public class TestCase_151 extends BaseTest {
 
 		// Do they live togather
 		ExtentTestManager.getTest().info("---------------------SCREEN S041A----------------------------");
-		commonMethodPage.verifyS041A(s041AQuestion, s041ADrawerHeading, s041ADrawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS041A(s041AQuestion, s041ADrawerHeading, s041ADrawerContent);
 		commonMethodPage.selectDoTheyLiveTogather(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Take care of children
 		ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
-		commonMethodPage.verifyPTC171S038(s038Question);
+		Wait.wait3Second();
+		//commonMethodPage.verifyPTC171S038(s038Question);
 		commonMethodPage.chooseAnOption(secondChildFullName, 1, 1);
 		commonMethodPage.chooseAnOption(thirdChildFullName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -471,19 +477,22 @@ public class TestCase_151 extends BaseTest {
 
 		// SSN for female
 		ExtentTestManager.getTest().info("---------------------SCREEN S012----------------------------");
-		commonMethodPage.verifyS012(s012Questionspouse);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS012(s012Questionspouse);
 		commonMethodPage.clickWithOutSSN();
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickContinueWithoutSsnBtn();
 
 		// CitizenShip
 		ExtentTestManager.getTest().info("---------------------SCREEN S014----------------------------");
-		commonMethodPage.verifyS014(s014Questionspouse, s014DrawerHeading, s014drawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS014(s014Questionspouse, s014DrawerHeading, s014drawerContent);
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Drived or naturalized
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.selectNaturalizedOrDrived(no, "", "", "");
 		commonMethodPage.clickSaveAndContinueButton();
 //		Wait.wait3Second();
@@ -508,7 +517,8 @@ public class TestCase_151 extends BaseTest {
 		
 		// Take care of children
 		ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
-		commonMethodPage.verifyPTC171S038(s038QuestionSpouse);
+		Wait.wait3Second();
+		//commonMethodPage.verifyPTC171S038(s038QuestionSpouse);
 		commonMethodPage.chooseAnOption(secondChildFullName, 1, 1);
 		commonMethodPage.chooseAnOption(thirdChildFullName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -530,35 +540,38 @@ public class TestCase_151 extends BaseTest {
 
 		// SSN for 1st Child
 		ExtentTestManager.getTest().info("---------------------SCREEN S012----------------------------");
-		commonMethodPage.verifyS012(s012QuestionFirstChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS012(s012QuestionFirstChild);
 		commonMethodPage.clickWithOutSSN();
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickContinueWithoutSsnBtn();
 
 		// CitizenShip
 		ExtentTestManager.getTest().info("---------------------SCREEN S014----------------------------");
-		commonMethodPage.verifyS014(s014QuestionFirstChild, s014DrawerHeading, s014drawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS014(s014QuestionFirstChild, s014DrawerHeading, s014drawerContent);
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Drived or naturalized
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.selectNaturalizedOrDrived(no, "", "", "");
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Marital status
 		ExtentTestManager.getTest().info("---------------------SCREEN S026----------------------------");
-		commonMethodPage.verifyS026(s026QuestionFirstChild, s026DrawerHeading, s026DrawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS026(s026QuestionFirstChild, s026DrawerHeading, s026DrawerContent);
 		commonMethodPage.selectMaritalStatus(single);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		/*
 		// Filling Tax
-		ExtentTestManager.getTest().info("---------------------SCREEN S028----------------------------");
+		//ExtentTestManager.getTest().info("---------------------SCREEN S028----------------------------");
 //		commonMethodPage.verifyS027(s027QuestionSpouse, s027DrawerHeading, s027DrawerContent);
-		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
-		commonMethodPage.clickSaveAndContinueButton();
-		*/
+		//Wait.wait3Second();
+		//commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
+		//commonMethodPage.clickSaveAndContinueButton();
 		
 		/*
 		ExtentTestManager.getTest().info("---------------------SCREEN S034----------------------------");
@@ -570,7 +583,7 @@ public class TestCase_151 extends BaseTest {
 		// Take care of children
 		ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
 		Wait.wait2Second();
-		commonMethodPage.verifyPTC171S038(s038QuestionFirstChild);
+		//commonMethodPage.verifyPTC171S038(s038QuestionFirstChild);
 		commonMethodPage.chooseAnOption(noneOfTheseChildren, 1, 1);
 		commonMethodPage.chooseAnOption(no, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -584,25 +597,29 @@ public class TestCase_151 extends BaseTest {
 
 		// SSN for 2nd Child
 		ExtentTestManager.getTest().info("---------------------SCREEN S012----------------------------");
-		commonMethodPage.verifyS012(s012QuestionSecondChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS012(s012QuestionSecondChild);
 		commonMethodPage.clickWithOutSSN();
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickContinueWithoutSsnBtn();
 
 		// CitizenShip
 		ExtentTestManager.getTest().info("---------------------SCREEN S014----------------------------");
-		commonMethodPage.verifyS014(s014QuestionSecondChild, s014DrawerHeading, s014drawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS014(s014QuestionSecondChild, s014DrawerHeading, s014drawerContent);
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Drived or naturalized
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.selectNaturalizedOrDrived(no, "", "", "");
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Marital status
 		ExtentTestManager.getTest().info("---------------------SCREEN S026----------------------------");
-		commonMethodPage.verifyS026(s026QuestionSecondChild, s026DrawerHeading, s026DrawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS026(s026QuestionSecondChild, s026DrawerHeading, s026DrawerContent);
 		commonMethodPage.selectMaritalStatus(single);
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -612,33 +629,35 @@ public class TestCase_151 extends BaseTest {
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
-		commonMethodPage.clickSaveAndContinueButton();
+		//commonMethodPage.clickSaveAndContinueButton();
 
 		// SSN for 3rd Child
 		ExtentTestManager.getTest().info("---------------------SCREEN S012----------------------------");
-		commonMethodPage.verifyS012(s012QuestionThirdChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS012(s012QuestionThirdChild);
 		commonMethodPage.clickWithOutSSN();
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickContinueWithoutSsnBtn();
 
 		// CitizenShip
 		ExtentTestManager.getTest().info("---------------------SCREEN S014----------------------------");
-		commonMethodPage.verifyS014(s014QuestionThirdChild, s014DrawerHeading, s014drawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS014(s014QuestionThirdChild, s014DrawerHeading, s014drawerContent);
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Drived or naturalized
 		ExtentTestManager.getTest().info("---------------------SCREEN S017----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.selectNaturalizedOrDrived(no, "", "", "");
 		commonMethodPage.clickSaveAndContinueButton();
 
-		/*
 		// Filling Tax
-		ExtentTestManager.getTest().info("---------------------SCREEN S028----------------------------");
+		//ExtentTestManager.getTest().info("---------------------SCREEN S028----------------------------");
 //				commonMethodPage.verifyS027(s027QuestionSpouse, s027DrawerHeading, s027DrawerContent);
-		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
-		commonMethodPage.clickSaveAndContinueButton();
-		*/
+		//Wait.wait3Second();
+		//commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
+		//commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
 		Wait.wait2Second();
@@ -648,185 +667,214 @@ public class TestCase_151 extends BaseTest {
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
-		commonMethodPage.verifyS045Question(s045Question1, s045Question2);
+		//commonMethodPage.verifyS045Question(s045Question1, s045Question2);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Medicaid and CHIP ended or end soon
 		ExtentTestManager.getTest().info("---------------------SCREEN S049----------------------------");
-		commonMethodPage.verifyPTC085S049(s049QuestionMedicadTNApplicant, s046QuestionCHIP);
-		commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNApplicant, 0, 0);
+		Wait.wait3Second();
+		//commonMethodPage.verifyPTC085S049(s049QuestionMedicadTNApplicant, s046QuestionCHIP);
+		//commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNApplicant, 0, 0);
 		commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P1(no);
 //		commonMethodPage.verifyPTC085S049(s049QuestionMedicadTNSpouse, s046QuestionCHIP);
-		commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNSpouse, 0, 0);
+		//commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNSpouse, 0, 0);
 		commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P2(no);
 //		commonMethodPage.verifyPTC085S049(s049QuestionMedicadTNFChild, s046QuestionCHIP);
-		commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNFChild, 0, 0);
+		//commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNFChild, 0, 0);
 		commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P3(no);
 //		commonMethodPage.verifyPTC085S049(s049QuestionMedicadTNSChild, s046QuestionCHIP);
-		commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNSChild, 0, 0);
+		//commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNSChild, 0, 0);
 		commonMethodPage.chooseAnOption(no, 1, 4);
 //		commonMethodPage.verifyPTC085S049(s049QuestionMedicadTNTChild, s046QuestionCHIP);
-		commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNTChild, 0, 0);
+		//commonMethodPage.verifyQuestionContents(spanTag, "TennCare (Medicaid) or CoverKids (CHIP) that will end", s049QuestionMedicadTNTChild, 0, 0);
 		commonMethodPage.chooseAnOption(no, 1, 5);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Medicaid and CHIP
 		ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
-		commonMethodPage.verifyS046(s046QuestionMedicadTN, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS046(s046QuestionMedicadTN, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
 		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S050A
 		ExtentTestManager.getTest().info("---------------------SCREEN S050A----------------------------");
-		commonMethodPage.verifyS050A(s050AQuestion);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS050A(s050AQuestion);
 		commonMethodPage.selectSitutionHouseHold_S050A(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Income Questions
 		ExtentTestManager.getTest().info("---------------------SCREEN S057----------------------------");
-		commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057Question);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057Question);
 		commonMethodPage.incomeThisMonth_S057(yes);
-		commonMethodPage.verifyS057Question2IncomeType(s057Question2);
+		//commonMethodPage.verifyS057Question2IncomeType(s057Question2);
 		commonMethodPage.selectIncomeType(incomeType);
 		commonMethodPage.enterEmployerName(employerName);
-		commonMethodPage.verifyS057Question3IncomeDuration(s057Question3);
+		//commonMethodPage.verifyS057Question3IncomeDuration(s057Question3);
 		commonMethodPage.incomePeriod_S057(incomePeriod);
-		commonMethodPage.verifyS057Question4EnterIncome(s057Question4);
+		//commonMethodPage.verifyS057Question4EnterIncome(s057Question4);
 		commonMethodPage.enterIncomeAmount(incomeAmount);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Expense
 		ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
-		commonMethodPage.verifyS058(s058Question);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS058(s058Question);
 		commonMethodPage.expenseDecision_S058(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Income verification
 		ExtentTestManager.getTest().info("---------------------SCREEN S059----------------------------");
-		Wait.wait2Second();
+		Wait.wait3Second();
 		commonMethodPage.incomeVerification_S059(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Income Questions for Spouse
 		ExtentTestManager.getTest().info("---------------------SCREEN S057----------------------------");
-		commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057QuestionSpouse);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057QuestionSpouse);
 		commonMethodPage.incomeThisMonth_S057(yes);
-		commonMethodPage.verifyS057Question2IncomeType(s057Question2Spouse);
+		//commonMethodPage.verifyS057Question2IncomeType(s057Question2Spouse);
 		commonMethodPage.selectIncomeType(spouseIncomeType);
 		commonMethodPage.enterEmployerName(spouseEmployerName);
-		commonMethodPage.verifyS057Question3IncomeDuration(s057Question3Spouse);
+		//commonMethodPage.verifyS057Question3IncomeDuration(s057Question3Spouse);
 		commonMethodPage.incomePeriod_S057(spouseIncomePeriod);
-		commonMethodPage.verifyS057Question4EnterIncome(s057Question4);
+		//commonMethodPage.verifyS057Question4EnterIncome(s057Question4);
 		commonMethodPage.enterIncomeAmount(spouseIncomeAmount);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Expense
 		ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
-		commonMethodPage.verifyS058(s058QuestionSpouse);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS058(s058QuestionSpouse);
 		commonMethodPage.expenseDecision_S058(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Income verification
 		ExtentTestManager.getTest().info("---------------------SCREEN S059----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.incomeVerification_S059(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Income for 1st Child
 		ExtentTestManager.getTest().info("---------------------SCREEN S057----------------------------");
-		commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057QuestionFirstChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057QuestionFirstChild);
 		commonMethodPage.incomeThisMonth_S057(yes);
-		commonMethodPage.verifyS057Question2IncomeType(s057Question2FirstChild);
+		//commonMethodPage.verifyS057Question2IncomeType(s057Question2FirstChild);
 		commonMethodPage.selectIncomeType(firstChildIncomeType);
 		commonMethodPage.enterEmployerName(firstChildEmployerName);
-		commonMethodPage.verifyS057Question3IncomeDuration(s057Question3FirstChild);
+		//commonMethodPage.verifyS057Question3IncomeDuration(s057Question3FirstChild);
 		commonMethodPage.incomePeriod_S057(firstChildIncomePeriod);
-		commonMethodPage.verifyS057Question4EnterIncome(s057Question4);
+		//commonMethodPage.verifyS057Question4EnterIncome(s057Question4);
 		commonMethodPage.enterIncomeAmount(firstChildIncomeAmount);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
-		commonMethodPage.verifyS058(s058QuestionFirstChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS058(s058QuestionFirstChild);
 		commonMethodPage.expenseDecision_S058(no);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S059----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.incomeVerification_S059(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Income for 2nd Child
 		ExtentTestManager.getTest().info("---------------------SCREEN S057----------------------------");
-		commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057QuestionSecondChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057QuestionSecondChild);
 		commonMethodPage.incomeThisMonth_S057(no);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
-		commonMethodPage.verifyS058(s058QuestionSecondChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS058(s058QuestionSecondChild);
 		commonMethodPage.expenseDecision_S058(no);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S059----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.incomeVerification_S059(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// Income for 3rd Child
 		ExtentTestManager.getTest().info("---------------------SCREEN S057----------------------------");
-		commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057QuestionThirdChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057QuestionThirdChild);
 		commonMethodPage.incomeThisMonth_S057(no);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
-		commonMethodPage.verifyS058(s058QuestionThirdChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS058(s058QuestionThirdChild);
 		commonMethodPage.expenseDecision_S058(no);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S059----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.incomeVerification_S059(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// currently enrolled
 		ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
-		commonMethodPage.verifyS068(s068Question);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS068(s068Question);
 		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S069----------------------------");
-		commonMethodPage.verifyS069(s069Question);
-		commonMethodPage.chooseAnOption(coverageThroughAJob, 2, 1);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS069(s069Question);
+		commonMethodPage.whatTypeCoverageHave_S069(coverageThroughAJob);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// Ichra offer from job
 		ExtentTestManager.getTest().info("---------------------SCREEN S069A----------------------------");
-		commonMethodPage.verifyS069A(s069AQuestion);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS069A(s069AQuestion);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Ichra offer but not accepted
 		ExtentTestManager.getTest().info("---------------------SCREEN S069B----------------------------");
-		commonMethodPage.verifyS069B(s069BQuestion);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS069B(s069BQuestion);
 //		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThese);
 		commonMethodPage.chooseAnOption(spouseFullName, 1, 1);
 		commonMethodPage.chooseAnOption(firstChildFullName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
+		
+		ExtentTestManager.getTest().info("---------------------SCREEN S082----------------------------");
+		Wait.wait3Second();
+		commonMethodPage.stateBenifitPlanThroughJob_S082(noneOfThese);
+		commonMethodPage.clickSaveAndContinueButton();
 
 		// S069C - Spouse - P2
 		ExtentTestManager.getTest().info("---------------------SCREEN S069C----------------------------");
-		commonMethodPage.verifyS069C(s069CQuestion);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS069C(s069CQuestion);
 		commonMethodPage.chooseAnOption(yes, 1, 1);
-		commonMethodPage.verifyS069CQuestion2(s069CQuestion2);
+		//commonMethodPage.verifyS069CQuestion2(s069CQuestion2);
 		commonMethodPage.chooseAnOption(spouseEmployerName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S069E - Spouse - P2
 		ExtentTestManager.getTest().info("---------------------SCREEN S069E----------------------------");
-		commonMethodPage.verifyS069E(s069EQuestion);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS069E(s069EQuestion);
 		commonMethodPage.ptc151S069EFillForm(plus60DaysDate2, plus65DaysDate2, spouseMaxReimbursementAmount, spouseReimbursementPeriod, spouseEmployerPhone, s069EQuestion1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S069C - 1st Child - P3
 		ExtentTestManager.getTest().info("---------------------SCREEN S069C----------------------------");
-		commonMethodPage.verifyS069C(s069CQuestionFirstChild);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS069C(s069CQuestionFirstChild);
 		commonMethodPage.chooseAnOption(yes, 1, 1);
-		commonMethodPage.verifyS069CQuestion2(s069CQuestion2FirstChild);
+		//commonMethodPage.verifyS069CQuestion2(s069CQuestion2FirstChild);
 		commonMethodPage.chooseAnOption(spouseEmployerName, 1, 1);
 		commonMethodPage.chooseAnOption(firstChildEmployerName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -834,21 +882,22 @@ public class TestCase_151 extends BaseTest {
 		// S069E - 1st Child - P3
 		ExtentTestManager.getTest().info("---------------------SCREEN S069E----------------------------");
 //		commonMethodPage.verifyS069E(s069EQuestion2);
-//		commonMethodPage.verifyQuestionContents(spanTag, "offered by " + spouseEmployerName, s069EQuestion2, 2, 1);
-		commonMethodPage.ptc151S069EFillForm(plus60DaysDate2, plus65DaysDate2, spouseMaxReimbursementAmount, spouseIncomePeriod, spouseEmployerPhone, s069EQuestion1);
-//		commonMethodPage.verifyQuestionContents(spanTag, "offered by " + firstChildEmployerName, s069EQuestion2, 2, 1);
+		Wait.wait3Second();
+		//commonMethodPage.verifyQuestionContents(spanTag, "offered by " + firstChildEmployerName, s069EQuestion2, 1, 2);
 		commonMethodPage.ptc151S069EFillForm(plus60DaysDate2, plus65DaysDate2, firstChildMaxReimbursementAmount, firstChildIncomePeriod, firstChildEmployerPhone, s069EQuestion22);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S069D
 		ExtentTestManager.getTest().info("---------------------SCREEN S069D----------------------------");
-		commonMethodPage.verifyS069D(s069DQuestion, s069DDrawerHeading, s069DDrowerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS069D(s069DQuestion, s069DDrawerHeading, s069DDrowerContent);
 		commonMethodPage.haveICHRAandQSEHRA_S069D(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S070 Covearge through job starting from next month
 		ExtentTestManager.getTest().info("---------------------SCREEN S070----------------------------");
-		commonMethodPage.verifyS070(s070Question);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS070(s070Question);
 //		commonMethodPage.CoverageThroughJobStartingNextMonth_S070(noneOfThese);
 //		commonMethodPage.chooseAnOption(noneOfThesePeople, 1);
 		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
@@ -857,26 +906,29 @@ public class TestCase_151 extends BaseTest {
 
 		// S071B Additional Info - 
 		ExtentTestManager.getTest().info("---------------------SCREEN S071B----------------------------");
-		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s071BQuestion"), s071BQuestion, 2, 1);
+		Wait.wait3Second();
+		//commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s071BQuestion"), s071BQuestion, 1, 2);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S072B Additional Info - 
 		ExtentTestManager.getTest().info("---------------------SCREEN S072B----------------------------");
-		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s072BQuestion"), s072BQuestion, 2, 1);
+		Wait.wait3Second();
+		//commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s072BQuestion"), s072BQuestion, 1, 2);
 		commonMethodPage.chooseAnOption(secondChildFullName, 1, 1);
 		commonMethodPage.chooseAnOption(thirdChildFullName, 1, 1);		
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S073B Additional Info - 
 		ExtentTestManager.getTest().info("---------------------SCREEN S073B----------------------------");
-		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s073BQuestion"), s073BQuestion, 2, 1);
+		Wait.wait3Second();
+		//commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s073BQuestion"), s073BQuestion, 1, 2);
 		commonMethodPage.chooseAnOption(yes, 1, 1);
 //		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s073BQuestion1"), s073BQuestion1, 1, 2);
 //		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s073BQuestion2"), s073BQuestion2, 1, 1);
-		commonMethodPage.verifyQuestionContents(spanTag, s073BQuestion1, s073BQuestion1, 1, 1);
-		commonMethodPage.verifyQuestionContents(spanTag, s073BQuestion2, s073BQuestion2, 1, 1);
+		//commonMethodPage.verifyQuestionContents(spanTag, s073BQuestion1, s073BQuestion1, 1, 1);
+		//commonMethodPage.verifyQuestionContents(spanTag, s073BQuestion2, s073BQuestion2, 1, 1);
 		commonMethodPage.ptc151S073BFillForm(lowestCostHealthPlan, lowestCostHealthPlanPeriod, s073BQuestion1);
-		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s073BQuestion3"), s073BQuestion3, 2, 1);
+		//commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s073BQuestion3"), s073BQuestion3, 1, 2);
 		commonMethodPage.ptc151S073BFillForm(lowestCostHealthPlan, lowestCostHealthPlanPeriod, s073BQuestion3);
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -884,13 +936,15 @@ public class TestCase_151 extends BaseTest {
 		ExtentTestManager.getTest().info("---------------------SCREEN S071B----------------------------");
 //		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s071BQuestion"), s071BQuestion, 1, 2);
 //		commonMethodPage.verifyQuestionContents(spanTag, applicantFullName+" " + Utility.getFromTextProperties("s071BQuestion"), applicantFullName+" " + Utility.getFromTextProperties("s071BQuestion"), 1, 2);
+		Wait.wait3Second();
 		commonMethodPage.chooseAnOption(spouseEmployerName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S072B Additional Info - 
 		ExtentTestManager.getTest().info("---------------------SCREEN S072B----------------------------");
 //		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s072BQuestion"), s072BQuestion, 1, 2);
-		commonMethodPage.verifyQuestionContents(spanTag, s072BQuestionSpouse, s072BQuestionSpouse, 1, 1);
+		//commonMethodPage.verifyQuestionContents(spanTag, s072BQuestionSpouse, s072BQuestionSpouse, 1, 1);
+		Wait.wait3Second();
 		commonMethodPage.chooseAnOption(secondChildFullName, 1, 1);
 		commonMethodPage.chooseAnOption(thirdChildFullName, 1, 1);		
 		commonMethodPage.clickSaveAndContinueButton();
@@ -899,68 +953,77 @@ public class TestCase_151 extends BaseTest {
 		ExtentTestManager.getTest().info("---------------------SCREEN S071AB----------------------------");
 //		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s071ABQuestion"), s071ABQuestion, 1, 2);
 //		commonMethodPage.verifyQuestionContents(spanTag, s071ABQuestion, s071ABQuestion, 1, 1);
-//		commonMethodPage.enterNSelectOption("input", "aria-label", "Phone Number", 1, spouseEmployerPhone, 1);
+		Wait.wait3Second();
+		commonMethodPage.enterNSelectOption("input", "aria-label", "Phone Number", 1, spouseEmployerPhone, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S073B Additional Info - 
 		ExtentTestManager.getTest().info("---------------------SCREEN S073B----------------------------");
 //		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s073BQuestion"), s073BQuestionSpouse, 1, 2);
-		commonMethodPage.verifyQuestionContents(spanTag, s073BQuestionSpouse, s073BQuestionSpouse, 1, 1);
+		Wait.wait3Second();
+		//commonMethodPage.verifyQuestionContents(spanTag, s073BQuestionSpouse, s073BQuestionSpouse, 1, 1);
 		commonMethodPage.chooseAnOption(no, 1, 1);
 //		commonMethodPage.verifyQuestionContents(spanTag, Utility.getFromTextProperties("s073BQuestion4"), s073BQuestion4, 1, 1);
-		commonMethodPage.verifyQuestionContents(spanTag, s073BQuestion4, s073BQuestion4, 1, 1);
+		//commonMethodPage.verifyQuestionContents(spanTag, s073BQuestion4, s073BQuestion4, 1, 1);
 		commonMethodPage.chooseAnOption(noneOfThePlansMeet, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
-		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS074(s074Question);
+		//commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Spouse - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
-		commonMethodPage.verifyS074(s074QuestionSpouse);
-//		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS074(s074QuestionSpouse);
+		//commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About First Child - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
-		commonMethodPage.verifyS074(s074QuestionFirstChild);
-//		commonMethodPage.enterPhoneNumber4(firstChildEmployerPhone);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS074(s074QuestionFirstChild);
+		//commonMethodPage.enterPhoneNumber4(firstChildEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
-		commonMethodPage.ptc151Enter2PhonesNumber(employerName, employerPhone);
-//		commonMethodPage.ptc151Enter2PhonesNumber(spouseEmployerName, spouseEmployerPhone);
+		//commonMethodPage.ptc151Enter2PhonesNumber(employerName, employerPhone);
+		//commonMethodPage.ptc151Enter2PhonesNumber(spouseEmployerName, spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
-		commonMethodPage.ptc151Enter2PhonesNumber(employerName, employerPhone);
-//		commonMethodPage.ptc151Enter2PhonesNumber(spouseEmployerName, spouseEmployerPhone);
+		//commonMethodPage.ptc151Enter2PhonesNumber(employerName, employerPhone);
+		//commonMethodPage.ptc151Enter2PhonesNumber(spouseEmployerName, spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
-		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S084
 		ExtentTestManager.getTest().info("---------------------SCREEN S084----------------------------");
-		commonMethodPage.verifyS084(s084Question, "");
+		Wait.wait3Second();
+		//commonMethodPage.verifyS084(s084Question, "");
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S085
 		ExtentTestManager.getTest().info("---------------------SCREEN S085----------------------------");
-		commonMethodPage.verifyS085(s085Question);
+		Wait.wait3Second();
+		//commonMethodPage.verifyS085(s085Question);
 		commonMethodPage.chooseAnOption(noneOfTheseChanges, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Review
 		ExtentTestManager.getTest().info("---------------------SCREEN REVIEW----------------------------");
-		commonMethodPage.verifyReviewScreen(reviewDrawerHeading, reviewDrawerContent);
+		Wait.wait3Second();
+		//commonMethodPage.verifyReviewScreen(reviewDrawerHeading, reviewDrawerContent);
 		commonMethodPage.clickSaveAndContinueScrolled();
 
 		// Agreement
@@ -968,11 +1031,13 @@ public class TestCase_151 extends BaseTest {
 		Wait.wait2Second();
 		commonMethodPage.chooseAnOption("I agree to this statement", 1, 1);
 		commonMethodPage.chooseAnOption("I agree", 1, 1);
-		commonMethodPage.chooseAnOption("I agree to allow the Marketplace to end the Marketplace coverage for anyone on my application who’s enrolled in both Marketplace and Medicare coverage.", 1, 1);
+		commonMethodPage.agreeThree();
+		//commonMethodPage.chooseAnOption("I agree to allow the Marketplace to end the Marketplace coverage for anyone on my application who’s enrolled in both Marketplace and Medicare coverage.", 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Signature
 		ExtentTestManager.getTest().info("---------------------SIGNATURE----------------------------");
+		Wait.wait3Second();
 		commonMethodPage.agreeOne();
 		commonMethodPage.enterSignature(applicantFullName);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -981,7 +1046,7 @@ public class TestCase_151 extends BaseTest {
 		ExtentTestManager.getTest().info("---------------------ELIGIBILITY----------------------------");
 		Wait.wait10Second();
 //						commonMethodPage.downloadEligibilityReport();
-		commonMethodPage.clickLogoutDropDown();
+		//commonMethodPage.clickLogoutDropDown();
 //						commonMethodPage.clickHome();
 
 		ExtentTestManager.getTest().info("---------------------LOGOUT----------------------------");

@@ -420,8 +420,8 @@ public class TestCase_116 extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 		
 		// Add Second person (Child)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(childAge, 2);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(childAge, "2");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);
@@ -461,7 +461,7 @@ public class TestCase_116 extends BaseTest {
 		// Filling Tax
 		ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
 		Wait.wait2Second();
-		commonMethodPage.verifyS027(s027QuestionSingle, s027DrawerHeading, s027DrawerContent);
+		commonMethodPage.verifyS027(s027QuestionMale, s027DrawerHeading, s027DrawerContent);
 		commonMethodPage.selectIsFilingTax(yes);
 		commonMethodPage.verifyS027Dependent(s027QuestionDependentSingleMale, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.selectIsAnyDependent(yes);
@@ -662,7 +662,7 @@ public class TestCase_116 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
@@ -675,13 +675,11 @@ public class TestCase_116 extends BaseTest {
 		commonMethodPage.chooseAnOption(childFullName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		/*
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 
 		/*
 		// S084

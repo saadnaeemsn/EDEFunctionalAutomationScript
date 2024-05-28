@@ -539,7 +539,7 @@ public class TestCase_28 extends BaseTest {
 		// Add 2nd Person
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(firstChildAge, 2);
+		commonMethodPage.enterDOB_S010(firstChildAge, "2");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(male);

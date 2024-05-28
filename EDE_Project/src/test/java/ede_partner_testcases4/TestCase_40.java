@@ -480,7 +480,7 @@ public class TestCase_40 extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Second person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		/*
 //		commonMethodPage.needCoverage(no, "2");
 		commonMethodPage.enterDob(spouseAge, 2);
@@ -491,18 +491,18 @@ public class TestCase_40 extends BaseTest {
 		*/
 		
 		// Add 3rd Person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(firstChildAge, 2);
+		commonMethodPage.enterDOB_S010(firstChildAge, "2");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(female);
 		commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "1");
 		
 		// Add 4th Person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(secondChildAge, 3);
+		commonMethodPage.enterDOB_S010(secondChildAge, "3");
 		commonMethodPage.enterFirstName(secondChildFirstName);
 		commonMethodPage.enterLastName(secondChildLastName);
 		commonMethodPage.selectGender(female);
@@ -699,10 +699,9 @@ public class TestCase_40 extends BaseTest {
 		commonMethodPage.chooseAnOption(yes, 1, 3);
 		commonMethodPage.clickSaveAndContinueButton();
 		*/
-		/*
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S028----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S034----------------------------");
 		commonMethodPage.chooseAnOption(no, 1, 1);
@@ -735,18 +734,16 @@ public class TestCase_40 extends BaseTest {
 		commonMethodPage.selectNaturalizedOrDrived(no, "", "", "");
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		/*
 		// 2nd Appl - Marital status
 		ExtentTestManager.getTest().info("---------------------SCREEN S028----------------------------");
 		commonMethodPage.verifyQuestionContents(spanTag, s028QuestionFirstChild, s028QuestionFirstChild, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 		
 		// 2nd Appl - Lives with Other Parent
 		ExtentTestManager.getTest().info("---------------------SCREEN S030----------------------------");
 		commonMethodPage.verifyQuestionContents(spanTag, s030Question, s030Question, 1, 1);
 		commonMethodPage.chooseAnOption(yes, 1, 1);
-		commonMethodPage.enterDob(spouseAge, 1);
+		commonMethodPage.enterDOB_S010(spouseAge, "1");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -1001,13 +998,13 @@ public class TestCase_40 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Spouse's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// help paying for medical bills

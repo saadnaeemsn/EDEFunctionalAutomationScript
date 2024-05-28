@@ -563,9 +563,9 @@ public class TestCase_27 extends BaseTest {
 		// S010 Applicant detail
 		ExtentTestManager.getTest().info("---------------------SCREEN S010----------------------------");
 		// Add 2nd Person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(firstChildAge, 2);
+		commonMethodPage.enterDOB_S010(firstChildAge, "2");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(male);
@@ -677,16 +677,14 @@ public class TestCase_27 extends BaseTest {
 		commonMethodPage.clickSaveAndContinueButton();
 //				Wait.wait3Second();
 
-		/*
 		ExtentTestManager.getTest().info("---------------------SCREEN S028----------------------------");
 		commonMethodPage.verifyQuestionContents(spanTag, s028Question, s028Question, 1, 1);
 		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 		
 		ExtentTestManager.getTest().info("---------------------SCREEN S030----------------------------");
 		commonMethodPage.chooseAnOption(yes, 1, 1);
-		commonMethodPage.enterDob(spouseAge, 1);
+		commonMethodPage.enterDOB_S010(spouseAge, "1");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -830,7 +828,6 @@ public class TestCase_27 extends BaseTest {
 		commonMethodPage.currentlyEnrolled_S068(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
 
-		/*
 		if(state.trim().equalsIgnoreCase("az") || state.trim().equalsIgnoreCase("tx") || state.trim().equalsIgnoreCase("ut")) {
 			// S081
 			ExtentTestManager.getTest().info("---------------------SCREEN S081----------------------------");
@@ -838,7 +835,6 @@ public class TestCase_27 extends BaseTest {
 			commonMethodPage.loseQualifyingHealthCovRecent_PTC043S083(noneOfThesePeople);
 			commonMethodPage.clickSaveAndContinueButton();	
 		}
-		*/
 		
 		// Ichra offer from job
 		ExtentTestManager.getTest().info("---------------------SCREEN S069A----------------------------");
@@ -852,7 +848,6 @@ public class TestCase_27 extends BaseTest {
 		commonMethodPage.throughJobICHRA_S069A(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
 
-		/*
 //		if(state.trim().equalsIgnoreCase("ga") || state.trim().equalsIgnoreCase("ks")) {
 			// S082
 			ExtentTestManager.getTest().info("---------------------SCREEN S082----------------------------");
@@ -860,7 +855,6 @@ public class TestCase_27 extends BaseTest {
 			commonMethodPage.loseQualifyingHealthCovRecent_PTC043S083(noneOfThesePeople);
 			commonMethodPage.clickSaveAndContinueButton();	
 //		}
-		*/
 		
 		// s069D
 		ExtentTestManager.getTest().info("---------------------SCREEN S069D----------------------------");
@@ -878,26 +872,20 @@ public class TestCase_27 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-//		if(state.trim().equalsIgnoreCase("ok")) {
+		if(state.trim().equalsIgnoreCase("ok")) {
 			Wait.wait2Second();
 			ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
 			commonMethodPage.clickSaveAndContinueButton();
-//		}
-		
-		// S079
-		ExtentTestManager.getTest().info("---------------------SCREEN S079----------------------------");
-		commonMethodPage.verifyQuestionContents(spanTag, s079Question, s079Question, 1, 1);
-		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
-		commonMethodPage.clickSaveAndContinueButton();
+		}
 		
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		Wait.wait2Second();
-//				commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
-//				commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
+//		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
+//		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
 		commonMethodPage.loseQualifyingHealthCovRecent_PTC043S083(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -923,9 +911,9 @@ public class TestCase_27 extends BaseTest {
 		ExtentTestManager.getTest().info("---------------------AGREEMENT----------------------------");
 		Wait.wait2Second();
 		commonMethodPage.chooseAnOption(iAgreeToThisStatement, 1, 1);
-//		if(state.trim().equalsIgnoreCase("ok")) {
+		if(state.trim().equalsIgnoreCase("ok")) {
 			commonMethodPage.chooseAnOption(iAgreeToThisStatement, 1, 2);	
-//		}
+		}
 		commonMethodPage.chooseAnOption(iAgree, 1, 1);
 //		commonMethodPage.chooseAnOption(iAgree, 1, 2);
 		commonMethodPage.chooseAnOption(iAgreeToAllow, 1, 1);

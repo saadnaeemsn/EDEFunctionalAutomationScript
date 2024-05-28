@@ -178,7 +178,7 @@ public class TestCase_155 extends BaseTest {
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + "2024" + "?";
+		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale") + " " + "2024" + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
 		String s027QuestionDependentCouple = "Will " + applicantFullName + " and " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionDependent") + " " + "2024" + "?";
@@ -581,7 +581,7 @@ public class TestCase_155 extends BaseTest {
 		// Medicaid and CHIP
 		ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
 //		commonMethodPage.verifyPTC107S046(s046QuestionMedicad7);
-		commonMethodPage.verifyQuestionContents(spanTag, s046QuestionMedicad7, s046QuestionMedicad7, 1, 1);
+		commonMethodPage.verifyQuestionContents(spanTag, s046QuestionMedicad7, s046QuestionMedicad7, 1, 2);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -660,17 +660,15 @@ public class TestCase_155 extends BaseTest {
 		// Currently Enrolled
 		ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
 		commonMethodPage.verifyS068(s068Question);
-//		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
-		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
+		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		/*
+
 		// Currently Enrolled
 		ExtentTestManager.getTest().info("---------------------SCREEN S069----------------------------");
 		commonMethodPage.verifyQuestionContents("span", s069Question, s069Question, 1, 1);
-		commonMethodPage.chooseAnOption("Other coverage", 1, 1);
+		commonMethodPage.chooseAnOption("Other coverage", 2, 1);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 		
 		/*
 		ExtentTestManager.getTest().info("---------------------SCREEN S081----------------------------");
@@ -748,13 +746,13 @@ public class TestCase_155 extends BaseTest {
 		// About Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 //		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S083

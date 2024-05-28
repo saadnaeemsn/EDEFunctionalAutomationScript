@@ -430,8 +430,6 @@ public class TestCase_37 extends BaseTest {
 		commonMethodPage.selectStateInContactInfo(state);
 		commonMethodPage.enterCity(city);
 		commonMethodPage.enterZipCode(zipCode);
-		commonMethodPage.refreshPage();
-		Wait.wait2Second();
 		commonMethodPage.clickCountyDropDown();
 		commonMethodPage.selectCounty(county);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -482,9 +480,9 @@ public class TestCase_37 extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Second person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 //		commonMethodPage.needCoverage(no, "2");
-		commonMethodPage.enterDob(brotherAge, 2);
+		commonMethodPage.enterDOB_S010(brotherAge, "2");
 		commonMethodPage.enterFirstName(brotherFirstName);
 		commonMethodPage.enterLastName(brotherLastName);
 		commonMethodPage.selectGender(male);
@@ -785,7 +783,7 @@ public class TestCase_37 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		/*

@@ -186,8 +186,8 @@ public class TestCase_41 extends BaseTest {
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
+		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " " + ESTTimeZone.getCurrentYear() + "?";
+		String s027QuestionSingle2 = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionSpouse = "Does " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionDependentSingle = "Will " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionDependentSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionDependentSpouse = "Will " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionDependentSingleFemale") + " " + ESTTimeZone.getCurrentYear() + "?";
@@ -474,27 +474,27 @@ public class TestCase_41 extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Second person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 //		commonMethodPage.needCoverage(no, "2");
-		commonMethodPage.enterDob(spouseAge, 2);
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(male);
 		commonMethodPage.selectRelation(spouseRelationship, "No applicable", "not applicable", "1");
 
 		// Add 3rd Person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(firstChildAge, 3);
+		commonMethodPage.enterDOB_S010(firstChildAge, "3");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(female);
 		commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "2");
 		
 		// Add 4th Person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(secondChildAge, 4);
+		commonMethodPage.enterDOB_S010(secondChildAge, "4");
 		commonMethodPage.enterFirstName(secondChildFirstName);
 		commonMethodPage.enterLastName(secondChildLastName);
 		commonMethodPage.selectGender(female);
@@ -548,7 +548,7 @@ public class TestCase_41 extends BaseTest {
 		// Filling Tax
 		ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
 //		Wait.wait3Second();
-		commonMethodPage.verifyS027(s027QuestionMale, s027DrawerHeading, s027DrawerContent);
+		commonMethodPage.verifyS027(s027QuestionSingle, s027DrawerHeading, s027DrawerContent);
 		commonMethodPage.selectIsFilingTax(yes);
 		commonMethodPage.verifyS027Dependent(s027QuestionDependentPair, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.selectIsAnyDependent(yes);
@@ -557,7 +557,7 @@ public class TestCase_41 extends BaseTest {
 //		commonMethodPage.chooseAnOption(secondChildFullName, 1, 1);
 		commonMethodPage.chooseAnOption(someoneNotApplying, 2, 1);
 		
-		commonMethodPage.enterDob(thirdChildAge, 1);
+		commonMethodPage.enterDOB_S010(thirdChildAge, "1");
 		commonMethodPage.enterFirstName(thirdChildFirstName);
 		commonMethodPage.enterLastName(thirdChildLastName);
 		commonMethodPage.selectGender(male);
@@ -685,8 +685,7 @@ public class TestCase_41 extends BaseTest {
 		commonMethodPage.chooseAnOption(yes, 1, 1);
 		commonMethodPage.verifyS027Dependent(s027QuestionFirstChild2, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.chooseAnOption(no, 1, 2);
-		// Need to discuss with Shahzad following:
-//		commonMethodPage.verifyS027Dependent3(s027QuestionFirstChild3, s027DependentDrawerHeading,s027DependentDrawerContent);
+		commonMethodPage.verifyS027Dependent3(s027QuestionFirstChild3, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.chooseAnOption(yes, 1, 3);
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -754,7 +753,7 @@ public class TestCase_41 extends BaseTest {
 		commonMethodPage.selectIsFilingTax(yes);
 		commonMethodPage.verifyS027Dependent(s027QuestionSecondChild2, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.chooseAnOption(no, 1, 2);
-//		commonMethodPage.verifyS027Dependent3(s027QuestionSecondChild3, s027DependentDrawerHeading,s027DependentDrawerContent);
+		commonMethodPage.verifyS027Dependent3(s027QuestionSecondChild3, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.chooseAnOption(yes, 1, 3);
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -980,13 +979,13 @@ public class TestCase_41 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Spouse's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// help paying for medical bills

@@ -368,8 +368,8 @@ public class TestCase_106 extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 
 		// Add Second person (Spouse)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(spouseAge, 2);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -433,7 +433,6 @@ public class TestCase_106 extends BaseTest {
 		
 		// Race - 1st Appl
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
-		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// SSN - 2nd Appl - Spouse

@@ -206,8 +206,8 @@ public class TestCase_118 extends BaseTest {
 		String s046QuestionCHIP = Utility.getFromTextProperties("s046QuestionCHIP");
 		String s046DrawerHeading = Utility.getFromTextProperties("s046DrawerHeading");
 		String s046DrawerContent = Utility.getFromTextProperties("s046DrawerContent");
-		String s049QuestionMedicad1 = "Did " + applicantFullName + " " + Utility.getFromTextProperties("s049QuestionMedicadWI");
-		String s049QuestionMedicad2 = "Did " + childFullName + " " + Utility.getFromTextProperties("s049QuestionMedicadWI");
+		String s049QuestionMedicad1 = "Did " + applicantFullName + " " + Utility.getFromTextProperties("s049QuestionMedicad6");
+		String s049QuestionMedicad2 = "Did " + childFullName + " " + Utility.getFromTextProperties("s049QuestionMedicad6");
 		String s050AQuestion = Utility.getFromTextProperties("s050AQuestion");
 		String s053Question = Utility.getFromTextProperties("s053Question");
 		String s053DrawerHeading = Utility.getFromTextProperties("s053DrawerHeading");
@@ -421,8 +421,8 @@ public class TestCase_118 extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 		
 		// Add Second person (Child)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(childAge, 2);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(childAge, "2");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);
@@ -462,7 +462,7 @@ public class TestCase_118 extends BaseTest {
 		// Filling Tax
 		ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
 		Wait.wait2Second();
-		commonMethodPage.verifyS027(s027QuestionSingle, s027DrawerHeading, s027DrawerContent);
+		commonMethodPage.verifyS027(s027QuestionMale, s027DrawerHeading, s027DrawerContent);
 		commonMethodPage.selectIsFilingTax(yes);
 		commonMethodPage.verifyS027Dependent(s027QuestionDependentSingleMale, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.selectIsAnyDependent(yes);
@@ -510,11 +510,9 @@ public class TestCase_118 extends BaseTest {
 		commonMethodPage.selectMaritalStatus(single);
 		commonMethodPage.clickSaveAndContinueButton();
 
-		/*
 		// Tax Filer - 2nd Appl
 		ExtentTestManager.getTest().info("---------------------SCREEN S028---------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 		
 		// Live Another Parent - 2nd Appl
 		ExtentTestManager.getTest().info("---------------------SCREEN S030----------------------------");
@@ -672,7 +670,7 @@ public class TestCase_118 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		/*
@@ -689,9 +687,6 @@ public class TestCase_118 extends BaseTest {
 		
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
-		Wait.wait2Second();
-		commonMethodPage.refreshPage();
-		Wait.wait2Second();
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();

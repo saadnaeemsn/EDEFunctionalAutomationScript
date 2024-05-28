@@ -606,8 +606,8 @@ public class TestCase_157 extends BaseTest {
 		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
 		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion2, s069DQuestion2, 1, 1);
 		commonMethodPage.chooseAnOption(hraCoverage, 1, 1);
-		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion02, 2, minus60DaysDate2, 1);
-		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion03, 2, minus60DaysDate2, 1);
+		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion02, 2, minus60DaysDate2, 2);
+		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion03, 2, minus60DaysDate2, 2);
 		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion3, s069DQuestion3, 1, 1);
 		commonMethodPage.chooseAnOption(no, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -615,14 +615,14 @@ public class TestCase_157 extends BaseTest {
 		// S070 covearge through job starting from next month
 		ExtentTestManager.getTest().info("---------------------SCREEN S070----------------------------");
 //				commonMethodPage.verifyS070(s070Question);
-		commonMethodPage.verifyQuestionContents(spanTag, s070Question, s070Question, 2, 1);
+		commonMethodPage.verifyQuestionContents(spanTag, s070Question, s070Question, 1, 2);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		/*

@@ -184,7 +184,8 @@ public class TestCase_172 extends BaseTest {
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale1") + " " + "2024" + "?";
-		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
+		String s027QuestionSingle = "Does " + applicantFullName + " "
+				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
 		String s027QuestionDependentCouple = "Will " + applicantFullName + " and " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionDependent") + " " + "2024" + "?";
 		String s027QuestionDependentSingle = "Will " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionDependentSingle") + " " + "2024" + "?";
 		
@@ -509,14 +510,14 @@ public class TestCase_172 extends BaseTest {
 		
 		// Filling Tax
 		ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
-		commonMethodPage.verifyS027(s027QuestionSingle, s027DrawerHeading, s027DrawerContent);
+		commonMethodPage.verifyS027(s027QuestionMale, s027DrawerHeading, s027DrawerContent);
 		commonMethodPage.selectIsFilingTax(yes);
 		commonMethodPage.verifyS027Dependent(s027QuestionDependentSingle, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.selectIsAnyDependent(yes);
 //		commonMethodPage.selectToAddNonAplicantSpouse_S026(someoneApplying);
 		commonMethodPage.chooseAnOption("Someone else who isn", 2, 1);
 		Wait.wait2Second();
-		commonMethodPage.enterDob(childAge, 1);
+		commonMethodPage.enterDOB_S010(childAge, "1");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);
@@ -699,7 +700,7 @@ public class TestCase_172 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Employer - Medical Bill
@@ -708,13 +709,11 @@ public class TestCase_172 extends BaseTest {
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 						
-		/*
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 
 		/*
 		// S084

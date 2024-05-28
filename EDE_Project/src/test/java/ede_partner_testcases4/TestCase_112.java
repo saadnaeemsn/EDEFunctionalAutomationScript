@@ -316,10 +316,8 @@ public class TestCase_112 extends BaseTest {
 		// Open Browser and execute URL
 
 		loginEdeQa(userName, password, url);
-		
 		CommonMethodPage commonMethodPage = new CommonMethodPage();
 		LoginPage loginPage = new LoginPage();
-//		Wait.wait2Second();
 //		commonMethodPage.clickContinueBtn();
 		commonMethodPage.clickAgreeConntinueBtn();
 		commonMethodPage.selectState(state);
@@ -344,7 +342,6 @@ public class TestCase_112 extends BaseTest {
 		// Address
 		ExtentTestManager.getTest().info("---------------------SCREEN S002----------------------------");
 		commonMethodPage.refreshPage();
-		Wait.wait2Second();
 		commonMethodPage.enterStreetAddress(streetAddress);
 		commonMethodPage.verifyS002(s002Question);
 		commonMethodPage.selectStateInContactInfo(state);
@@ -396,7 +393,6 @@ public class TestCase_112 extends BaseTest {
 
 		// S010 Applicant Details
 		ExtentTestManager.getTest().info("---------------------SCREEN S010----------------------------");
-		Wait.wait3Second();
 		// Get application ID
 		String applicationId = commonMethodPage.getS010AppId();
 		commonMethodPage.clickSaveAndContinueButton();
@@ -529,7 +525,7 @@ public class TestCase_112 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S077
@@ -538,14 +534,12 @@ public class TestCase_112 extends BaseTest {
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		/*
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
-		
+
 		/*
 		// S084
 		ExtentTestManager.getTest().info("---------------------SCREEN S084----------------------------");

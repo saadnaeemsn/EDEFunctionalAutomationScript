@@ -419,16 +419,16 @@ public class TestCase_42 extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 
 		// Add 2nd person (Domestic Partner)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(domesticPartnerAge, 2);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(domesticPartnerAge, "2");
 		commonMethodPage.enterFirstName(domesticPartnerFirstName);
 		commonMethodPage.enterLastName(domesticPartnerLastName);
 		commonMethodPage.selectGender(female);
 		commonMethodPage.selectRelation(domesticPartnerRelationship, "not applicable", "not applicable", "1");
 		
 		// Add 3rd person (Niece of P1)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(nieceAge, 3);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(nieceAge, "3");
 		commonMethodPage.enterFirstName(nieceFirstName);
 		commonMethodPage.enterLastName(nieceLastName);
 		commonMethodPage.selectGender(female);

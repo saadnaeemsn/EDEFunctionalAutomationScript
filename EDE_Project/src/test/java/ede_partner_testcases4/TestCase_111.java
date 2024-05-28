@@ -526,7 +526,7 @@ public class TestCase_111 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S077
@@ -535,13 +535,12 @@ public class TestCase_111 extends BaseTest {
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		/*
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
+
 		/*
 		// S084
 		ExtentTestManager.getTest().info("---------------------SCREEN S084----------------------------");

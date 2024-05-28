@@ -132,8 +132,8 @@ public class TestCase_159 extends BaseTest {
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionSpouse = "Does " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
+		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale") + " " + ESTTimeZone.getCurrentYear() + "?";
+		String s027Questionspouse = "Does " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionDependentSingle = "Will " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionDependentSingle") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionDependentSpouse = "Will " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionDependentSingleFemale") + " " + ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionDependentPair = "Will " + applicantFullName + " and " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionDependent") + " " + ESTTimeZone.getCurrentYear() + "?";
@@ -206,7 +206,6 @@ public class TestCase_159 extends BaseTest {
 		String s069DQuestion = Utility.getFromTextProperties("s069DQuestion") + " " + minus60DaysDate + " and " + plus60DaysDate + "?";
 		String s069DQuestion2 = "Is "+spouseFullName+" " + Utility.getFromTextProperties("s069DQuestion7");
 		String s069DQuestion3 = "Is "+applicantFullName+" " + Utility.getFromTextProperties("s069DQuestion6");
-		String s069DQuestion4 = "Is "+applicantFullName+" " + Utility.getFromTextProperties("s069DQuestion7");
 		String s069DQuestion02 = Utility.getFromTextProperties("s069DQuestion2");
 		String s069DQuestion03 = Utility.getFromTextProperties("s069DQuestion3");
 		String s069DQuestion04 = Utility.getFromTextProperties("s069DQuestion4");
@@ -345,9 +344,9 @@ public class TestCase_159 extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Second person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(spouseAge, 2);
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -405,9 +404,9 @@ public class TestCase_159 extends BaseTest {
 		commonMethodPage.selectIsFilingTax(yes);
 		commonMethodPage.verifyS027Dependent(s027QuestionDependentPair, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.selectIsAnyDependent(yes);
-		commonMethodPage.verifyQuestionContents(spanTag, s027QuestionDependentPairDependents, s027QuestionDependentPairDependents, 2, 1);
+		commonMethodPage.verifyQuestionContents("span", s027QuestionDependentPairDependents, s027QuestionDependentPairDependents, 1, 2);
 		commonMethodPage.chooseAnOption(someoneElse, 2, 1);
-		commonMethodPage.enterDob(daughterAge, 1);
+		commonMethodPage.enterDOB_S010(daughterAge, "1");
 		commonMethodPage.enterFirstName(daughterFirstName);
 		commonMethodPage.enterLastName(daughterLastName);
 		commonMethodPage.selectGender(female);
@@ -664,41 +663,24 @@ public class TestCase_159 extends BaseTest {
 		Wait.wait2Second();
 		commonMethodPage.verifyS069D(s069DQuestion, s069DDrawerHeading, s069DDrowerContent);
 		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
-		commonMethodPage.chooseAnOption(spouseFullName, 1, 1);
 		Wait.wait2Second();
 		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestionApplicant, s069DQuestionApplicant, 1, 1);
 		commonMethodPage.chooseAnOption(hraCoverage, 1, 1);
-		commonMethodPage.chooseAnOption(qsehra, 1, 1);
-		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion02, 2, minus30DaysDate2, 1);
-		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion03, 2, minus60DaysDate2, 1);
-		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion3, s069DQuestion3, 1, 1);
-		commonMethodPage.chooseAnOption(no, 1, 1);
-//		commonMethodPage.chooseAnOption(yes, 1, 2);
-		Wait.wait2Second();
-		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestionSpouse, s069DQuestionSpouse, 1, 1);
-		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion04, 2, nextMonthFirstDay, 1);
-		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion05, 2, minus30DaysDate2, 1);
-		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion4, s069DQuestion4, 1, 1);
-		commonMethodPage.chooseAnOption(no, 1, 2);
-//		commonMethodPage.chooseAnOption(yes, 1, 4);
-		
-		// for 2nd Appl
-//		commonMethodPage.clickSaveAndContinueButton();
-//		commonMethodPage.chooseAnOption(no, 1, 2);
-		commonMethodPage.chooseAnOption(hraCoverage, 1, 2);
-		commonMethodPage.chooseAnOption(qsehra, 1, 2);
 		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion02, 2, minus30DaysDate2, 2);
 		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion03, 2, minus60DaysDate2, 2);
-		commonMethodPage.chooseAnOption(no, 1, 3);
-		/*
-		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion3, s069DQuestion3, 1, 2);
-		*/
+		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion3, s069DQuestion3, 1, 1);
+		commonMethodPage.chooseAnOption(no, 1, 1);
+		Wait.wait2Second();
+		commonMethodPage.chooseAnOption(spouseFullName, 1, 1);
+		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestionSpouse, s069DQuestionSpouse, 1, 1);
+		commonMethodPage.chooseAnOption(qsehra, 1, 1);
 		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion04, 2, nextMonthFirstDay, 2);
 		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion05, 2, minus30DaysDate2, 2);
-		commonMethodPage.chooseAnOption(no, 1, 4);
-		Wait.wait2Second();
+		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion2, s069DQuestion2, 1, 1);
+		commonMethodPage.chooseAnOption(no, 1, 1);
+		
 		commonMethodPage.clickSaveAndContinueButton();
-//		commonMethodPage.clickSaveAndContinueButton();
+
 		/*
 		// S069E - Applicant - P1/Applicant
 		ExtentTestManager.getTest().info("---------------------SCREEN S069E----------------------------");
@@ -752,13 +734,13 @@ public class TestCase_159 extends BaseTest {
 		// About Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Employer of Daughter
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074QuestionDaughter);
-//		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		/*

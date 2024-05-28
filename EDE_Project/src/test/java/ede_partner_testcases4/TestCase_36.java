@@ -511,7 +511,7 @@ public class TestCase_36 extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Second person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		/*
 //		commonMethodPage.needCoverage(no, "2");
 		commonMethodPage.enterDob(spouseAge, 2);
@@ -522,9 +522,9 @@ public class TestCase_36 extends BaseTest {
 		*/
 		
 		// Add 2nd Person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(firstChildAge, 2);
+		commonMethodPage.enterDOB_S010(firstChildAge, "2");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(female);
@@ -678,7 +678,7 @@ public class TestCase_36 extends BaseTest {
 		commonMethodPage.verifyQuestionContents(spanTag, s028QuestionFirstChild2, s028QuestionFirstChild2, 1, 1);
 		commonMethodPage.selectAnOption(selectTag, attrAriaLabel, s028QuestionFirstChild2, parentRelationship, 1, 1);
 		commonMethodPage.chooseAnOption(yes, 1, 1);
-		commonMethodPage.enterDob(fatherAge, 1);
+		commonMethodPage.enterDOB_S010(fatherAge, "1");
 		commonMethodPage.enterFirstName(fatherFirstName);
 		commonMethodPage.enterLastName(fatherLastName);
 		commonMethodPage.selectGender(male);
@@ -692,7 +692,7 @@ public class TestCase_36 extends BaseTest {
 		commonMethodPage.chooseAnOption(yes, 1, 1);
 		commonMethodPage.verifyQuestionContents(spanTag, s032Question3, s032Question3, 2, 1);
 		commonMethodPage.chooseAnOption(someoneNotApplying, 2, 1);
-		commonMethodPage.enterDob(spouseAge, 1);
+		commonMethodPage.enterDOB_S010(spouseAge, "1");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 //		commonMethodPage.selectGender(female);
@@ -969,13 +969,13 @@ public class TestCase_36 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Spouse's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// help paying for medical bills

@@ -567,9 +567,9 @@ public class TestCase_26 extends BaseTest {
 		// S010 Applicant detail
 		ExtentTestManager.getTest().info("---------------------SCREEN S010----------------------------");
 		// Add 2nd Person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(firstChildAge, 2);
+		commonMethodPage.enterDOB_S010(firstChildAge, "2");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(male);
@@ -701,7 +701,7 @@ public class TestCase_26 extends BaseTest {
 		commonMethodPage.chooseAnOption(yes, 1, 3);
 		*/
 		Wait.wait2Second();
-		commonMethodPage.enterDob(spouseAge, 1);
+		commonMethodPage.enterDOB_S010(spouseAge, "1");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -720,7 +720,7 @@ public class TestCase_26 extends BaseTest {
 		commonMethodPage.verifyQuestionContents(spanTag, s033Question2, s033Question2, 1, 1);
 		commonMethodPage.chooseAnOption(someoneNotApplying, 2, 1);
 		Wait.wait2Second();
-		commonMethodPage.enterDob(secondChildAge, 1);
+		commonMethodPage.enterDOB_S010(secondChildAge, "1");
 		commonMethodPage.enterFirstName(secondChildFirstName);
 		commonMethodPage.enterLastName(secondChildLastName);
 		commonMethodPage.selectGender(female);
@@ -933,7 +933,7 @@ public class TestCase_26 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		if(state.trim().equalsIgnoreCase("ok")) {

@@ -188,7 +188,7 @@ public class TestCase_178 extends BaseTest {
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + "2024" + "?";
+		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale") + " " + "2024" + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
 		String s027QuestionDependentCouple = "Will " + applicantFullName + " and " + spouseFullName + " " 
@@ -293,7 +293,6 @@ public class TestCase_178 extends BaseTest {
 		String s069DDrowerContent = Utility.getFromTextProperties("s069DDrowerContent");
 		String s070Question = Utility.getFromTextProperties("s070Question");
 		String s074Question = Utility.getFromTextProperties("s074Question") + " " + employerName + " ("+ applicantFullName + "'s job).";
-		String s074Question2 = Utility.getFromTextProperties("s074Question") + " " + employerName + " ("+ spouseFullName + "'s job).";
 		String s074QuestionDomesticPartner = Utility.getFromTextProperties("s074Question") + " " + domesticPartnerEmployerName + " (" + domesticPartnerFullName + "'s job).";
 		String s077Question = Utility.getFromTextProperties("s077Question");
 		String s079Question = Utility.getFromTextProperties("s079Question");
@@ -453,8 +452,8 @@ public class TestCase_178 extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 		
 		// Add Second person (Spouse)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(spouseAge, 2);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -694,13 +693,7 @@ public class TestCase_178 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
-		commonMethodPage.clickSaveAndContinueButton();
-		
-		// About 2nd Employer - Phone #
-		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
-		commonMethodPage.verifyS074(s074Question2);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		/*
@@ -870,9 +863,9 @@ public class TestCase_178 extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Third person
-		commonMethodPage.clickAddPerson2();
+		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(childAge, 3);
+		commonMethodPage.enterDOB_S010(childAge, "3");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);

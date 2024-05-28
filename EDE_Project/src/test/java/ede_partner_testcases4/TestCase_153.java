@@ -616,14 +616,14 @@ public class TestCase_153 extends BaseTest {
 		// S070 covearge through job starting from next month
 		ExtentTestManager.getTest().info("---------------------SCREEN S070----------------------------");
 //				commonMethodPage.verifyS070(s070Question);
-		commonMethodPage.verifyQuestionContents(spanTag, s070Question, s070Question, 2, 1);
+		commonMethodPage.verifyQuestionContents(spanTag, s070Question, s070Question, 1, 2);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question2);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		/*

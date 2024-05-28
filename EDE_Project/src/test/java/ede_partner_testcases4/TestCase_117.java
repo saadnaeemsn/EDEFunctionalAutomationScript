@@ -179,7 +179,7 @@ public class TestCase_117 extends BaseTest {
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + "2024" + "?";
+		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionSingle3") + " " + "2024" + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
 		String s027QuestionDependentCouple = "Will " + applicantFullName + " and " + spouseFullName + " " 
@@ -424,24 +424,24 @@ public class TestCase_117 extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 		
 		// Add Second person (Spouse)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(spouseAge, 2);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
 		commonMethodPage.selectRelation(spouseRelationship, "No applicable", "not applicable", "1");
 
 		// Add Third person (First Child)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(firstChildAge, 3);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(firstChildAge, "3");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.selectGender(male);
 		commonMethodPage.selectRelation(childRelationship, childRelationship, "not applicable", "2");
 		
 		// Add Fourth person (Second Child)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(secondChildAge, 4);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(secondChildAge, "4");
 		commonMethodPage.enterFirstName(secondChildFirstName);
 		commonMethodPage.enterLastName(secondChildLastName);
 		commonMethodPage.selectGender(male);
@@ -577,11 +577,9 @@ public class TestCase_117 extends BaseTest {
 		commonMethodPage.chooseAnOption(yes, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 
-		/*
 		// Tax Filer - 3rd Appl
 		ExtentTestManager.getTest().info("---------------------SCREEN S028----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 		
 		// Race - 3rd Appl
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
@@ -770,13 +768,13 @@ public class TestCase_117 extends BaseTest {
 		// About Applicant's Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Spouse's Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074QuestionSpouse);
-//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
@@ -784,13 +782,11 @@ public class TestCase_117 extends BaseTest {
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 
-		/*
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 
 		/*
 		// S084

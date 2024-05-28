@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ede_partner_testcases4.TestCase_25">
+      <class name="ede_partner_testcases4.TestCase_151">
         <methods>
           <include name="openBrowser"/>
           <include name="finish"/>
+          <include name="TestCase_151"/>
           <include name="closeBrowser"/>
-          <include name="TestCase_25"/>
         </methods>
-      </class> <!-- ede_partner_testcases4.TestCase_25 -->
+      </class> <!-- ede_partner_testcases4.TestCase_151 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

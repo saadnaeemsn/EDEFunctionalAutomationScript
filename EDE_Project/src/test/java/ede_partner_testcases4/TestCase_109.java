@@ -403,8 +403,8 @@ public class TestCase_109 extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 
 		// Add Second person (Spouse)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(spouseAge, 2);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);

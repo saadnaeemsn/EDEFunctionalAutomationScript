@@ -375,10 +375,9 @@ public class TestCase_102 extends BaseTest {
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 
 		// Get application ID
-		
 		String applicationId = commonMethodPage.getS010AppId();
 		commonMethodPage.clickSaveAndContinueButton();
-		Wait.wait2Second();
+
 		// SSN
 		ExtentTestManager.getTest().info("---------------------SCREEN S012----------------------------");
 		Wait.wait2Second();

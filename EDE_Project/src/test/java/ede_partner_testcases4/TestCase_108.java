@@ -163,7 +163,7 @@ public class TestCase_108 extends BaseTest {
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + "2024" + "?";
+		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale") + " " + "2024" + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
 		String s027QuestionDependentCouple = "Will " + applicantFullName + " and " + spouseFullName + " " 
@@ -403,8 +403,8 @@ public class TestCase_108 extends BaseTest {
 		String applicationId = commonMethodPage.getS010AppId();
 
 		// Add Second person (Spouse)
-		commonMethodPage.clickAddPerson2();
-		commonMethodPage.enterDob(spouseAge, 2);
+		commonMethodPage.clickAddPerson();
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -476,7 +476,7 @@ public class TestCase_108 extends BaseTest {
 		commonMethodPage.selectIsAnyDependent(yes);
 		commonMethodPage.chooseAnOption(someoneElse, 2, 1);
 		// Add Third person (Child)
-		commonMethodPage.enterDob(childAge, 1);
+		commonMethodPage.enterDOB_S010(childAge, "1");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);
@@ -691,7 +691,7 @@ public class TestCase_108 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		/*
 		// S077

@@ -181,7 +181,7 @@ public class TestCase_158 extends BaseTest {
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + "2024" + "?";
+		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale") + " " + "2024" + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
 		String s027QuestionDependentCouple = "Will " + applicantFullName + " and " + spouseFullName + " " + Utility.getFromTextProperties("s027QuestionDependent") + " " + "2024" + "?";
@@ -205,7 +205,7 @@ public class TestCase_158 extends BaseTest {
 		String s046QuestionMedicad4 = Utility.getFromTextProperties("s046QuestionMedicad4") + " " + minus90DaysDate + "?";
 		String s046QuestionMedicad5 = Utility.getFromTextProperties("s046QuestionMedicad5");
 		String s046QuestionMedicad6 = Utility.getFromTextProperties("s046QuestionMedicad6") + " " + minus90DaysDate;
-		String s046QuestionMedicad7 = Utility.getFromTextProperties("s046QuestionMedicadWI") + " " + minus90DaysDate + "?";
+		String s046QuestionMedicad7 = Utility.getFromTextProperties("s046QuestionMedicad7") + " " + minus90DaysDate + "?";
 		String s046QuestionMedicadOH = Utility.getFromTextProperties("s046QuestionMedicad8") + " " + minus90DaysDate + "?";
 		String s046QuestionMedicadIL = Utility.getFromTextProperties("s046QuestionMedicadIL") + " " + minus90DaysDate;
 		String s046QuestionMedicadAZ = Utility.getFromTextProperties("s046QuestionMedicadAZ") + " " + minus90DaysDate;
@@ -213,7 +213,7 @@ public class TestCase_158 extends BaseTest {
 		String s046QuestionCHIP = Utility.getFromTextProperties("s046QuestionCHIP");
 		String s046DrawerHeading = Utility.getFromTextProperties("s046DrawerHeading");
 		String s046DrawerContent = Utility.getFromTextProperties("s046DrawerContent");
-		String s049QuestionMedicad1 = "Did " + applicantFullName + " " + Utility.getFromTextProperties("s049QuestionMedicadWI");
+		String s049QuestionMedicad1 = "Did " + applicantFullName + " " + Utility.getFromTextProperties("s049QuestionMedicad6");
 		String s049QuestionMedicad2 = "Did " + childFullName + " " + Utility.getFromTextProperties("s049QuestionMedicadOR");
 		String s050AQuestion = Utility.getFromTextProperties("s050AQuestion");
 		String s053Question = Utility.getFromTextProperties("s053Question");
@@ -584,7 +584,7 @@ public class TestCase_158 extends BaseTest {
 		// Medicaid and CHIP
 		ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
 //		commonMethodPage.verifyPTC107S046(s046QuestionMedicad7);
-		commonMethodPage.verifyQuestionContents(spanTag, s046QuestionMedicad7, s046QuestionMedicad7, 1, 1);
+		commonMethodPage.verifyQuestionContents(spanTag, s046QuestionMedicad7, s046QuestionMedicad7, 1, 2);
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -724,8 +724,8 @@ public class TestCase_158 extends BaseTest {
 		commonMethodPage.chooseAnOption(applicantFullName, 1, 1);
 		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion2, s069DQuestion2, 1, 1);
 		commonMethodPage.chooseAnOption(hraCoverage, 1, 1);
-		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion02, 2, minus05DaysDate2, 1);
-		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion03, 2, minus95DaysDate2, 1);
+		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion02, 2, minus05DaysDate2, 2);
+		commonMethodPage.enterNSelectOption(inputTag, attrAriaLabel, s069DQuestion03, 2, minus95DaysDate2, 2);
 		commonMethodPage.verifyQuestionContents(spanTag, s069DQuestion3, s069DQuestion3, 1, 1);
 		commonMethodPage.chooseAnOption(no, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -740,7 +740,7 @@ public class TestCase_158 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074QuestionSpouse);
-//		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		/*

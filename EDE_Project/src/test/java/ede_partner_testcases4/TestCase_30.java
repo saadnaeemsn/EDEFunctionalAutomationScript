@@ -573,7 +573,7 @@ public class TestCase_30 extends BaseTest {
 		commonMethodPage.verifyQuestionContents(spanTag, s038Question3, s038Question3, 1, 1);
 		commonMethodPage.chooseAnOption(yes, 1, 2);
 		Wait.wait2Second();
-		commonMethodPage.enterDob(firstChildAge, 1);
+		commonMethodPage.enterDOB_S010(firstChildAge, "1");
 		commonMethodPage.enterFirstName(firstChildFirstName);
 		commonMethodPage.enterLastName(firstChildLastName);
 		commonMethodPage.chooseAnOption(male, 1, 1);
@@ -663,7 +663,7 @@ public class TestCase_30 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// Help paying for medical bills
@@ -671,14 +671,12 @@ public class TestCase_30 extends BaseTest {
 		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		/*
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 //		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
 		commonMethodPage.loseQualifyingHealthCovRecent_PTC043S083(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 		
 		// Review
 		ExtentTestManager.getTest().info("---------------------SCREEN REVIEW----------------------------");

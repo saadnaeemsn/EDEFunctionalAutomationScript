@@ -626,17 +626,15 @@ public class TestCase_32 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-//		commonMethodPage.enterPhoneNumber4(employerPhone);
+		commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 						
-		/*
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 //		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
 		commonMethodPage.loseQualifyingHealthCovRecent_PTC043S083(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
-		*/
 		
 		// Review
 		ExtentTestManager.getTest().info("---------------------SCREEN REVIEW----------------------------");
