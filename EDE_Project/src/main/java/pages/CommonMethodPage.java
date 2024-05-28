@@ -20,50 +20,6 @@ import webelements.OR;
 import static javax.swing.JOptionPane.showMessageDialog;
 
 public class CommonMethodPage extends BasePage {
-	public String enterDOB_S010(String age, String count)throws InterruptedException {
-		WebElement element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[2]"),60);
-		
-		String dob = ESTTimeZone.getDobFromAge(age);
-		//Wait.waitForElement(getWebDriver(), element);
-		//sendKeysToElement(element, dob, " Date of birth");
-		ExtentTestManager.getTest().info("Second Person Age Selected: " + age);
-		
-		if (count.contains("2")) {
-			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[4]"),60);
-			Wait.waitForElement(getWebDriver(), element);
-			sendKeysToElement(element, dob, " Date of birth");
-			ExtentTestManager.getTest().info("Third Person Age Selected: " + age );
-		}
-		
-		if (count.contains("3")) {
-			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[6]"),60);
-			Wait.waitForElement(getWebDriver(), element);
-			sendKeysToElement(element, dob, " Date of birth");
-			ExtentTestManager.getTest().info("Fourth Person Age Selected: " + age );
-		}
-		
-		if (count.contains("4")) {
-			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[8]"),60);
-			Wait.waitForElement(getWebDriver(), element);
-			sendKeysToElement(element, dob, " Date of birth");
-			ExtentTestManager.getTest().info("Fifth Person Age Selected: " + age );
-		}
-		
-		if (count.contains("5")) {
-			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[10]"),60);
-			Wait.waitForElement(getWebDriver(), element);
-			sendKeysToElement(element, dob, " Date of birth");
-			ExtentTestManager.getTest().info("Fifth Person Age Selected: " + age );
-		}
-		
-		if (count.contains("6")) {
-			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[12]"),60);
-			Wait.waitForElement(getWebDriver(), element);
-			sendKeysToElement(element, dob, " Date of birth");
-			ExtentTestManager.getTest().info("Sixth Person Age Selected: " + age );
-		}
-		return dob;
-	}
 	public void clickToCancelSessionOutBtn() throws InterruptedException {
 		WebElement element1 = null;
 		WebElement element2 = null;
@@ -199,6 +155,50 @@ public class CommonMethodPage extends BasePage {
 				"I understand that I�m required to provide true answers and that I may be asked to provide additional information, including proof of my eligibility for a Special Enrollment Period, if I qualify. If I don�t, I may face penalties, including the risk of losing my eligibility for coverage.");
 	}
 
+	public String enterDOB_S010(String age, String count)throws InterruptedException {
+		WebElement element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[2]"),60);
+		
+		String dob = ESTTimeZone.getDobFromAge(age);
+		//Wait.waitForElement(getWebDriver(), element);
+		//sendKeysToElement(element, dob, " Date of birth");
+		ExtentTestManager.getTest().info("Second Person Age Selected: " + age);
+		
+		if (count.contains("2")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[4]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Third Person Age Selected: " + age );
+		}
+		
+		if (count.contains("3")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[6]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Fourth Person Age Selected: " + age );
+		}
+		
+		if (count.contains("4")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[8]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Fifth Person Age Selected: " + age );
+		}
+		
+		if (count.contains("5")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[10]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Fifth Person Age Selected: " + age );
+		}
+		
+		if (count.contains("6")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Date of birth')]/../..//following-sibling::div//input)[12]"),60);
+			Wait.waitForElement(getWebDriver(), element);
+			sendKeysToElement(element, dob, " Date of birth");
+			ExtentTestManager.getTest().info("Sixth Person Age Selected: " + age );
+		}	
+		return dob;
+	}
 	/*
 	public boolean clickSaveAndContinueButton() throws InterruptedException {
 //		Wait.wait3Second();
@@ -234,6 +234,30 @@ public class CommonMethodPage extends BasePage {
 		}
 		return false;
 	}
+	
+	/*
+	public void clickSaveAndContinueButton() throws InterruptedException {
+//      Wait.wait3Second();
+      try {
+              WebElement element = waitForElementToBeClickable(OR.saveAndContinueButton, 30);
+	      WebElement element = waitForElementToBeClickable(OR.saveAndContinueButton, 60);
+	      Wait.waitForElement(getWebDriver(), element);
+	              //Wait.waitUntilPageIsLoaded(getWebDriver());
+	      Wait.waitUntilPageIsLoaded(getWebDriver());
+	              //Wait.waitForElementToBeVisibile(OR.saveAndContinueButton, getWebDriver());
+	      Wait.waitForElementToBeVisibile(OR.saveAndContinueButton, getWebDriver());
+	      Wait.wait2Second();
+	              //Utility.attachWebScreenShotToReport(ExtentTestManager.name + "_" + ESTTimeZone.getCurrentDate("dd_MM_yyyy_HH_mm_ss_ms"));
+	      //Utility.attachWebScreenShotToReport(ExtentTestManager.name + "_" + ESTTimeZone.getCurrentDate("dd_MM_yyyy_HH_mm_ss_ms"));
+	      Wait.wait2Second();
+	      //Wait.waitUntilPageIsLoaded(getWebDriver());
+	              Utility.scrollToElement(element, getWebDriver());
+	      Utility.scrollToElement(element, getWebDriver());
+	              clickElement(element, "save and continue button");
+	      clickElement(element, "save and continue button");
+      }
+	}
+	*/
 	
 	public void clickContinueAgent() throws InterruptedException {
 		WebElement element = waitForElementToBeClickable(OR.clickContinueAgent, 30);
@@ -282,6 +306,15 @@ public class CommonMethodPage extends BasePage {
 		sendKeysToElement(element, dob, " Date of birth");
 		return dob;
 	}
+	
+	public String enterDobS035(String age) {
+        WebElement element = waitForElementToBePresent(OR.enterDOBS035, 60);
+        String dob = ESTTimeZone.getDobFromAge(age);
+        sendKeysToElement(element, dob, " Date of birth");
+        return dob;
+	}
+	
+	
 	
 	public String enterDob(String age, int applNumber) {
 		WebElement element;
@@ -507,6 +540,17 @@ public class CommonMethodPage extends BasePage {
 		Wait.waitForElement(getWebDriver(), element);
 		sendKeysToElement(element, phoneNumber, " Employer phone number");
 		Wait.wait2Second();
+	}
+	
+	public void enterPhoneNumber_S69E2(String phoneNumber) throws InterruptedException {
+        By path = By.xpath("(//input[@class='form-control'])[13]");
+        WebElement element = waitForElementToBePresent(path, 60);
+        Wait.waitForElement(getWebDriver(), element);
+        Wait.waitForElement(getWebDriver(), element);
+        sendKeysToElement(element, phoneNumber, " Employer phone number");
+        sendKeysToElement(element, phoneNumber, " Employer phone number");
+        Wait.wait2Second();
+        Wait.wait2Second();
 	}
 	
 	public void selectPhoneType(String decision) throws InterruptedException {
@@ -837,6 +881,7 @@ public class CommonMethodPage extends BasePage {
 
 	public void haveICHRAandQSEHRA_S069D(String decision) throws InterruptedException {
 		String path = "//span[contains(text(),'" + decision + "')]";
+//		WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
 		WebElement element = waitForElementToBeVisible(By.xpath(path), 30);
 		Wait.waitUntilPageIsLoaded(getWebDriver());
 		clickElement(element, decision + " for ICHRA and QSEHRA");
@@ -869,6 +914,24 @@ public class CommonMethodPage extends BasePage {
 			clickElementMethod2(element, decision + " for lose qualifying health coverage Recent");
 		}
 	}
+	/*
+	// Faizan
+	public void loseQualifyingHealthCovRecent_S083(String decision) throws InterruptedException {
+		String path = "//span//span[contains(text(),'" + decision + "')]//parent::span";
+		WebElement element = waitForElementToBeClickable(By.xpath(path),60);
+//		Wait.waitForElement(getWebDriver(), element);
+//		Wait.waitUntilPageIsLoaded(getWebDriver());
+//		Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+		try {
+			JavascriptExecutor jse = (JavascriptExecutor) getWebDriver();
+			jse.executeScript("arguments[0].click();", element);
+			ExtentTestManager.getTest().info("click " + decision + " for lose qualifying health coverage Recent");
+		} catch (Exception e) {
+			//Wait.wait5Second();
+			clickElementMethod2(element, decision + " for lose qualifying health coverage Recent");
+		}
+	}
+	*/
 	public void loseQualifyingHealthCovRecent_PTC043S083(String decision) throws InterruptedException {
 		String path = "//span[@style='position: static;' and contains(text(),'" + decision + "')]";
 		WebElement element = waitForElementToBeVisible(By.xpath(path),30);
@@ -1016,7 +1079,18 @@ public class CommonMethodPage extends BasePage {
 		WebElement element = waitForElementToBeVisible(OR.agreeOne, 30);
 		clickElement(element, " agree statement");
 	}
-	
+	/*
+	 // Faizan
+	public void agreeOne() throws InterruptedException {
+//		Wait.wait5Second();
+		Wait.wait2Second();
+		WebElement element = waitForElementToBeClickable(OR.agreeOne, 60);
+		Wait.waitForElement(getWebDriver(), element);
+		Wait.waitUntilPageIsLoaded(getWebDriver());
+		Wait.waitForElementToBeVisibile(OR.agreeOne, getWebDriver());
+		clickElement(element, " agree statement");
+	}
+	 */
 	public void agreeOne1() throws InterruptedException {
 		WebElement element = waitForElementToBeVisible(OR.agreeOne1, 30);
 		clickElement(element, " agree statement");
@@ -1118,6 +1192,7 @@ public class CommonMethodPage extends BasePage {
 //		Wait.wait15Second();
 //		Wait.waitUntilPageIsLoaded(getWebDriver());
 //		Wait.wait10Second();
+		Utility.attachWebScreenShotToReport(ExtentTestManager.name + "_" + ESTTimeZone.getCurrentDate("dd_MM_yyyy_HH_mm_ss_ms"));
 		clickElement(element, " download eligibility notice");
 //		Wait.wait2Second();
 //		Wait.wait10Second();
@@ -1134,6 +1209,81 @@ public class CommonMethodPage extends BasePage {
 		Wait.wait3Second();
 	}
 
+	public void selectRelation3G_S28(String relation, String secondRelation, String thirdRelation, String forthRelation,
+			String count) throws InterruptedException {
+		WebElement element = waitForElementToBePresent(
+				By.xpath("(//span[contains(text(),'')]//..//..//..//select[@class='form-control'])[1]"),
+				60);
+		//Wait.waitForElement(getWebDriver(), element);
+		//Wait.wait5Second();
+		Select select = new Select(element);
+		select.selectByVisibleText(relation);
+		ExtentTestManager.getTest().info("Relation selected: " + relation);
+		if (count.contains("2")) {
+			element = waitForElementToBePresent(By.xpath(
+					"(//span[contains(text(),'')]//..//..//..//select[@class='form-control'])[2]"), 60);
+			//Wait.waitForElement(getWebDriver(), element);
+			select = new Select(element);
+			select.selectByVisibleText(secondRelation);
+			ExtentTestManager.getTest().info("Relation selected: " + secondRelation);
+		}
+		if (count.contains("3")) {
+
+			element = waitForElementToBePresent(By.xpath(
+					"(//span[contains(text(),'')]//..//..//..//select[@class='form-control'])[2]"), 60);
+			Wait.waitForElement(getWebDriver(), element);
+			select = new Select(element);
+			select.selectByVisibleText(secondRelation);
+			ExtentTestManager.getTest().info("Relation selected: " + secondRelation);
+
+			element = waitForElementToBePresent(By.xpath(
+					"(//span[contains(text(),'')]//..//..//..//select[@class='form-control'])[3]"), 60);
+			Wait.waitForElement(getWebDriver(), element);
+			select = new Select(element);
+			select.selectByVisibleText(thirdRelation);
+			ExtentTestManager.getTest().info("Relation selected: " + thirdRelation);
+		}
+		if (count.contains("4")) {
+
+			element = waitForElementToBePresent(By.xpath(
+					"(//span[contains(text(),'')]//..//..//..//select[@class='form-control'])[2]"), 60);
+			Wait.waitForElement(getWebDriver(), element);
+			select = new Select(element);
+			select.selectByVisibleText(secondRelation);
+			ExtentTestManager.getTest().info("Relation selected: " + secondRelation);
+
+			element = waitForElementToBePresent(By.xpath(
+					"(//span[contains(text(),'This person is ')]//..//..//..//select[@class='form-control'])[3]"), 60);
+			Wait.waitForElement(getWebDriver(), element);
+			select = new Select(element);
+			select.selectByVisibleText(thirdRelation);
+			ExtentTestManager.getTest().info("Relation selected: " + thirdRelation);
+
+			element = waitForElementToBePresent(By.xpath(
+					"(//span[contains(text(),'This person is ')]//..//..//..//select[@class='form-control'])[4]"), 60);
+			Wait.waitForElement(getWebDriver(), element);
+			select = new Select(element);
+			select.selectByVisibleText(forthRelation);
+			ExtentTestManager.getTest().info("Relation selected: " + forthRelation);
+		}
+	}
+	
+	public void doYouClaimDependent_S027_4thIndex(String decision) throws InterruptedException {
+		WebElement element = waitForElementToBeClickable(By.xpath("(//span//span[contains(text(),'" + decision + "')])[4]"), 60);
+		Wait.waitForElement(getWebDriver(), element);
+		clickElement(element, "on " + decision + " for dependent");
+	}
+	
+	public void selectBabyCountP2(String count) throws InterruptedException {
+		WebElement element = waitForElementToBePresent(OR.selectBabyCount2, 60);
+//		Wait.waitForElement(getWebDriver(), element);
+//		Wait.waitUntilPageIsLoaded(getWebDriver());
+//		Wait.waitForElementToBeVisibile(OR.selectBabyCount, getWebDriver());
+		Select select = new Select(element);
+		select.selectByVisibleText(count);
+		ExtentTestManager.getTest().info("Baby count selected: " + count);
+	}
+	
 	public void clickOpenMailingDrawer_S003() throws InterruptedException {
 		Wait.wait2Second();
 		WebElement element = waitForElementToBeClickable(OR.mailingDrawerLink, 30);
@@ -1995,28 +2145,20 @@ public class CommonMethodPage extends BasePage {
 
 	public void selectRelation_RelationShip(String relation, String secondRelation, String thirdRelation, String count)
 			throws InterruptedException {
-		WebElement element = waitForElementToBePresent(
-				By.xpath("(//span[contains(text(),'Relationship ')]//..//..//..//select[@class='form-control'])[1]"),
-				30);
+		WebElement element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Relationship ')]//..//..//..//select[@class='form-control'])[1]"), 30);
 		Wait.waitForElement(getWebDriver(), element);
 		Select select = new Select(element);
 		select.selectByVisibleText(relation);
 		ExtentTestManager.getTest().info("Relation selected: " + relation);
 		if (count.contains("2")) {
-			element = waitForElementToBePresent(
-					By.xpath(
-							"(//span[contains(text(),'Relationship ')]//..//..//..//select[@class='form-control'])[2]"),
-					30);
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Relationship ')]//..//..//..//select[@class='form-control'])[2]"), 30);
 			Wait.waitForElement(getWebDriver(), element);
 			select = new Select(element);
 			select.selectByVisibleText(secondRelation);
 			ExtentTestManager.getTest().info("Relation selected: " + secondRelation);
 		}
 		if (count.contains("3")) {
-			element = waitForElementToBePresent(
-					By.xpath(
-							"(//span[contains(text(),'Relationship ')]//..//..//..//select[@class='form-control'])[3]"),
-					30);
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'Relationship ')]//..//..//..//select[@class='form-control'])[3]"), 30);
 			Wait.waitForElement(getWebDriver(), element);
 			select = new Select(element);
 			select.selectByVisibleText(thirdRelation);
@@ -2466,6 +2608,16 @@ public class CommonMethodPage extends BasePage {
 			select.selectByVisibleText(thirdRelation);
 			ExtentTestManager.getTest().info("Relation selected: " + thirdRelation);
 		}
+		/*
+		// Faizan
+		if (count.contains("3")) {
+			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'This person is ')]//..//..//..//select[@class='form-control'])[3]"), 60);
+			//Wait.waitForElement(getWebDriver(), element);
+			select = new Select(element);
+			select.selectByVisibleText(thirdRelation);
+			ExtentTestManager.getTest().info("Relation selected: " + thirdRelation);
+		}
+		*/
 		if (count.contains("4")) {
 			/*
 			element = waitForElementToBePresent(By.xpath("(//span[contains(text(),'This person is ')]//..//..//..//select[@class='form-control'])[2]"), 30);
@@ -3409,6 +3561,15 @@ public class CommonMethodPage extends BasePage {
 		WebElement element = waitForElementToBeVisible(By.xpath("//span[@style='position: static;' and contains(text(),'" + decision + "')]"), 30);
 		Utility.attachWebScreenShotToReport(ExtentTestManager.name + "_" + ESTTimeZone.getCurrentDate("dd_MM_yyyy_HH_mm_ss_ms"));
 		clickElementMethod2(element, decision + " for recent changes");
+		
+		/*
+		// Faizan
+		WebElement element = waitForElementToBeClickable(By.xpath("//span//span[contains(text(),'" + decision + "')]"), 60);
+		Wait.waitForElement(getWebDriver(), element);
+		Utility.attachWebScreenShotToReport(ExtentTestManager.name + "_" + ESTTimeZone.getCurrentDate("dd_MM_yyyy_HH_mm_ss_ms"));
+		Wait.wait2Second();
+		clickElementMethod2(element, decision + " for recent changes");
+		*/
 	}
 	
 	public void applicantMainPersontakingCare_S038(String decision) throws InterruptedException {
@@ -3442,6 +3603,15 @@ public class CommonMethodPage extends BasePage {
 		WebElement element = waitForElementToBeClickable(By.xpath("//span[text()='" + decision + "']"), 30);
 		Wait.waitForElement(getWebDriver(), element);
 		clickElement(element, decision + " for recent changes");
+		
+		/*
+		 // Faizan
+		Wait.wait5Second();
+		WebElement element = waitForElementToBeClickable(
+				By.xpath("(//span//span[contains(text(),'" + decision + "')])[2]"), 60);
+		Wait.waitForElement(getWebDriver(), element);
+		clickElement(element, decision + " for recent changes");
+		*/
 	}
 
 	public void applicantMainPersonTakeCareOfChildren_S038Question3(String decision) throws InterruptedException {
@@ -4238,7 +4408,7 @@ public class CommonMethodPage extends BasePage {
 
 	public void CoverageThroughJobStartingNextMonth_S070(String decision) throws InterruptedException {
 //		Wait.wait2Second();
-//		WebElement element = waitForElementToBeClickable(By.xpath("//span//span[contains(text(),'" + decision + "')]"), 30);
+//		WebElement element = waitForElementToBeClickable(By.xpath("//span//span[contains(text(),'" + decision + "')]"), 30); // Faizan
 //		WebElement element = waitForElementToBeVisible(By.xpath("//span[contains(text(),'" + decision + "')]"), 30);
 		WebElement element = waitForElementToBeVisible(By.xpath("//span[@style='position: static;' and text()='"+decision+"']"), 30);
 //		Wait.waitForElement(getWebDriver(), element);
@@ -4651,6 +4821,101 @@ public class CommonMethodPage extends BasePage {
 		clickElement(element, decision + " live with another parent");
 	}
 
+	public void liveWithAnotherParent2_S030(String decision) throws InterruptedException {
+		//Wait.wait5Second();
+		WebElement element = waitForElementToBeClickable(
+				By.xpath("(//span[contains(text(),'"+ decision + "')])[2]"),60);
+		//Wait.waitForElement(getWebDriver(), element);
+		//Wait.waitUntilPageIsLoaded(getWebDriver());
+		clickElement(element, decision + " live with another parent");
+	}
+	
+	public void incarceratedPendingDisposition_S094_P3(String decision) throws InterruptedException {
+		WebElement element = null;
+		if (decision.equals("Yes")) {
+			element = waitForElementToBeClickable(By.xpath("(//span[contains(text(),'" + decision + "')])[3]"), 60);
+		} else if (decision.equals("No")) {
+			element = waitForElementToBeClickable(By.xpath("(//span[contains(text(),'" + decision + "')])[4]"), 60);
+		}
+		Wait.waitForElement(getWebDriver(), element);
+		Wait.waitUntilPageIsLoaded(getWebDriver());
+		clickElement(element, decision + " incarcerated pending disposition");
+	}
+	
+	public void incarceratedPendingDisposition_S094_P4(String decision) throws InterruptedException {
+		WebElement element = null;
+		if (decision.equals("Yes")) {
+			element = waitForElementToBeClickable(By.xpath("(//span[contains(text(),'" + decision + "')])[4]"), 60);
+		} else if (decision.equals("No")) {
+			element = waitForElementToBeClickable(By.xpath("(//span[contains(text(),'" + decision + "')])[5]"), 60);
+		}
+		Wait.waitForElement(getWebDriver(), element);
+		Wait.waitUntilPageIsLoaded(getWebDriver());
+		clickElement(element, decision + " incarcerated pending disposition");
+	}
+	
+	public void canYouProvideMoreInfo2_S034(String decision) throws InterruptedException {
+		Wait.wait5Second();
+		String path = "(//span//span[contains(text(),'" + decision + "')])[3]";
+		WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
+		Wait.waitForElement(getWebDriver(), element);
+		Wait.waitUntilPageIsLoaded(getWebDriver());
+		Wait.waitForElements(getWebDriver(), path);
+		Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+		clickElement(element, decision + " can you provide more information");
+	}
+	
+	public void selectGender_S027(String decision) throws InterruptedException {
+		WebElement element = waitForElementToBeClickable(By.xpath("(//span[contains(text(),'" + decision + "')])[2]"), 60);
+		//*[@id="sq_418"]/div[2]/fieldset/div[1]/label/span[3]/span
+		Wait.waitForElement(getWebDriver(), element);
+		element.click();
+		
+		clickElement(element, "on " + decision + " for gender");
+	}
+	
+	public void whoWorksForEmployerHRA_S069C(String decision) throws InterruptedException {
+        String path = "//span//span[contains(text(),'" + decision + "')]";
+        WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
+        Wait.waitForElement(getWebDriver(), element);
+        Wait.waitUntilPageIsLoaded(getWebDriver());
+        Wait.waitForElements(getWebDriver(), path);
+        Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+        clickElement(element, decision + " who Works");
+	}
+	
+	public void selectIchraAmountPeriodJobB(String period) throws InterruptedException {
+        WebElement element = waitForElementToBePresent(OR.selectIchraAmountPeriodJobB, 60);
+        Wait.waitForElement(getWebDriver(), element);
+        Wait.waitUntilPageIsLoaded(getWebDriver());
+        Wait.waitForElementToBeVisibile(OR.selectIchraAmountPeriodJobB, getWebDriver());
+        Select select = new Select(element);
+        select.selectByVisibleText(period);
+        ExtentTestManager.getTest().info("Period of ICHRA amount selected: " + period);
+	}
+	
+	public void liveWithOtherParent_S031(String decision) throws InterruptedException {
+        String path = "(//span//span[contains(text(),'" + decision + "')])[2]";
+//        String path = "//span//span[contains(text(),'" + decision + "')]"; // Faizan
+        WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
+        //Wait.waitForElement(getWebDriver(), element);
+        //Wait.waitUntilPageIsLoaded(getWebDriver());
+        Wait.waitForElements(getWebDriver(), path);
+        Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+        clickElement(element, decision + "live with who is claming");
+	}
+		
+	public void canYouProvideMoreInfo_S028(String decision) throws InterruptedException {
+		Wait.wait5Second();
+		String path = "(//span//span[contains(text(),'" + decision + "')])[1]";
+		WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
+		Wait.waitForElement(getWebDriver(), element);
+		Wait.waitUntilPageIsLoaded(getWebDriver());
+		Wait.waitForElements(getWebDriver(), path);
+		Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+		clickElement(element, decision + " can you provide more information");
+	}
+	
 	public String getS045Question1() throws InterruptedException {
 		WebElement element = waitForElementToBePresent(OR.s045Question, 30);
 		Wait.waitForElement(getWebDriver(), element);
@@ -4911,6 +5176,7 @@ public class CommonMethodPage extends BasePage {
 	public void changeimmigrationStatusDueToNonEligibleForMedicaidCHIP_S050(String decision) throws InterruptedException {
 //		WebElement element = waitForElementToBeClickable(By.xpath("(//span[contains(text(),'" + decision + "')])[3]"), 30);
 		WebElement element = waitForElementToBeClickable(By.xpath("//span[contains(text(),'Program (CHIP)?')]//following::span[7]"), 30);
+		// WebElement element = waitForElementToBeClickable(By.xpath("(//span[contains(text(),'" + decision + "')])[3]"), 60); // Faizan
 		Wait.waitForElement(getWebDriver(), element);
 		Wait.waitUntilPageIsLoaded(getWebDriver());
 		clickElement(element, decision + " change in immigration status due to not eligible for Medicaid and CHIP");
@@ -6346,6 +6612,15 @@ public class CommonMethodPage extends BasePage {
 		clickElement(element, path);
 	}
 	
+	public void doesAnyPlanMeetTheMinimumValueStandard_S073B() throws InterruptedException {
+        String path = "(//span[contains(text(),'None of the plans meet the minimum value standard')])";
+        WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
+        Wait.waitForElement(getWebDriver(), element);
+        Wait.waitUntilPageIsLoaded(getWebDriver());
+        Wait.waitForElements(getWebDriver(), path);
+        Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+        clickElement(element, path);
+	}
 	
 	public void enterSelfPremiumAmount_S073(String amount) {
 		WebElement element = waitForElementToBePresent(OR.enterSelfPremiumAmount, 30);
@@ -6411,8 +6686,6 @@ public class CommonMethodPage extends BasePage {
 		select.selectByVisibleText(period);
 		ExtentTestManager.getTest().info("Family Period selected: " + period);
 	}
-	
-	
 
 	public String getS079Question() throws InterruptedException {
 		WebElement element = waitForElementToBePresent(OR.s079Question, 30);
@@ -6749,8 +7022,38 @@ public class CommonMethodPage extends BasePage {
 		element = waitForElementToBeVisible(By.xpath("//span[contains(text(), 'Qualified Small Employer HRA (QSEHRA) offer.')]//following::input[2]"), 10);
 		sendKeysToElement(element, offerDate, " QSEHRA Offer Date");
 	}
+	public void enterEmployerNameS0692(String employerName) {
+        WebElement element = waitForElementToBePresent(OR.enterEmployerNameS0692, 60);
+        sendKeysToElement(element, employerName, " employer name");
+	}
+	public void enterOtherIncomeSourceS069(String employerName) {
+	        WebElement element = waitForElementToBePresent(OR.enterOtherIncomeSourceS069, 60);
+	        sendKeysToElement(element, employerName, " employer name");
+	}
 	
-///////////////////////////////////////////////////////////////////////////////////////////////
+	public void healthServiceFromIHS_S076_P3(String decision) throws InterruptedException {
+        String path = "(//span//span[text()='" + decision + "'])[3]";
+        WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
+        Wait.waitForElement(getWebDriver(), element);
+        Wait.waitUntilPageIsLoaded(getWebDriver());
+        Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+        clickElement(element, decision + " for eligible to health service");
+	}
+
+	public void healthServiceFromIHS_S076_P4(String decision) throws InterruptedException {
+        String path = "(//span//span[text()='" + decision + "'])[4]";
+        WebElement element = waitForElementToBeClickable(By.xpath(path), 60);
+        Wait.waitForElement(getWebDriver(), element);
+        Wait.waitForElement(getWebDriver(), element);
+        Wait.waitUntilPageIsLoaded(getWebDriver());
+        Wait.waitUntilPageIsLoaded(getWebDriver());
+        Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+        Wait.waitForElementToBeVisibile(By.xpath(path), getWebDriver());
+        clickElement(element, decision + " for eligible to health service");
+        clickElement(element, decision + " for eligible to health service");
+	}
+	
+// **************** Amjad *********************************************************************
 	public void clickAnElement(String matchingContents, int option, int index) {
 		// option 1 for Equal
 		// option 2, for Contains
