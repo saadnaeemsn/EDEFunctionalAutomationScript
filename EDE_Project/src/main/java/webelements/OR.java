@@ -383,26 +383,12 @@ public interface OR {
 	//By hoursForP2 = By.xpath("(//input[contains(@aria-label,'I-94')])[2]");
 	By hoursForP2 = By.xpath("((//div[contains(@class,'sv_q sv_qstn')])//input)[2]");
 	By s80Question = By.xpath("//div[contains(text(),'parents work?')]");
-	
-	
 
 	// After Eligibility
 	By continueButton = By.xpath("//button[contains(text(),'CONTINUE')]");
 	By clickViewPlans = By.xpath("//button[contains(text(),'VIEW PLANS')]");
 	By agreeCheckBox = By.xpath("//label[contains(text(),'I agree')]");
 	By goBackToHomeButton = By.xpath("//input[@value='Go BACK TO HOME']");
-
-	// continue button
-	// save and continue
-	// slect all from lower premium
-	// save and continue
-	// click view plan
-	// select plan(Envision - Silver 400 CSR)
-	// click enroll button
-	// save and continue
-	// select i agree
-	// save and continue
-	// wait on go back to home button for screenshot
 
 	// Shahzad / Faizan
 	By selectGender_S027 = By.xpath("(//select[@class='form-control'])[2]");
