@@ -4409,8 +4409,8 @@ public class CommonMethodPage extends BasePage {
 	public void CoverageThroughJobStartingNextMonth_S070(String decision) throws InterruptedException {
 //		Wait.wait2Second();
 //		WebElement element = waitForElementToBeClickable(By.xpath("//span//span[contains(text(),'" + decision + "')]"), 30); // Faizan
-//		WebElement element = waitForElementToBeVisible(By.xpath("//span[contains(text(),'" + decision + "')]"), 30);
-		WebElement element = waitForElementToBeVisible(By.xpath("//span[@style='position: static;' and text()='"+decision+"']"), 30);
+		WebElement element = waitForElementToBeVisible(By.xpath("//span[contains(text(),'" + decision + "')]"), 30);
+//		WebElement element = waitForElementToBeVisible(By.xpath("//span[@style='position: static;' and text()='"+decision+"']"), 30);
 //		Wait.waitForElement(getWebDriver(), element);
 //		Wait.waitUntilPageIsLoaded(getWebDriver());
 		clickElement(element, decision + " for S070");
