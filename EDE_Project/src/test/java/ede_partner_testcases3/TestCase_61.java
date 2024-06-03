@@ -27,6 +27,7 @@ public class TestCase_61 extends BaseTest {
 		String male = Utility.getValue("male");
 		String female = Utility.getValue("female");
 		String noneOfThese = Utility.getValue("noneOfThese");
+		String noneOfThesePeople = Utility.getValue("noneOfThesePeople");
 		String married = Utility.getValue("married");
 		String noticeMedium = Utility.getValue("noticeMedium");
 		String noticeMediumEmail = Utility.getValue("selectNoticeMediumEmail");
@@ -43,6 +44,7 @@ public class TestCase_61 extends BaseTest {
 		String grandChildRelation = Utility.getValue("grandChildRelation");
 		String retirement = Utility.getValue("retirement");
 		String selfEmployement = Utility.getValue("selfEmployement");
+		String applcationYear = Utility.getValue("applcationYear");
 
 		// Get data from testcase_61.properties
 		String state = Utility.getDate_TestCase_61("state");
@@ -194,13 +196,13 @@ public class TestCase_61 extends BaseTest {
 				+ Utility.getFromTextProperties("s057Question3");
 		String s057Question4 = Utility.getFromTextProperties("s057Question4");
 		String s058QuestionApplicant = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ "2023" + "?";
+				+ applcationYear + "?";
 		String s058QuestionSpouse = "Does " + spouseFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ "2023" + "?";
+				+ applcationYear + "?";
 		String s058QuestionChild = "Does " + childFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ "2023" + "?";
+				+ applcationYear + "?";
 		String s058QuestionDomesticPartner = "Does " + domesticPartnerFullName + " "
-				+ Utility.getFromTextProperties("s058Question") + " " + "2023" + "?";
+				+ Utility.getFromTextProperties("s058Question") + " " + applcationYear + "?";
 		String s068Question = Utility.getFromTextProperties("s068Question");
 		String s082Question = Utility.getFromTextProperties("s082Question");
 		String s069AQuestion = Utility.getFromTextProperties("s069AQuestion");
@@ -373,7 +375,7 @@ public class TestCase_61 extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(spouseAge);
+		commonMethodPage.enterDOB_S010(spouseAge,"2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -383,7 +385,7 @@ public class TestCase_61 extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "3");
-		commonMethodPage.enterDob(childAge);
+		commonMethodPage.enterDOB_S010(childAge,"3");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);
@@ -456,6 +458,10 @@ public class TestCase_61 extends BaseTest {
 		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(childFullName);
 		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
+		
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
@@ -486,7 +492,12 @@ public class TestCase_61 extends BaseTest {
 		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// child SSN
@@ -503,20 +514,26 @@ public class TestCase_61 extends BaseTest {
 		commonMethodPage.verifyS014(s014QuestionChild, s014DrawerHeading, s014drawerContent);
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
+	
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
+		Wait.wait5Second();
 
 		// NON-Magi Questions
 		ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
-		Wait.wait5Second();
-		commonMethodPage.physicalDisability_S045(noneOfThese);
-		commonMethodPage.helpWithDailyActivities_S045(noneOfThese);
+//		commonMethodPage.physicalDisability_S045(noneOfThese);
+//		commonMethodPage.helpWithDailyActivities_S045(noneOfThese);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 2);
+        //commonMethodPage.helpWithDailyActivities_S045(noneOfThesePeople);
+		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Medicaid and CHIP ended or end soon
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S049----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.verifyS049(s046QuestionMedicad, s046QuestionCHIP);
 		commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P1(no);
 		commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P2(no);
@@ -608,15 +625,15 @@ public class TestCase_61 extends BaseTest {
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
 		Wait.wait5Second();
-		commonMethodPage.helpPayingBill_S077(noneOfThese);
+		commonMethodPage.helpPayingBill_S077(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Hours per weeks for p1 & p2
 
-		ExtentTestManager.getTest().info("---------------------SCREEN S080----------------------------");
-		commonMethodPage.enterHoursForP1(hours);
-		commonMethodPage.enterHoursForP2(hours);
-		commonMethodPage.clickSaveAndContinueButton();
+//		ExtentTestManager.getTest().info("---------------------SCREEN S080----------------------------");
+//		commonMethodPage.enterHoursForP1(hours);
+//		commonMethodPage.enterHoursForP2(hours);
+//		commonMethodPage.clickSaveAndContinueButton();
 
 		// Review
 		ExtentTestManager.getTest().info("---------------------SCREEN REVIEW----------------------------");

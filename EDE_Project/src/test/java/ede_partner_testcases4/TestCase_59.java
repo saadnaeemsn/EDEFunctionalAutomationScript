@@ -466,7 +466,11 @@ public class TestCase_59  extends BaseTest {
 				//commonMethodPage.verifyS038(s038Question2);
 				commonMethodPage.applicantMainPersontakingCare_S038(no);
 				commonMethodPage.clickSaveAndContinueScrolled();
-
+				
+				ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+				Wait.wait2Second();
+				commonMethodPage.clickSaveAndContinueButton();
+		
 				ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 				commonMethodPage.clickSaveAndContinueButton();
 				
@@ -503,11 +507,16 @@ public class TestCase_59  extends BaseTest {
 				commonMethodPage.applicantMainPersontakingCare_S038(no);
 				commonMethodPage.clickSaveAndContinueScrolled();
 				
+				ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+				Wait.wait2Second();
+				commonMethodPage.clickSaveAndContinueButton();
+				
 				ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 				commonMethodPage.clickSaveAndContinueButton();
 				
 				ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
 				commonMethodPage.clickSaveAndContinueButton();
+				
 				
 				ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 				commonMethodPage.clickSaveAndContinueButton();

@@ -584,7 +584,9 @@ public class TestCase3_G extends BaseTest {
 		commonMethodPage.selectNaturalizedOrDrived(yes, s017DocumentQuestion, "", "");
 		Wait.wait2Second();
 		commonMethodPage.selectDocumentType(noneOfThese, "", "", "");
+		
 		commonMethodPage.clickSaveAndContinueButton();
+		//commonMethodPage.clickContinue();
 		//commonMethodPage.clickContinueBtn();
 
 		// Marital status
@@ -652,6 +654,7 @@ public class TestCase3_G extends BaseTest {
 
 		// Medicaid and CHIP ended or end soon
 		ExtentTestManager.getTest().info("---------------------SCREEN S049----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.verifyS049(s046QuestionMedicad, s046QuestionCHIP);
 		commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P1(no);
 		commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P2(no);

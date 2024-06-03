@@ -234,6 +234,7 @@ public class TestCase_51 extends BaseTest {
 		LoginPage loginPage = new LoginPage();
 		commonMethodPage.clickAgreeConntinueBtn();
 		//commonMethodPage.selectYear(ESTTimeZone.getCurrentYear());
+		Wait.wait2Second();
 		commonMethodPage.selectState(state);
 		commonMethodPage.clickApplyOrRenew();
 		commonMethodPage.clickNext();
@@ -325,6 +326,7 @@ public class TestCase_51 extends BaseTest {
 		commonMethodPage.enterSSN(SSN,s012SameNameQuestion);
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.selectWithSameName(no);
+		Wait.wait2Second();
 		commonMethodPage.enterFirstName(differentFirstName);
 		commonMethodPage.enterMiddleName("");
 		commonMethodPage.enterLastName(differentLastName);
@@ -337,6 +339,9 @@ public class TestCase_51 extends BaseTest {
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
 
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
 
 		Wait.wait5Second();
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");

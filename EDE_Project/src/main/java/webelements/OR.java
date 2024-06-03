@@ -48,6 +48,7 @@ public interface OR {
 	By addressRadiobtn = By.xpath("//div[contains(text(),'Select the correct address:')]//..//form//div//div//div//label");
 	By addressRadiobtn2 = By.xpath("//*[@id='address']/div/div/div[2]/form/div[4]/div/div/label");
 	By addressRadiobtn3 = By.xpath("//div[text()='Keep my address:']//following::label[1]");
+	By noHomeAddress = By.xpath("//input[@aria-label='No home address']");
 					
 	//By enterPhoneNumber = By.xpath("//span[contains(text(),'Phone number')]/../..//following-sibling::div//input");
 	By enterPhoneNumber = By.xpath("(//div[@class='sv_q sv_qstn']//input[contains(@aria-label,'phone number')])[1]");
@@ -84,7 +85,7 @@ public interface OR {
 	By county = By.xpath("(//select[@class='form-control'])[2]");
 	By county2 = By.xpath("(//select[@class='form-control'])[1]");
 	By countyOnSamePage = By.xpath("(//select[@class='form-control'])[4]");
-	By eligibilityNoticeButton = By.xpath("(//button[@class='btn theme-btn-secondary'])");
+	By eligibilityNoticeButton = By.xpath("(//button[@class='btn theme-btn'])");
 	By agreeTwoNew = By.xpath("(//span[contains(text(),'I agree')])[3]");
 	By agreeThree = By.xpath("(//span[contains(text(),'I agree')])[4]");
 	By agreeFour = By.xpath("(//span[contains(text(),'I agree')])[5]");

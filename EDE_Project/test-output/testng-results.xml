@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
@@ -98,3 +99,34 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-06-01T20:49:02 EDT" name="Default suite" finished-at="2024-06-01T20:54:31 EDT" duration-ms="329038">
+    <groups>
+    </groups>
+    <test started-at="2024-06-01T20:49:02 EDT" name="Default test" finished-at="2024-06-01T20:54:31 EDT" duration-ms="329038">
+      <class name="ede_partner_testcases4.TestCase_35">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:49:02 EDT" name="openBrowser" finished-at="2024-06-01T20:49:04 EDT" duration-ms="1712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="TestCase_35()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:49:04 EDT" name="TestCase_35" finished-at="2024-06-01T20:54:28 EDT" duration-ms="323947" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_35 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:54:28 EDT" name="closeBrowser" finished-at="2024-06-01T20:54:31 EDT" duration-ms="3341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="finish()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:54:31 EDT" name="finish" finished-at="2024-06-01T20:54:32 EDT" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+      </class> <!-- ede_partner_testcases4.TestCase_35 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
+>>>>>>> refs/remotes/origin/main

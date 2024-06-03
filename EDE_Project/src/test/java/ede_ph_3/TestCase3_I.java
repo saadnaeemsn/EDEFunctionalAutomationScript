@@ -69,6 +69,7 @@ public class TestCase3_I extends BaseTest {
 		String ichraAmount = Utility.getDate_TestCase3_I("ichraAmount");
 		String ichraPeriod = Utility.getDate_TestCase3_I("ichraPeriod");
 		String phoneNumber = Utility.getDate_TestCase3_I("phoneNumber");
+		String spouseAge = Utility.getDate_TestCase3_I("spouseAge");
 
 		// Get data from text.properties
 		String mailingDrawerHeading = Utility.getFromTextProperties("mailingDrawerHeading");
@@ -298,18 +299,21 @@ public class TestCase3_I extends BaseTest {
 		// removeSomeOneDrawerHeading,
 		// medicaidDrawerContent, notIncludeDrawerContent, removeSomeOneDrawerContent);
 		// Add Second person
+		
 		String applicationId = commonMethodPage.getS010AppId();
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(age);
+	
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
+		commonMethodPage.enterDOB_S010(spouseAge,"2");
 		commonMethodPage.selectRelation(relationShip, "No applicable", "not applicable", "1");
 		commonMethodPage.clickSaveAndContinueScrolled();
 
 		// S010A
 		ExtentTestManager.getTest().info("---------------------SCREEN S010A----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.verifyS010A(s010AQuestion, s010ADrawerHeading, s010ADrawerContent);
 		commonMethodPage.selectToRemovePerson(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -361,11 +365,17 @@ public class TestCase3_I extends BaseTest {
 		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
 		commonMethodPage.clickSaveAndContinueButton();
 		Wait.wait5Second();
+		
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		
+		commonMethodPage.clickSaveAndContinueButton();
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// SSN for male
 		ExtentTestManager.getTest().info("---------------------SCREEN S012----------------------------");
+		Wait.wait2Second();
 		commonMethodPage.verifyS012(s012QuestionSpouse);
 		commonMethodPage.clickWithOutSSN();
 		commonMethodPage.clickSaveAndContinueButton();
@@ -389,6 +399,11 @@ public class TestCase3_I extends BaseTest {
 		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
 		commonMethodPage.clickSaveAndContinueButton();
 		Wait.wait5Second();
+		
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -557,7 +572,7 @@ public class TestCase3_I extends BaseTest {
 		commonMethodPage.enterEndDateJobA(ichraEndDateJobA);
 		commonMethodPage.enterIchraAmountOffered(ichraAmount);
 		commonMethodPage.selectIchraAmountPeriod(ichraPeriod);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		if (flag == 1) {
@@ -580,12 +595,17 @@ public class TestCase3_I extends BaseTest {
 		// pre populated
 		ExtentTestManager.getTest().info("---------------------SCREEN S069E----------------------------");
 		Wait.wait5Second();
+		commonMethodPage.enterStartDateJobA(ichraStartDateJobA);
+		commonMethodPage.enterEndDateJobA(ichraEndDateJobA);
+		commonMethodPage.enterIchraAmountOffered(ichraAmount);
+		commonMethodPage.selectIchraAmountPeriod(ichraPeriod);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickSaveAndContinueScrolled();
 
 		// s069D
 		ExtentTestManager.getTest().info("---------------------SCREEN S069D----------------------------");
 		Wait.wait5Second();
-		Wait.wait2Second();
 		commonMethodPage.haveICHRAandQSEHRA_S069D(applicantFullName);
 		commonMethodPage.haveICHRAandQSEHRA_S069D(spouseFullName);
 		commonMethodPage.verifyS069D(s069DQuestion, s069DDrawerHeading, s069DDrowerContent);
