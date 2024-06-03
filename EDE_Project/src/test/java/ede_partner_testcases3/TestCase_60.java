@@ -25,6 +25,7 @@ public class TestCase_60 extends BaseTest{
 		String male = Utility.getValue("male");
 		String female = Utility.getValue("female");
 		String noneOfThese = Utility.getValue("noneOfThese");
+		String noneOfThesePeople = Utility.getValue("noneOfThesePeople");
 		String married = Utility.getValue("married");
 		String noticeMedium = Utility.getValue("noticeMedium");
 		String agentUserName = Utility.getValue("agentUserName");
@@ -355,6 +356,7 @@ public class TestCase_60 extends BaseTest{
 		// Take care of children
 		ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
 		//commonMethodPage.verifyS038(s038Question2);
+		Wait.wait2Second();
 		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(yes);
 		commonMethodPage.applicantTakeCareOfChildren_S038Question2(yes);
 
@@ -366,7 +368,11 @@ public class TestCase_60 extends BaseTest{
 		commonMethodPage.selectRelation3H_S038(nieceRelation, "not applicable", "not applicable", "not applicable",
 				"not applicable", "not applicable", "not applicable");
 		commonMethodPage.clickSaveAndContinueScrolled();
-
+        
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
 		
@@ -377,18 +383,25 @@ public class TestCase_60 extends BaseTest{
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickContinueWithoutSsnBtn();
 
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
+		Wait.wait15Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// NON-Magi Questions
 		ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
-		Wait.wait5Second();
-		commonMethodPage.physicalDisability_S045(no);
-		commonMethodPage.helpWithDailyActivities_S045(no);
+		Wait.wait2Second();
+        //commonMethodPage.physicalDisability_S045(noneOfThesePeople);
+//		Wait.wait2Second();
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 2);
+        //commonMethodPage.helpWithDailyActivities_S045(noneOfThesePeople);
+		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Medicaid and CHIP ended or end soon
 		ExtentTestManager.getTest().info("---------------------SCREEN S049----------------------------");
+		Wait.wait2Second();
 		//commonMethodPage.verifyS049(s046QuestionMedicad, s046QuestionCHIP);
 		commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P1(no);
 		commonMethodPage.clickSaveAndContinueButton();
@@ -446,20 +459,21 @@ public class TestCase_60 extends BaseTest{
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
-		Wait.wait5Second();
-		commonMethodPage.helpPayingBill_S077(noneOfThese);
+		Wait.wait2Second();
+		
+		commonMethodPage.helpPayingBill_S077(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S083
-		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
-		Wait.wait5Second();
-		//commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
-		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
-		commonMethodPage.clickSaveAndContinueButton();
+//		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
+//		Wait.wait5Second();
+//		//commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
+//		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
+//		commonMethodPage.clickSaveAndContinueButton();
 
 		// Review
 
@@ -484,8 +498,8 @@ public class TestCase_60 extends BaseTest{
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Eligibility
-
 		ExtentTestManager.getTest().info("---------------------ELIGIBILITY----------------------------");
+		Wait.wait15Second();
 		commonMethodPage.downloadEligibilityReport();
 		Wait.wait5Second();
 

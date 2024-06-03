@@ -1,70 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-28T08:26:47 PDT" name="Default suite" finished-at="2024-05-28T08:28:08 PDT" duration-ms="81892">
+  <suite started-at="2024-06-01T20:49:02 EDT" name="Default suite" finished-at="2024-06-01T20:54:31 EDT" duration-ms="329038">
     <groups>
     </groups>
-    <test started-at="2024-05-28T08:26:47 PDT" name="Default test" finished-at="2024-05-28T08:28:08 PDT" duration-ms="81892">
-      <class name="ede_partner_testcases4.TestCase_151">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:ede_partner_testcases4.TestCase_151@63021689]" started-at="2024-05-28T08:26:47 PDT" name="openBrowser" finished-at="2024-05-28T08:26:58 PDT" duration-ms="11743" status="PASS">
+    <test started-at="2024-06-01T20:49:02 EDT" name="Default test" finished-at="2024-06-01T20:54:31 EDT" duration-ms="329038">
+      <class name="ede_partner_testcases4.TestCase_35">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:49:02 EDT" name="openBrowser" finished-at="2024-06-01T20:49:04 EDT" duration-ms="1712" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="TestCase_151()[pri:0, instance:ede_partner_testcases4.TestCase_151@63021689]" started-at="2024-05-28T08:26:58 PDT" name="TestCase_151" finished-at="2024-05-28T08:28:06 PDT" duration-ms="67719" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.contains(java.lang.CharSequence)" because "toEscape" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because "toEscape" is null
-at org.openqa.selenium.support.ui.Quotes.escape(Quotes.java:42)
-at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:113)
-at pages.CommonMethodPage.selectRelation(CommonMethodPage.java:2593)
-at ede_partner_testcases4.TestCase_151.TestCase_151(TestCase_151.java:371)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
-at org.testng.TestRunner.privateRun(TestRunner.java:766)
-at org.testng.TestRunner.run(TestRunner.java:587)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-at org.testng.TestNG.runSuites(TestNG.java:1039)
-at org.testng.TestNG.run(TestNG.java:1007)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="TestCase_35()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:49:04 EDT" name="TestCase_35" finished-at="2024-06-01T20:54:28 EDT" duration-ms="323947" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_151 -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:ede_partner_testcases4.TestCase_151@63021689]" started-at="2024-05-28T08:28:06 PDT" name="closeBrowser" finished-at="2024-05-28T08:28:08 PDT" duration-ms="2303" status="PASS">
+        </test-method> <!-- TestCase_35 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:54:28 EDT" name="closeBrowser" finished-at="2024-06-01T20:54:31 EDT" duration-ms="3341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="finish()[pri:0, instance:ede_partner_testcases4.TestCase_151@63021689]" started-at="2024-05-28T08:28:09 PDT" name="finish" finished-at="2024-05-28T08:28:10 PDT" duration-ms="1303" status="PASS">
+        <test-method is-config="true" signature="finish()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:54:31 EDT" name="finish" finished-at="2024-06-01T20:54:32 EDT" duration-ms="265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finish -->
-      </class> <!-- ede_partner_testcases4.TestCase_151 -->
+      </class> <!-- ede_partner_testcases4.TestCase_35 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

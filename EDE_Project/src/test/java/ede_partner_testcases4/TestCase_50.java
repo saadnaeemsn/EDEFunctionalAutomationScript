@@ -351,8 +351,8 @@ public class TestCase_50  extends BaseTest {
 				// Mail Address
 
 				ExtentTestManager.getTest().info("---------------------SCREEN S003----------------------------");
-				commonMethodPage.verifyScreen_s003(linkMailingDrawer, mailingDrawerHeading, s003Question, drawerContent);
 				commonMethodPage.selectMailingAddress(yes);
+				commonMethodPage.verifyScreen_s003(linkMailingDrawer, mailingDrawerHeading, s003Question, drawerContent);
 				commonMethodPage.clickSaveAndContinueButton();
 				
 				// Phone and email
@@ -476,26 +476,32 @@ public class TestCase_50  extends BaseTest {
 				commonMethodPage.applicantMainPersontakingCare_S038(no);
 				commonMethodPage.clickSaveAndContinueScrolled();
 				
+				ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+				Wait.wait2Second();
+				commonMethodPage.clickSaveAndContinueButton();
+				
 				ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
+				Wait.wait5Second();
 				commonMethodPage.clickSaveAndContinueButton();
 				
 				ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
+				Wait.wait5Second();
 				commonMethodPage.clickSaveAndContinueButton();
 				
-				ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
-				commonMethodPage.clickSaveAndContinueButton();
-				
+//				ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
+//				commonMethodPage.clickSaveAndContinueButton();
+//				
 				// Medicaid and CHIP ended or end soon
 				ExtentTestManager.getTest().info("---------------------SCREEN S049----------------------------");
 				//commonMethodPage.verifyS049(s046QuestionMedicad, s046QuestionCHIP);
 				Wait.wait2Second();
 				commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P1(no);
+				//commonMethodPage.verifyS049(s046QuestionMedicad, s046QuestionCHIP);
 				commonMethodPage.clickSaveAndContinueButton();
 
 				// Medicaid and CHIP
 				ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
 				//commonMethodPage.verifyS046(s046QuestionMedicad, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
-				Wait.wait2Second();
 				commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThese);
 				commonMethodPage.clickSaveAndContinueButton();
 				

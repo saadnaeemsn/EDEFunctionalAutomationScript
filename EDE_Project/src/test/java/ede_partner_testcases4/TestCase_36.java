@@ -969,13 +969,13 @@ public class TestCase_36 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(employerPhone);
+		//commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Spouse's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// help paying for medical bills

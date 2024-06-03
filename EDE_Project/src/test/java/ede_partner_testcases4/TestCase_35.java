@@ -53,6 +53,8 @@ public class TestCase_35 extends BaseTest {
 		String someoneNotApplying = Utility.getValue("someoneNotApplying");
 		String parentRelation = Utility.getValue("parentRelation");
 		String someoneApplying = Utility.getValue("someoneApplying");
+		String applcationYear = Utility.getValue("applcationYear");
+
 
 		// Get data from testcase43.properties
 		String state = Utility.getData_TestCase(tcDataFile, "state");
@@ -659,7 +661,7 @@ public class TestCase_35 extends BaseTest {
 		commonMethodPage.verifyQuestionContents(spanTag, s028QuestionFirstChild2, s028QuestionFirstChild2, 1, 1);
 		commonMethodPage.selectAnOption(selectTag, attrAriaLabel, s028QuestionFirstChild2, parentRelationship, 1, 1);
 		commonMethodPage.chooseAnOption(yes, 1, 1);
-		commonMethodPage.enterDOB_S010(spouseAge, "1");
+		commonMethodPage.enterDob(spouseAge);
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -905,13 +907,13 @@ public class TestCase_35 extends BaseTest {
 		// About Applicant's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(employerPhone);
+		//commonMethodPage.enterPhoneNumber4(employerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// About Spouse's Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(spouseEmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Help paying for medical bills

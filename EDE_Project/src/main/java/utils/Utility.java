@@ -357,6 +357,12 @@ public class Utility {
 		prop.load(reader);
 		return prop.getProperty(value);
 	}
+	public static String getDate_GATestCase1_B(String value) throws IOException {
+		Properties prop = new Properties();
+		FileReader reader=new FileReader("GAtestcase1_B2.properties");  
+		prop.load(reader);
+		return prop.getProperty(value);
+	}
 	public static String getData_TestCase1_C(String value) throws IOException {
 		Properties prop = new Properties();
 		FileReader reader=new FileReader("testcase1_C.properties");  
@@ -395,7 +401,7 @@ public class Utility {
 	}
 	public static String getDate_TestCase_34(String value) throws IOException {
 		Properties prop = new Properties();
-		FileReader reader=new FileReader("testcase_34.properties");  
+		FileReader reader=new FileReader("partner_34.properties");  
 		prop.load(reader);
 		return prop.getProperty(value);
 	}
