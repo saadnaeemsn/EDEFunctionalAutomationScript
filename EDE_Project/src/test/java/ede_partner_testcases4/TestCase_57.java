@@ -380,7 +380,7 @@ public class TestCase_57  extends BaseTest {
 
 				ExtentTestManager.getTest().info("---------------------SCREEN S008----------------------------");
 				commonMethodPage.verifyS008(s008Question);
-				commonMethodPage.selectHelpPayingForCoverage(yes);
+				commonMethodPage.selectHelpPayingForCoverage(no);
 				commonMethodPage.clickSaveAndContinueButton();
 				
 				// Household Composition
@@ -416,50 +416,53 @@ public class TestCase_57  extends BaseTest {
 				commonMethodPage.clickSaveAndContinueButton();
 				
 				// Marital status
-				ExtentTestManager.getTest().info("---------------------SCREEN S026----------------------------");
-				//commonMethodPage.verifyS026(s026Question, s026DrawerHeading, s026DrawerContent);
-				commonMethodPage.selectMaritalStatus(single);
-				commonMethodPage.clickSaveAndContinueButton();
+//				ExtentTestManager.getTest().info("---------------------SCREEN S026----------------------------");
+//				//commonMethodPage.verifyS026(s026Question, s026DrawerHeading, s026DrawerContent);
+//				commonMethodPage.selectMaritalStatus(single);
+//				commonMethodPage.clickSaveAndContinueButton();
 				
 				// Filling Tax
-				ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
-			////	commonMethodPage.verifyS027(s027QuestionMale, s027DrawerHeading, s027DrawerContent);
-				commonMethodPage.selectIsFilingTax(yes);
-				//commonMethodPage.verifyS027Dependent(s027QuestionDependent, s027DependentDrawerHeading,
-					//	s027DependentDrawerContent);
-				commonMethodPage.selectIsAnyDependent(no);
-				commonMethodPage.selectIsAnyDependentMarriedButFillingSeprate_027(no);
-				commonMethodPage.clickSaveAndContinueButton();
+//				ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
+//			////	commonMethodPage.verifyS027(s027QuestionMale, s027DrawerHeading, s027DrawerContent);
+//				commonMethodPage.selectIsFilingTax(yes);
+//				//commonMethodPage.verifyS027Dependent(s027QuestionDependent, s027DependentDrawerHeading,
+//					//	s027DependentDrawerContent);
+//				commonMethodPage.selectIsAnyDependent(no);
+//				commonMethodPage.selectIsAnyDependentMarriedButFillingSeprate_027(no);
+//				commonMethodPage.clickSaveAndContinueButton();
 				
 				
 				// Take care of children
-				ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
-				//commonMethodPage.verifyS038(s038Question2);
-				commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
+//				ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
+//				//commonMethodPage.verifyS038(s038Question2);
+//				commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
 				
-				commonMethodPage.clickSaveAndContinueScrolled();
+//				commonMethodPage.clickSaveAndContinueScrolled();
+				
+				ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+				commonMethodPage.clickSaveAndContinueButton();
 
 				ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 				commonMethodPage.clickSaveAndContinueButton();
 				
-				ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
-				commonMethodPage.clickSaveAndContinueButton();
+//				ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
+//				commonMethodPage.clickSaveAndContinueButton();
 				
-				ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
-				commonMethodPage.clickSaveAndContinueButton();
+//				ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
+//				commonMethodPage.clickSaveAndContinueButton();
 				
 				
 				// Medicaid and CHIP ended or end soon
-				ExtentTestManager.getTest().info("---------------------SCREEN S049----------------------------");
-				//commonMethodPage.verifyS049(s046QuestionMedicad, s046QuestionCHIP);
-				commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P1(no);
-				commonMethodPage.clickSaveAndContinueButton();
+//				ExtentTestManager.getTest().info("---------------------SCREEN S049----------------------------");
+//				//commonMethodPage.verifyS049(s046QuestionMedicad, s046QuestionCHIP);
+//				commonMethodPage.haveMedicaidOrChipEndedOrEndedSoon_S049_P1(no);
+//				commonMethodPage.clickSaveAndContinueButton();
 
 				// Medicaid and CHIP
-				ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
-				//commonMethodPage.verifyS046(s046QuestionMedicad, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
-				commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThese);
-				commonMethodPage.clickSaveAndContinueButton();
+//				ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
+//				//commonMethodPage.verifyS046(s046QuestionMedicad, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
+//				commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThese);
+//				commonMethodPage.clickSaveAndContinueButton();
 				
 				// S050A
 				ExtentTestManager.getTest().info("---------------------SCREEN S050A----------------------------");
@@ -476,50 +479,56 @@ public class TestCase_57  extends BaseTest {
 				
 				// Income Questions
 
-				ExtentTestManager.getTest().info("---------------------SCREEN S057----------------------------");
-				Wait.wait2Second();
-				//commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057Question);
-				commonMethodPage.incomeThisMonth_S057(yes);
-				//commonMethodPage.verifyS057Question2IncomeType(s057Question2);
-				commonMethodPage.selectIncomeType(incomeType);
-				commonMethodPage.enterEmployerName(employerName);
-				//commonMethodPage.verifyS057Question3IncomeDuration(s057Question3);
-				commonMethodPage.incomePeriod_S057(incomePeriod);
-				//commonMethodPage.verifyS057Question4EnterIncome(s057Question4);
-				commonMethodPage.enterIncomeAmount(incomeAmount);
-				//commonMethodPage.isTribeSourceIncome_S057(yes);
-				//commonMethodPage.enterTribeIncomeAmount(anotherincomeAmount);
-				commonMethodPage.clickSaveAndContinueButton();
+//				ExtentTestManager.getTest().info("---------------------SCREEN S057----------------------------");
+//				Wait.wait2Second();
+//				//commonMethodPage.verifyS057QuestionHaveIncomeThisMonth(s057Question);
+//				commonMethodPage.incomeThisMonth_S057(yes);
+//				//commonMethodPage.verifyS057Question2IncomeType(s057Question2);
+//				commonMethodPage.selectIncomeType(incomeType);
+//				commonMethodPage.enterEmployerName(employerName);
+//				//commonMethodPage.verifyS057Question3IncomeDuration(s057Question3);
+//				commonMethodPage.incomePeriod_S057(incomePeriod);
+//				//commonMethodPage.verifyS057Question4EnterIncome(s057Question4);
+//				commonMethodPage.enterIncomeAmount(incomeAmount);
+//				//commonMethodPage.isTribeSourceIncome_S057(yes);
+//				//commonMethodPage.enterTribeIncomeAmount(anotherincomeAmount);
+//				commonMethodPage.clickSaveAndContinueButton();
 				
 				// Applicant Expense
 
-				ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
-				//commonMethodPage.verifyS058(s058Question);
-				Wait.wait2Second();
-				commonMethodPage.expenseDecision_S058(no);
-				commonMethodPage.clickSaveAndContinueButton();
+//				ExtentTestManager.getTest().info("---------------------SCREEN S058----------------------------");
+//				//commonMethodPage.verifyS058(s058Question);
+//				Wait.wait2Second();
+//				commonMethodPage.expenseDecision_S058(no);
+//				commonMethodPage.clickSaveAndContinueButton();
 				
 				
-				// Income verification
-				ExtentTestManager.getTest().info("---------------------SCREEN S059----------------------------");
-				// calculate monthly income
-				Wait.wait2Second();
-				commonMethodPage.incomeVerification_S059(yes);
-				commonMethodPage.clickSaveAndContinueButton();
+//				// Income verification
+//				ExtentTestManager.getTest().info("---------------------SCREEN S059----------------------------");
+//				// calculate monthly income
+//				Wait.wait2Second();
+//				commonMethodPage.incomeVerification_S059(yes);
+//				commonMethodPage.clickSaveAndContinueButton();
 				
 				// currently enrolled
 
-				ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
-				Wait.wait2Second();
-				//commonMethodPage.verifyS068(s068Question);
-				commonMethodPage.currentlyEnrolled_S068(noneOfThese);
+//				ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
+//				Wait.wait2Second();
+//				//commonMethodPage.verifyS068(s068Question);
+//				commonMethodPage.currentlyEnrolled_S068(noneOfThese);
+//				commonMethodPage.clickSaveAndContinueButton();
+				
+				// s069D
+				ExtentTestManager.getTest().info("---------------------SCREEN S069D----------------------------");
+				commonMethodPage.haveICHRAandQSEHRA_S069D(noneOfThese);
+				commonMethodPage.verifyS069D(s069DQuestion, s069DDrawerHeading, s069DDrowerContent);
 				commonMethodPage.clickSaveAndContinueButton();
 				
-				// About Employer
-				ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
-				//commonMethodPage.verifyS074(s074Question);
-				//commonMethodPage.enterPhoneNumberJobB(EmployerPhone);
-				commonMethodPage.clickSaveAndContinueButton();
+//				// About Employer
+//				ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
+//				//commonMethodPage.verifyS074(s074Question);
+//				//commonMethodPage.enterPhoneNumberJobB(EmployerPhone);
+//				commonMethodPage.clickSaveAndContinueButton();
 				
 				
 				// S070 covearge through job starting from next month
@@ -561,16 +570,15 @@ public class TestCase_57  extends BaseTest {
 				
 				// Agreement
 				ExtentTestManager.getTest().info("---------------------AGREEMENT----------------------------");
-				Wait.wait3Second();
+				Wait.wait5Second();
+				commonMethodPage.agreeOne();
 				commonMethodPage.agreeTwo();
-				//commonMethodPage.agreeOne();
-				commonMethodPage.agreeTwoNew();
-				commonMethodPage.agreeThree();
+				//commonMethodPage.agreeTwoNew();
 				commonMethodPage.clickSaveAndContinueButton();
-				
+
 				// Signature
 				ExtentTestManager.getTest().info("---------------------SIGNATURE----------------------------");
-				Wait.wait3Second();
+				Wait.wait5Second();
 				commonMethodPage.agreeOne();
 				commonMethodPage.enterSignature(applicantFullName);
 				commonMethodPage.clickSaveAndContinueButton();

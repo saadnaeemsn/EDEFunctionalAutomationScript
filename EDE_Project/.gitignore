@@ -1,2 +1,4 @@
 /.metadata/
 /target/
+/test-output/
+/data.properties
