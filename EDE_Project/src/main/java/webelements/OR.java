@@ -137,7 +137,8 @@ public interface OR {
 			.xpath("//span[contains(text(),'Describe the expense ')]/../..//following-sibling::div//input");
 	//By startDateJobA = By.xpath("//span[contains(text(),'Start date')]/../..//following-sibling::div//input");
 	By startDateJobA = By.xpath("((//div[@class='flatpickr dp-block-ruby'])[1])//input");
-	By endDateJobA = By.xpath("((//div[@class='flatpickr dp-block-ruby'])[2])//input");
+	By endDateJobA = By.xpath("((//div[@class='flatpickr dp-block-ruby']))//input");
+	
 	//By endDateJobA = By.xpath("//span[contains(text(),'End date')]/../..//following-sibling::div//input");
 	By enterEmployerNameS0692 = By.xpath("(//span[contains(text(),'Employer name')]//..//..//following-sibling::div//input)[2]");
 	By incomeEndDate = By.xpath("//input[@class='form-control flatpickr-input input w-80 datepicker masked active']"); 

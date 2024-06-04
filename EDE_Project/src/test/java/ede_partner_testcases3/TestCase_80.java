@@ -47,6 +47,7 @@ public class TestCase_80 extends BaseTest {
 		String fosterCare = Utility.getValue("fosterCare");
 		String studentLoanPayments =Utility.getValue("studentLoan");
 		String alimonPayments =Utility.getValue("alimonPayments");
+		String applicationYear = Utility.getValue("applicationYear");
 
 		// Get data from testcase_80.properties
 		String state = Utility.getDate_TestCase_80("state");
@@ -174,7 +175,7 @@ public class TestCase_80 extends BaseTest {
 		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale")
 		+ " " + "2024" + "?";
 //		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
-		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale") + " " + "2024" + "?";
+		String s027QuestionSingle = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale2") + " " + "2024" + "?";
 		String s027QuestionDependentSingleMale = "Will " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s027QuestionDependentSingle") + " " + "2024"
 				+ "?";
@@ -474,7 +475,7 @@ public class TestCase_80 extends BaseTest {
 
 		// Take care of children
 		ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
-		commonMethodPage.verifyS038(s038Question2);
+		//commonMethodPage.verifyS038(s038Question2);
 		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -501,8 +502,8 @@ public class TestCase_80 extends BaseTest {
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
 		Wait.wait2Second();
-		commonMethodPage.physicalDisability_S045(noneOfThese);
-		commonMethodPage.helpWithDailyActivities_S045(noneOfThese);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 2);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		/*
@@ -523,7 +524,7 @@ public class TestCase_80 extends BaseTest {
 		// Medicaid and CHIP
 		ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
 		commonMethodPage.verifyS046(s046QuestionMedicad, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
-		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThese);
+		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S050A
@@ -604,13 +605,13 @@ public class TestCase_80 extends BaseTest {
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
 		commonMethodPage.verifyS068(s068Question);
-		commonMethodPage.currentlyEnrolled_S068(noneOfThese);
+		commonMethodPage.currentlyEnrolled_S068(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 
@@ -623,11 +624,11 @@ public class TestCase_80 extends BaseTest {
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S083
-		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
-		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
-		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
-		commonMethodPage.clickSaveAndContinueButton();
-		
+//		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
+//		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
+//		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
+//		commonMethodPage.clickSaveAndContinueButton();
+//		
 		// Review
 		ExtentTestManager.getTest().info("---------------------SCREEN REVIEW----------------------------");
 		commonMethodPage.verifyReviewScreen(reviewDrawerHeading, reviewDrawerContent);

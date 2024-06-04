@@ -47,7 +47,7 @@ public class TestCase_63 extends BaseTest{
 		String grandChildRelation = Utility.getValue("grandChildRelation");
 		String retirement = Utility.getValue("retirement");
 		String selfEmployement = Utility.getValue("selfEmployement");
-		String applcationYear = Utility.getValue("applcationYear");
+		String applicationYear = Utility.getValue("applicationYear");
 
 		// Get data from testcase_61.properties
 		String state = Utility.getDate_TestCase_63("state");
@@ -144,11 +144,11 @@ public class TestCase_63 extends BaseTest{
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale")
-		+ " " + applcationYear + "?";
+		+ " " + applicationYear + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " "
-				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + applcationYear + "?";
+				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + applicationYear + "?";
 		String s027QuestionDependentSingleMale = "Will " + applicantFullName + " "
-				+ Utility.getFromTextProperties("s027QuestionDependentSingle") + " " + applcationYear
+				+ Utility.getFromTextProperties("s027QuestionDependentSingle") + " " + applicationYear
 				+ "?";
 
 		// ESTTimeZone.getCurrentYear() to be used for getting Current year
@@ -194,13 +194,13 @@ public class TestCase_63 extends BaseTest{
 				+ Utility.getFromTextProperties("s057Question3");
 		String s057Question4 = Utility.getFromTextProperties("s057Question4");
 		String s058Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ applcationYear + "?";
+				+ applicationYear + "?";
 		String s058QuestionSpouse = "Does " + spouseFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ applcationYear + "?";
+				+ applicationYear + "?";
 		String s058QuestionChild = "Does " + childFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ applcationYear + "?";
+				+ applicationYear + "?";
 		String s058QuestionDomesticPartner = "Does " + domesticPartnerFullName + " "
-				+ Utility.getFromTextProperties("s058Question") + " " + applcationYear + "?";
+				+ Utility.getFromTextProperties("s058Question") + " " + applicationYear + "?";
 		String s068Question = Utility.getFromTextProperties("s068Question");
 		String s082Question = Utility.getFromTextProperties("s082Question");
 		String s069AQuestion = Utility.getFromTextProperties("s069AQuestion");
@@ -256,7 +256,7 @@ public class TestCase_63 extends BaseTest{
 				+ Utility.getFromTextProperties("s019Question2");
 		String s027QuestionDependentSingleFemale = "Will " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s027QuestionDependentSingleFemale") + " "
-				+ applcationYear + "?";
+				+ applicationYear + "?";
 		String s024Question = "Has " + applicantFullName + " " + Utility.getFromTextProperties("s024Question");
 		String s030QuestionChild = "You told us " + childFullName + " lives with " + applicantFullName + ". Does "
 				+ childFullName + " " + Utility.getFromTextProperties("s030Question");

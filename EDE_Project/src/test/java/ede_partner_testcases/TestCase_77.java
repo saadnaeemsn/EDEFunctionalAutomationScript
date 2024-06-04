@@ -27,6 +27,7 @@ public class TestCase_77 extends BaseTest {
 		String male = Utility.getValue("male");
 		String female = Utility.getValue("female");
 		String noneOfThese = Utility.getValue("noneOfThese");
+		String noneOfThesePeople = Utility.getValue("noneOfThesePeople");
 		String married = Utility.getValue("married");
 		String noticeMedium = Utility.getValue("noticeMedium");
 		String agentUserName = Utility.getValue("agentUserName");
@@ -37,6 +38,8 @@ public class TestCase_77 extends BaseTest {
 		String alimony = Utility.getValue("alimony");
 		String monthly = Utility.getValue("monthly");
 		String unExpiredPassport = Utility.getValue("unExpiredPassport");
+		String applicationYear = Utility.getValue("applicationYear");
+
 
 		// Get data from testcase_77.properties
 		String state = Utility.getData_TestCase77("state");
@@ -53,6 +56,7 @@ public class TestCase_77 extends BaseTest {
 		String relationShip = Utility.getData_TestCase77("relationShip");
 		String spouseFirstName = Utility.getData_TestCase77("spouseFirstName");
 		String spouseLastName = Utility.getData_TestCase77("spouseLastName");
+		String spouseAge = Utility.getDate_TestCase_63("spouseAge");
 		String spouseFullName = spouseFirstName + " " + spouseLastName;
 		String s050OptionPregnant = Utility.getData_TestCase77("s050OptionPregnant");
 		String babyCount = Utility.getData_TestCase77("babyCount");
@@ -306,7 +310,7 @@ public class TestCase_77 extends BaseTest {
 		// Add Second person
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(age);
+		commonMethodPage.enterDOB_S010(spouseAge,"2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -314,7 +318,7 @@ public class TestCase_77 extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "3");
-		commonMethodPage.enterDob(childAge);
+		commonMethodPage.enterDOB_S010(childAge,"3");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(female);
@@ -376,6 +380,10 @@ public class TestCase_77 extends BaseTest {
 		commonMethodPage.clickSaveAndContinueButton();
 //		Wait.wait2Second();
 		
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
+
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -402,7 +410,7 @@ public class TestCase_77 extends BaseTest {
 		commonMethodPage.clickContinueWithoutAddingMore();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S021----------------------------");
-//		Wait.wait5Second();
+        Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickContinueWithoutAddingMore();
 
@@ -417,6 +425,10 @@ public class TestCase_77 extends BaseTest {
 		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
 		commonMethodPage.clickSaveAndContinueButton();
 //		Wait.wait2Second();
+		
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
@@ -443,7 +455,7 @@ public class TestCase_77 extends BaseTest {
 		commonMethodPage.clickContinueWithoutAddingMore();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S021----------------------------");
-//		Wait.wait5Second();
+		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickContinueWithoutAddingMore();
 
@@ -459,6 +471,10 @@ public class TestCase_77 extends BaseTest {
 		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
 		commonMethodPage.clickSaveAndContinueButton();
 //		Wait.wait2Second();
+
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
@@ -482,14 +498,14 @@ public class TestCase_77 extends BaseTest {
 		// Medicaid and CHIP
 		ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
 		commonMethodPage.verifyS046(s046QuestionMedicad, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
-		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThese);
+		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Medicad or CHIP effect due to immigration status
 		ExtentTestManager.getTest().info("---------------------SCREEN S050----------------------------");
 		commonMethodPage.verifyS050(s046QuestionMedicad, s046QuestionCHIP, s50Question);
 //		commonMethodPage.deniedMedicaidCHIPBecauseOfImmigrationStatus_S050(noneOfThese);
-		commonMethodPage.deniedMedicaidCHIPBecauseOfImmigrationStatus_PTC077S050(noneOfThese);
+		commonMethodPage.deniedMedicaidCHIPBecauseOfImmigrationStatus_PTC077S050(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S050A
@@ -580,19 +596,19 @@ public class TestCase_77 extends BaseTest {
 		// currently enrolled
 		ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
 		commonMethodPage.verifyS068(s068Question);
-		commonMethodPage.currentlyEnrolled_S068(noneOfThese);
+		commonMethodPage.currentlyEnrolled_S068(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Ichra offer from job
 		ExtentTestManager.getTest().info("---------------------SCREEN S069A----------------------------");
 		commonMethodPage.verifyS069A(s069AQuestion);
-		commonMethodPage.throughJobICHRA_S069A(noneOfThese);
+		commonMethodPage.throughJobICHRA_S069A(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Ichra offer but not accepted
 		ExtentTestManager.getTest().info("---------------------SCREEN S069B----------------------------");
 		commonMethodPage.verifyS069B(s069BQuestion);
-		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThese);
+		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// s069D
@@ -604,26 +620,26 @@ public class TestCase_77 extends BaseTest {
 		// S070 covearge through job starting from next month
 		ExtentTestManager.getTest().info("---------------------SCREEN S070----------------------------");
 		//commonMethodPage.verifyS070(s070Question);
-		commonMethodPage.CoverageThroughJobStartingNextMonth_S070(noneOfThese);
+		commonMethodPage.CoverageThroughJobStartingNextMonth_S070(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		//commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 //		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
-		commonMethodPage.loseQualifyingHealthCovRecent_PTC077S083(noneOfThese);
+		commonMethodPage.loseQualifyingHealthCovRecent_PTC077S083(noneOfThesePeople);
 	//	commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S084
 		ExtentTestManager.getTest().info("---------------------SCREEN S084----------------------------");
 //		Wait.wait5Second();
-		commonMethodPage.loseQualifyingHealthCovUpcoming_S084(noneOfThese);
+		commonMethodPage.loseQualifyingHealthCovUpcoming_S084(noneOfThesePeople);
 	//	commonMethodPage.verifyS084(s084Question, s084DrawerHeading);
 		commonMethodPage.clickSaveAndContinueButton();
 

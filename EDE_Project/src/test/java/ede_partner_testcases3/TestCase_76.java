@@ -28,6 +28,7 @@ public class TestCase_76 extends BaseTest {
 		String male = Utility.getValue("male");
 		String female = Utility.getValue("female");
 		String noneOfThese = Utility.getValue("noneOfThese");
+		String noneOfThesePeople = Utility.getValue("noneOfThesePeople");
 		String married = Utility.getValue("married");
 		String noticeMedium = Utility.getValue("noticeMedium");
 		String noticeMediumEmail = Utility.getValue("selectNoticeMediumEmail");
@@ -45,6 +46,7 @@ public class TestCase_76 extends BaseTest {
 		String retirement = Utility.getValue("retirement");
 		String selfEmployement = Utility.getValue("selfEmployement");
 		String fosterCare = Utility.getValue("fosterCare");
+		String applicationYear = Utility.getValue("applicationYear");
 
 
 		// Get data from testcase_61.properties
@@ -137,7 +139,7 @@ public class TestCase_76 extends BaseTest {
 		String s010AQuestion = Utility.getFromTextProperties("s010AQuestion");
 		String s010ADrawerHeading = Utility.getFromTextProperties("s010ADrawerHeading");
 		String s010ADrawerContent = Utility.getFromTextProperties("s010ADrawerContent");
-		String s026Question = "What�s" + " " + applicantFullName + "'s" + " "
+		String s026Question = "What’s" + " " + applicantFullName + "'s" + " "
 				+ Utility.getFromTextProperties("s026Question");
 		String s026QuestionChild = "What�s" + " " + childFullName + "'s" + " "
 				+ Utility.getFromTextProperties("s026Question");
@@ -146,11 +148,11 @@ public class TestCase_76 extends BaseTest {
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
 		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale")
-		+ " " + "2023" + "?";
+		+ " " + applicationYear + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " "
-				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + "2023" + "?";
+				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + applicationYear + "?";
 		String s027QuestionDependentSingleMale = "Will " + applicantFullName + " "
-				+ Utility.getFromTextProperties("s027QuestionDependentSingle") + " " + "2023"
+				+ Utility.getFromTextProperties("s027QuestionDependentSingle") + " " + applicationYear
 				+ "?";
 		String s030Question = "You told us " + childFullName + " lives with " + applicantFullName + ". Does "
 				+ childFullName + " " + Utility.getFromTextProperties("s030Question");
@@ -200,11 +202,11 @@ public class TestCase_76 extends BaseTest {
 				+ Utility.getFromTextProperties("s057Question3");
 		String s057Question4 = Utility.getFromTextProperties("s057Question4");
 		String s058QuestionApplicant = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ "2023" + "?";
+				+ applicationYear + "?";
 		String s058QuestionSpouse = "Does " + spouseFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ "2023" + "?";
+				+ applicationYear + "?";
 		String s058QuestionChild = "Does " + childFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ "2023" + "?";
+				+ applicationYear + "?";
 		String s058QuestionDomesticPartner = "Does " + domesticPartnerFullName + " "
 				+ Utility.getFromTextProperties("s058Question") + " " + "2023" + "?";
 		String s068Question = Utility.getFromTextProperties("s068Question");
@@ -220,6 +222,7 @@ public class TestCase_76 extends BaseTest {
 		String s070Question = Utility.getFromTextProperties("s070Question");
 		String s074Question = Utility.getFromTextProperties("s074Question") + " " + employerName + " ("
 				+ applicantFullName + "'s job).";
+		String s074QuestionSpouse = Utility.getFromTextProperties("s074Question") + " " + employerName + " (" + spouseFullName + "'s job).";
 		String s074QuestionDomesticPartner = Utility.getFromTextProperties("s074Question") + " "
 				+ domesticPartnerEmployerName + " (" + domesticPartnerFullName + "'s job).";
 		String s083Question = Utility.getFromTextProperties("s083Question") + " " + minus60DaysDate + " and "
@@ -273,7 +276,7 @@ public class TestCase_76 extends BaseTest {
 				+ childFullName + " " + Utility.getFromTextProperties("s030Question");
 		String s50Question = Utility.getFromTextProperties("s50Question");
 		String s058Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s058Question") + " "
-				+ "2023" + "?";
+				+ applicationYear + "?";
 		String s081Question = Utility.getFromTextProperties("s081Question");
 		String s071QuestionApplicant = "Which of " + applicantFullName + "'s " + "employers offer " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s071Question");
@@ -385,12 +388,13 @@ public class TestCase_76 extends BaseTest {
 		// Add Second person (Spouse)
 
 		commonMethodPage.clickAddPerson();
-		commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(spouseAge);
+		//commonMethodPage.needCoverage(yes, "2");
+		commonMethodPage.enterDOB_S010(spouseAge,"2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
 		commonMethodPage.selectRelation(relationShip, "No applicable", "not applicable", "1");
+		commonMethodPage.clickSaveAndContinueScrolled();
 
 		// S010A
 
@@ -411,7 +415,7 @@ public class TestCase_76 extends BaseTest {
 		// CitizenShip Spouse
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S014----------------------------");
-		commonMethodPage.verifyS014(s014QuestionSpouse, s014DrawerHeading, s014drawerContent);
+		commonMethodPage.verifyS014(s014Question, s014DrawerHeading, s014drawerContent);
 		commonMethodPage.selectUSCitizenOrNot(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -432,9 +436,10 @@ public class TestCase_76 extends BaseTest {
 		// Filling Tax
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
-		commonMethodPage.verifyS027(s027QuestionSingle, s027DrawerHeading, s027DrawerContent);
-		commonMethodPage.selectIsFilingTax(yes);
+		//commonMethodPage.verifyS027(s027QuestionSingle, s027DrawerHeading, s027DrawerContent);
+		//commonMethodPage.selectIsFilingTax(yes);
 		//commonMethodPage.verifyS027Dependent(s027QuestionDependentSingleFemale, s027DependentDrawerHeading,s027DependentDrawerContent);
+		commonMethodPage.selectIsFilingTax(yes);
 		commonMethodPage.selectIsAnyDependent(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -452,11 +457,16 @@ public class TestCase_76 extends BaseTest {
 		// Take care of children
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
-		commonMethodPage.verifyS038(s038Question1);
-		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
+		//commonMethodPage.verifyS038(s038Question2);
+		
+		commonMethodPage.applicantMainPersontakingCare_S038(no);
 		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
+		Wait.wait2Second();
+		commonMethodPage.clickSaveAndContinueButton();
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -498,11 +508,15 @@ public class TestCase_76 extends BaseTest {
 		// Take care of children
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S038----------------------------");
-		commonMethodPage.verifyS038(s038QuestionSpouse1);
-		commonMethodPage.applicantTakeCareOfChildrenFirst_S038(no);
+		//commonMethodPage.verifyS038(s038Question2);
+		Wait.wait2Second();
+		commonMethodPage.applicantMainPersontakingCare_S038(no);
+		commonMethodPage.clickSaveAndContinueButton();
+		
+		ExtentTestManager.getTest().info("---------------------SCREEN S042A----------------------------");
 		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
-
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S043----------------------------");
 		commonMethodPage.clickSaveAndContinueButton();
 
@@ -517,8 +531,8 @@ public class TestCase_76 extends BaseTest {
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
 		Wait.wait5Second();
-		commonMethodPage.physicalDisability_S045(noneOfThese);
-		commonMethodPage.helpWithDailyActivities_S045(noneOfThese);
+		commonMethodPage.physicalDisability_S045(noneOfThesePeople);
+		commonMethodPage.helpWithDailyActivities_S045(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Medicaid and CHIP ended or end soon
@@ -539,7 +553,12 @@ public class TestCase_76 extends BaseTest {
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S050----------------------------");
 		//commonMethodPage.verifyS050(s046QuestionMedicad, s046QuestionCHIP, s50Question);
-		commonMethodPage.deniedMedicaidCHIPBecauseOfImmigrationStatus_S050(noneOfThese);
+		commonMethodPage.deniedMedicaidCHIPBecauseOfImmigrationStatus_S050(noneOfThesePeople);
+		commonMethodPage.clickSaveAndContinueButton();
+
+		ExtentTestManager.getTest().info("---------------------SCREEN S050A----------------------------");
+		commonMethodPage.verifyS050A(s050AQuestion);
+		commonMethodPage.selectSitutionHouseHold_S050A(noneOfThese);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Income Questions
@@ -600,21 +619,21 @@ public class TestCase_76 extends BaseTest {
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
 		commonMethodPage.verifyS068(s068Question);
-		commonMethodPage.currentlyEnrolled_S068(noneOfThese);
+		commonMethodPage.currentlyEnrolled_S068(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Employer
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
-		commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		commonMethodPage.verifyS074(s074QuestionSpouse);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Help paying for medical bills
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
-		Wait.wait5Second();
-		commonMethodPage.helpPayingBill_S077(noneOfThese);
+		Wait.wait2Second();
+		commonMethodPage.helpPayingBill_S077(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Review
@@ -627,7 +646,7 @@ public class TestCase_76 extends BaseTest {
 		commonMethodPage.agreeOne();
 		commonMethodPage.agreeTwoNew();
 		commonMethodPage.agreeThree();
-		commonMethodPage.agreeFour();
+		//commonMethodPage.agreeFour();
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Signature

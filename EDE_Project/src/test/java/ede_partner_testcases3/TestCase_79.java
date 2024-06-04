@@ -23,11 +23,11 @@ public class TestCase_79 extends BaseTest {
 		String password = Utility.getValue("edePassword");
 		String yes = Utility.getValue("yes");
 		String no = Utility.getValue("no");
-		
 		String continueWithoutAnsweringQuestion = Utility.getValue("continueWithoutAnsweringQuestion");
 		String male = Utility.getValue("male");
 		String female = Utility.getValue("female");
 		String noneOfThese = Utility.getValue("noneOfThese");
+		String noneOfThesePeople = Utility.getValue("noneOfThesePeople");
 		String noneOfTheseChanges = Utility.getValue("noneOfTheseChanges");
 		String oneOfThese = Utility.getValue("oneOfThese");
 		String otherReason = Utility.getValue("otherReason");
@@ -49,6 +49,7 @@ public class TestCase_79 extends BaseTest {
 		String retirement = Utility.getValue("retirement");
 		String selfEmployement = Utility.getValue("selfEmployement");
 		String fosterCare = Utility.getValue("fosterCare");
+		String applicationYear = Utility.getValue("applicationYear");
 
 		// Get data from testcase_61.properties
 		String state = Utility.getDate_TestCase_79("state");
@@ -360,7 +361,7 @@ public class TestCase_79 extends BaseTest {
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S007----------------------------");
 		commonMethodPage.verifyS007(s007Question, s007DrawerHeading, s007DrawerContent);
-		commonMethodPage.selectIsProfessnalHelping(yes);
+		commonMethodPage.selectIsProfessnalHelping(no);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Financial coverage
@@ -385,7 +386,7 @@ public class TestCase_79 extends BaseTest {
 		commonMethodPage.clickAddPerson();
 //		commonMethodPage.needCoverage(yes, "2");
 //		commonMethodPage.enterDob(childAge);
-		commonMethodPage.enterDob(childAge, 2);
+		commonMethodPage.enterDOB_S010(childAge, "2");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);
@@ -486,8 +487,8 @@ public class TestCase_79 extends BaseTest {
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
 		Wait.wait2Second();
-		commonMethodPage.physicalDisability_S045(noneOfThese);
-		commonMethodPage.helpWithDailyActivities_S045(noneOfThese);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 2);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Medicaid and CHIP ended or end soon
@@ -502,7 +503,7 @@ public class TestCase_79 extends BaseTest {
 		ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
 		Wait.wait2Second();
 		commonMethodPage.verifyS046(s046QuestionMedicad, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
-		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThese);
+		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S050A
@@ -581,7 +582,7 @@ public class TestCase_79 extends BaseTest {
 		ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
 		Wait.wait2Second();
 		commonMethodPage.verifyS068(s068Question);
-		commonMethodPage.currentlyEnrolled_S068(noneOfThese);
+		commonMethodPage.currentlyEnrolled_S068(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S069D
@@ -597,14 +598,14 @@ public class TestCase_79 extends BaseTest {
 		// S083
 		ExtentTestManager.getTest().info("---------------------SCREEN S083----------------------------");
 		Wait.wait5Second();
-		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThese);
+		commonMethodPage.loseQualifyingHealthCovRecent_S083(noneOfThesePeople);
 		commonMethodPage.verifyS083(s083Question, s083DrawerHeading, s83DrawerContent);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// S084
 		ExtentTestManager.getTest().info("---------------------SCREEN S084----------------------------");
 		Wait.wait5Second();
-		commonMethodPage.loseQualifyingHealthCovUpcoming_S084(noneOfThese);
+		commonMethodPage.loseQualifyingHealthCovUpcoming_S084(noneOfThesePeople);
 		commonMethodPage.verifyS084(s084Question, s084DrawerHeading);
 		commonMethodPage.clickSaveAndContinueButton();
 

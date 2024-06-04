@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-01T20:49:02 EDT" name="Default suite" finished-at="2024-06-01T20:54:31 EDT" duration-ms="329038">
+  <suite started-at="2024-06-03T17:04:26 EDT" name="Default suite" finished-at="2024-06-03T17:08:11 EDT" duration-ms="225412">
     <groups>
     </groups>
-    <test started-at="2024-06-01T20:49:02 EDT" name="Default test" finished-at="2024-06-01T20:54:31 EDT" duration-ms="329038">
-      <class name="ede_partner_testcases4.TestCase_35">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:49:02 EDT" name="openBrowser" finished-at="2024-06-01T20:49:04 EDT" duration-ms="1712" status="PASS">
+    <test started-at="2024-06-03T17:04:26 EDT" name="Default test" finished-at="2024-06-03T17:08:11 EDT" duration-ms="225412">
+      <class name="ede_partner_testcases3.TestCase_80">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:ede_partner_testcases3.TestCase_80@2b91004a]" started-at="2024-06-03T17:04:26 EDT" name="openBrowser" finished-at="2024-06-03T17:04:28 EDT" duration-ms="2195" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="TestCase_35()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:49:04 EDT" name="TestCase_35" finished-at="2024-06-01T20:54:28 EDT" duration-ms="323947" status="PASS">
+        <test-method signature="testCase_80()[pri:0, instance:ede_partner_testcases3.TestCase_80@2b91004a]" started-at="2024-06-03T17:04:28 EDT" name="testCase_80" finished-at="2024-06-03T17:08:10 EDT" duration-ms="221632" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_35 -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:54:28 EDT" name="closeBrowser" finished-at="2024-06-01T20:54:31 EDT" duration-ms="3341" status="PASS">
+        </test-method> <!-- testCase_80 -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:ede_partner_testcases3.TestCase_80@2b91004a]" started-at="2024-06-03T17:08:10 EDT" name="closeBrowser" finished-at="2024-06-03T17:08:11 EDT" duration-ms="1553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="finish()[pri:0, instance:ede_partner_testcases4.TestCase_35@2b91004a]" started-at="2024-06-01T20:54:31 EDT" name="finish" finished-at="2024-06-01T20:54:32 EDT" duration-ms="265" status="PASS">
+        <test-method is-config="true" signature="finish()[pri:0, instance:ede_partner_testcases3.TestCase_80@2b91004a]" started-at="2024-06-03T17:08:11 EDT" name="finish" finished-at="2024-06-03T17:08:11 EDT" duration-ms="293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- finish -->
-      </class> <!-- ede_partner_testcases4.TestCase_35 -->
+      </class> <!-- ede_partner_testcases3.TestCase_80 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
