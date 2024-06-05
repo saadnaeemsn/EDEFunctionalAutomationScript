@@ -395,7 +395,25 @@ public class Utility {
 	}
 	public static String getDate_TestCase_98(String value) throws IOException {
 		Properties prop = new Properties();
-		FileReader reader=new FileReader("testcase_98.properties");  
+		FileReader reader=new FileReader("partner_98.properties");  
+		prop.load(reader);
+		return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_96(String value) throws IOException {
+		Properties prop = new Properties();
+		FileReader reader=new FileReader("partner_96.properties");  
+		prop.load(reader);
+		return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_97(String value) throws IOException {
+		Properties prop = new Properties();
+		FileReader reader=new FileReader("partner_97.properties");  
+		prop.load(reader);
+		return prop.getProperty(value);
+	}
+	public static String getDate_TestCase_99(String value) throws IOException {
+		Properties prop = new Properties();
+		FileReader reader=new FileReader("partner_99.properties");  
 		prop.load(reader);
 		return prop.getProperty(value);
 	}

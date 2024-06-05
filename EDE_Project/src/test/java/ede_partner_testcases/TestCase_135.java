@@ -28,6 +28,7 @@ public class TestCase_135 extends BaseTest {
 		String male = Utility.getValue("male");
 		String female = Utility.getValue("female");
 		String noneOfThese = Utility.getValue("noneOfThese");
+		String noneOfThesePeople = Utility.getValue("noneOfThesePeople");
 		String married = Utility.getValue("married");
 		String noticeMedium = Utility.getValue("noticeMedium");
 		String agentUserName = Utility.getValue("agentUserName");
@@ -58,6 +59,7 @@ public class TestCase_135 extends BaseTest {
 		String spouseFirstName = Utility.getDate_TestCase_135("spouseFirstName");
 		String spouseLastName = Utility.getDate_TestCase_135("spouseLastName");
 		String spouseFullName = spouseFirstName + " " + spouseLastName;
+		String spouseAge = Utility.getDate_TestCase_63("spouseAge");
 		String s050OptionPregnant = Utility.getDate_TestCase_129("s050OptionPregnant");
 		String babyCount = Utility.getDate_TestCase_135("babyCount");
 		String incomeAmount = Utility.getDate_TestCase_135("incomeAmount");
@@ -313,7 +315,7 @@ public class TestCase_135 extends BaseTest {
 		// Add Second person
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "2");
-		commonMethodPage.enterDob(age);
+		commonMethodPage.enterDOB_S010(spouseAge, "2");
 		commonMethodPage.enterFirstName(spouseFirstName);
 		commonMethodPage.enterLastName(spouseLastName);
 		commonMethodPage.selectGender(female);
@@ -321,7 +323,7 @@ public class TestCase_135 extends BaseTest {
 
 		commonMethodPage.clickAddPerson();
 		//commonMethodPage.needCoverage(yes, "3");
-		commonMethodPage.enterDob(childAge);
+		commonMethodPage.enterDOB_S010(childAge, "3");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);
 		commonMethodPage.selectGender(male);
@@ -346,6 +348,7 @@ public class TestCase_135 extends BaseTest {
 		commonMethodPage.verifyS014(s014Question, s014DrawerHeading, s014drawerContent);
 		commonMethodPage.selectUSCitizenOrNot(yes);
 		commonMethodPage.clickSaveAndContinueButton();
+		
 
 		// Marital status
 		ExtentTestManager.getTest().info("---------------------SCREEN S026----------------------------");
@@ -406,7 +409,7 @@ public class TestCase_135 extends BaseTest {
 		commonMethodPage.clickContinueWithoutAddingMore();
 
 		ExtentTestManager.getTest().info("---------------------SCREEN S021----------------------------");
-//		Wait.wait5Second();
+		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
 		commonMethodPage.clickContinueWithoutAddingMore();
 
@@ -463,6 +466,8 @@ public class TestCase_135 extends BaseTest {
 		// NON-Magi Questions
 		ExtentTestManager.getTest().info("---------------------SCREEN S045----------------------------");
 		commonMethodPage.verifyS045Question(s045Question1, s045Question2);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 2);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// Medicaid and CHIP ended or end soon
@@ -476,13 +481,13 @@ public class TestCase_135 extends BaseTest {
 		// Medicaid and CHIP
 		ExtentTestManager.getTest().info("---------------------SCREEN S046----------------------------");
 		commonMethodPage.verifyS046(s046QuestionMedicad, s046QuestionCHIP, s046DrawerHeading, s046DrawerContent);
-		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThese);
+		commonMethodPage.foundNotEligibleMedicaidOrCHIP_S046(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Medicad or CHIP effect due to immigration status
 		ExtentTestManager.getTest().info("---------------------SCREEN S050----------------------------");
 		commonMethodPage.verifyS050(s046QuestionMedicad, s046QuestionCHIP, s50Question);
-		commonMethodPage.deniedMedicaidCHIPBecauseOfImmigrationStatus_PTC135S050(noneOfThese);
+		commonMethodPage.deniedMedicaidCHIPBecauseOfImmigrationStatus_PTC135S050(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// S050A
@@ -604,19 +609,19 @@ public class TestCase_135 extends BaseTest {
 		// currently enrolled
 		ExtentTestManager.getTest().info("---------------------SCREEN S068----------------------------");
 		commonMethodPage.verifyS068(s068Question);
-		commonMethodPage.currentlyEnrolled_S068(noneOfThese);
+		commonMethodPage.currentlyEnrolled_S068(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Ichra offer from job
 		ExtentTestManager.getTest().info("---------------------SCREEN S069A----------------------------");
 		commonMethodPage.verifyS069A(s069AQuestion);
-		commonMethodPage.throughJobICHRA_S069A(noneOfThese);
+		commonMethodPage.throughJobICHRA_S069A(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Ichra offer but not accepted
 		ExtentTestManager.getTest().info("---------------------SCREEN S069B----------------------------");
 		commonMethodPage.verifyS069B(s069BQuestion);
-		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThese);
+		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// s069D
@@ -630,21 +635,21 @@ public class TestCase_135 extends BaseTest {
 		// S070 covearge through job starting from next month
 		ExtentTestManager.getTest().info("---------------------SCREEN S070----------------------------");
 	//	commonMethodPage.verifyS070(s070Question);
-		commonMethodPage.CoverageThroughJobStartingNextMonth_S070(noneOfThese);
+		commonMethodPage.CoverageThroughJobStartingNextMonth_S070(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 //		Wait.wait3Second();
 	//	commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// About Employer
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 //		Wait.wait3Second();
 		//commonMethodPage.verifyS074(s074QuestionSpouse);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		

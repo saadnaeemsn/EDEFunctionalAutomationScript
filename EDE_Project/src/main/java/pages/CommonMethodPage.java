@@ -4146,7 +4146,14 @@ public class CommonMethodPage extends BasePage {
 		select.selectByVisibleText(type);
 		ExtentTestManager.getTest().info("Job type selected: " + type);
 	}
-
+	public void selectPayment(String type) throws InterruptedException {
+		WebElement element = waitForElementToBePresent(OR.selectJobType, 30);
+//		Wait.waitForElement(getWebDriver(), element);
+//		Wait.wait2Second();
+		Select select = new Select(element);
+		select.selectByVisibleText(type);
+		//ExtentTestManager.getTest().info("Job type selected: " + type);
+	}
 	public void enterEmployerName(String employerName) {
 		WebElement element = waitForElementToBePresent(OR.enterEmployerName, 30);
 		sendKeysToElement(element, employerName, " first name");
@@ -4388,7 +4395,7 @@ public class CommonMethodPage extends BasePage {
 
 	public void throughJobICHRA_S069A(String decision) throws InterruptedException {
 //		Wait.wait2Second();
-		WebElement element = waitForElementToBeClickable(By.xpath("//span[contains(text(),'" + decision + "')]"), 30);
+		WebElement element = waitForElementToBeClickable(By.xpath("//span[@style='position: static;' and text()='"+decision+"']"), 30);
 //		Wait.waitForElement(getWebDriver(), element);
 //		Wait.waitUntilPageIsLoaded(getWebDriver());
 		clickElement(element, decision + " for S069A");

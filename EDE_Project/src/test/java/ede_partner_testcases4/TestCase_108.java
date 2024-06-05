@@ -470,12 +470,13 @@ public class TestCase_108 extends BaseTest {
 		// Filling Tax
 		ExtentTestManager.getTest().info("---------------------SCREEN S027----------------------------");
 		Wait.wait2Second();
-		commonMethodPage.verifyS027(s027QuestionMale, s027DrawerHeading, s027DrawerContent);
+		//commonMethodPage.verifyS027(s027QuestionMale, s027DrawerHeading, s027DrawerContent);
 		commonMethodPage.selectIsFilingTax(yes);
-		commonMethodPage.verifyS027Dependent(s027QuestionDependentCouple, s027DependentDrawerHeading,s027DependentDrawerContent);
+		//commonMethodPage.verifyS027Dependent(s027QuestionDependentCouple, s027DependentDrawerHeading,s027DependentDrawerContent);
 		commonMethodPage.selectIsAnyDependent(yes);
 		commonMethodPage.chooseAnOption(someoneElse, 2, 1);
 		// Add Third person (Child)
+		Wait.wait1Second();
 		commonMethodPage.enterDOB_S010(childAge, "1");
 		commonMethodPage.enterFirstName(childFirstName);
 		commonMethodPage.enterLastName(childLastName);

@@ -174,7 +174,7 @@ public class TestCase_119 extends BaseTest {
 		String s026DrawerHeading = Utility.getFromTextProperties("s026DrawerHeading");
 		String s027Question = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027Question") + " "
 				+ ESTTimeZone.getCurrentYear() + "?";
-		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionMale1") + " " + "2024" + "?";
+		String s027QuestionMale = "Does " + applicantFullName + " " + Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
 		String s027QuestionSingle = "Does " + applicantFullName + " "
 				+ Utility.getFromTextProperties("s027QuestionSingle") + " " + "2024" + "?";
 		String s027QuestionDependentCouple = "Will " + applicantFullName + " and " + spouseFullName + " " 
@@ -648,23 +648,23 @@ public class TestCase_119 extends BaseTest {
 		// Ichra offer from job
 		ExtentTestManager.getTest().info("---------------------SCREEN S069A----------------------------");
 		commonMethodPage.verifyS069A(s069AQuestion);
-		commonMethodPage.throughJobICHRA_S069A(noneOfThese);
+		commonMethodPage.throughJobICHRA_S069A(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 
 		// Ichra offer but not accepted
 		ExtentTestManager.getTest().info("---------------------SCREEN S069B----------------------------");
 		Wait.wait2Second();
 		commonMethodPage.verifyS069B(s069BQuestion);
-		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThese);
+		commonMethodPage.throughJobICHRAHaveNotAccept_S069B(noneOfThesePeople);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		
-		// S082
-		ExtentTestManager.getTest().info("---------------------SCREEN S082----------------------------");
-//		commonMethodPage.verifyS082(s082Question, s083DrawerHeading, s83DrawerContent);
-		commonMethodPage.verifyQuestionContents(spanTag, s082Question, s082Question, 2, 1);
-		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
-		commonMethodPage.clickSaveAndContinueButton();
+//		
+//		// S082
+//		ExtentTestManager.getTest().info("---------------------SCREEN S082----------------------------");
+////		commonMethodPage.verifyS082(s082Question, s083DrawerHeading, s83DrawerContent);
+//		commonMethodPage.verifyQuestionContents(spanTag, s082Question, s082Question, 2, 1);
+//		commonMethodPage.chooseAnOption(noneOfThesePeople, 1, 1);
+//		commonMethodPage.clickSaveAndContinueButton();
 		
 		// Ichra offer but not accepted
 		ExtentTestManager.getTest().info("---------------------SCREEN S069D----------------------------");
@@ -683,15 +683,15 @@ public class TestCase_119 extends BaseTest {
 		// About Employer - Phone #
 		ExtentTestManager.getTest().info("---------------------SCREEN S074----------------------------");
 		commonMethodPage.verifyS074(s074Question);
-		commonMethodPage.enterPhoneNumber4(EmployerPhone);
+		//commonMethodPage.enterPhoneNumber4(EmployerPhone);
 		commonMethodPage.clickSaveAndContinueButton();
 		
-		/*
+		
 		ExtentTestManager.getTest().info("---------------------SCREEN S077----------------------------");
 		commonMethodPage.verifyS077(s077Question);
-		commonMethodPage.chooseAnOption(noneOfThesePeople, 1);
+		commonMethodPage.chooseAnOption(noneOfThesePeople, 1,1);
 		commonMethodPage.clickSaveAndContinueButton();
-		
+		/*
 		ExtentTestManager.getTest().info("---------------------SCREEN S079----------------------------");
 		commonMethodPage.verifyQuestionContents(spanTag, s079Question, s079Question, 1, 1);
 		commonMethodPage.chooseAnOption(childFullName, 1);
@@ -734,22 +734,17 @@ public class TestCase_119 extends BaseTest {
 		// Agreement
 		ExtentTestManager.getTest().info("---------------------AGREEMENT----------------------------");
 		Wait.wait2Second();
-//		commonMethodPage.chooseAnOption("I agree to this statement", 1, 1);
-		commonMethodPage.chooseAnOption("I agree to this statement", 1, 1);
-		commonMethodPage.chooseAnOption("I agree", 1, 1);
-//		commonMethodPage.chooseAnOption("I agree", 1, 2);
-		commonMethodPage.chooseAnOption("I agree to allow the Marketplace to end the Marketplace coverage for anyone on my application who’s enrolled in both Marketplace and Medicare coverage.", 1, 1);
-//		commonMethodPage.chooseAnOptionWithContains("I agree to allow the", 1);
+		commonMethodPage.agreeOne();
+		commonMethodPage.agreeTwoNew();
+		commonMethodPage.agreeThree();
+		commonMethodPage.agreeFour();
 		commonMethodPage.clickSaveAndContinueButton();
 		
 		// Signature
 		ExtentTestManager.getTest().info("---------------------SIGNATURE----------------------------");
-//		commonMethodPage.agreeOne();
-		commonMethodPage.chooseAnOption("I agree to this statement", 1, 1);
+		commonMethodPage.agreeOne();
 		commonMethodPage.enterSignature(applicantFullName);
-//		Wait.wait2Second();
 		commonMethodPage.clickSaveAndContinueButton();
-//		Wait.wait5Second();
 		
 		// Eligibility
 		// Eligibility

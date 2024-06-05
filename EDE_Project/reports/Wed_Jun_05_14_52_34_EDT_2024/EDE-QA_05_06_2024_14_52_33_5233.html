@@ -1,0 +1,4062 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='EEEE, MMMM dd, yyyy, hh:mm a '('zzz')''/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>EDE-QA_05_06_2024_14_52_33_5233.html</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>EDE-QA_05_06_2024_14_52_33_5233.html</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Wednesday, June 05, 2024, 02:52 PM (EDT)</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>PTC151</span>
+						<span class='test-time'>Wednesday, June 05, 2024, 02:52 PM (EDT)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Wednesday, June 05, 2024, 02:52 PM (EDT)</span>
+	<span class='label end-time'>Wednesday, June 05, 2024, 02:59 PM (EDT)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 6m 55s+345ms</span>
+</div>
+<div class='test-desc'>Partner Test Case 151 </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:34 PM</td>
+				<td class='step-details'>
+						Opening URL: https://enhanceqa.jet-insure.com/qoutedeeplink?PartnerCode=ENHANCE
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:37 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_52_34_5234.png' src='screenshot/PTC151_05_06_2024_14_52_34_5234.png' data-src='screenshot/PTC151_05_06_2024_14_52_34_5234.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:38 PM</td>
+				<td class='step-details'>
+						Entering Email EDE: harrylarry76@yopmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:38 PM</td>
+				<td class='step-details'>
+						Entering password EDE: 123456789@Aaaa
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:42 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_52_40_5240.png' src='screenshot/PTC151_05_06_2024_14_52_40_5240.png' data-src='screenshot/PTC151_05_06_2024_14_52_40_5240.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:43 PM</td>
+				<td class='step-details'>
+						year selected: 2024
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:51 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_52_49_5249.png' src='screenshot/PTC151_05_06_2024_14_52_49_5249.png' data-src='screenshot/PTC151_05_06_2024_14_52_49_5249.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:53 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_52_51_5251.png' src='screenshot/PTC151_05_06_2024_14_52_51_5251.png' data-src='screenshot/PTC151_05_06_2024_14_52_51_5251.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:56 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_52_54_5254.png' src='screenshot/PTC151_05_06_2024_14_52_54_5254.png' data-src='screenshot/PTC151_05_06_2024_14_52_54_5254.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:58 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_52_56_5256.png' src='screenshot/PTC151_05_06_2024_14_52_56_5256.png' data-src='screenshot/PTC151_05_06_2024_14_52_56_5256.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:58 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S001----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:58 PM</td>
+				<td class='step-details'>
+						Getting s001 question text: Do you need coverage for yourself?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:58 PM</td>
+				<td class='step-details'>
+						Entering  first name: Ava
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:58 PM</td>
+				<td class='step-details'>
+						Entering  Date of birth: 04/18/1974
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:59 PM</td>
+				<td class='step-details'>
+						Entering  middle name:
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:52:59 PM</td>
+				<td class='step-details'>
+						Entering  last name: Miller
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:01 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_52_59_5259.png' src='screenshot/PTC151_05_06_2024_14_52_59_5259.png' data-src='screenshot/PTC151_05_06_2024_14_52_59_5259.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:03 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_01_531.png' src='screenshot/PTC151_05_06_2024_14_53_01_531.png' data-src='screenshot/PTC151_05_06_2024_14_53_01_531.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:03 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S002----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:03 PM</td>
+				<td class='step-details'>
+						Entering  street address: 237 Sundown Dr
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:04 PM</td>
+				<td class='step-details'>
+						Getting s002 question text: What's your home address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:04 PM</td>
+				<td class='step-details'>
+						Expected: What's your home address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:04 PM</td>
+				<td class='step-details'>
+						Found: What's your home address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:04 PM</td>
+				<td class='step-details'>
+						Verified: What's your home address? on S002
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:04 PM</td>
+				<td class='step-details'>
+						State selected: TN
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:04 PM</td>
+				<td class='step-details'>
+						Entering  city: Antioch
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:04 PM</td>
+				<td class='step-details'>
+						Entering  zipCode: 25456
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:04 PM</td>
+				<td class='step-details'>
+						Entering zip code: 37013
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:05 PM</td>
+				<td class='step-details'>
+						Clicking  county drop down
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:08 PM</td>
+				<td class='step-details'>
+						Clicking  county
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:10 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_08_538.png' src='screenshot/PTC151_05_06_2024_14_53_08_538.png' data-src='screenshot/PTC151_05_06_2024_14_53_08_538.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:11 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_10_5310.png' src='screenshot/PTC151_05_06_2024_14_53_10_5310.png' data-src='screenshot/PTC151_05_06_2024_14_53_10_5310.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:11 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S003----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:12 PM</td>
+				<td class='step-details'>
+						Getting s003 question text: Is this also your mailing address?
+Learn how mailing address affects coverage.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:12 PM</td>
+				<td class='step-details'>
+						Expected: Is this also your mailing address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:12 PM</td>
+				<td class='step-details'>
+						Found: Is this also your mailing address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:12 PM</td>
+				<td class='step-details'>
+						Verified: Is this also your mailing address? on S003
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:14 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_12_5312.png' src='screenshot/PTC151_05_06_2024_14_53_12_5312.png' data-src='screenshot/PTC151_05_06_2024_14_53_12_5312.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:15 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_14_5314.png' src='screenshot/PTC151_05_06_2024_14_53_14_5314.png' data-src='screenshot/PTC151_05_06_2024_14_53_14_5314.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:15 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S004----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:15 PM</td>
+				<td class='step-details'>
+						Entering  phone number: (898) 788-4538
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:16 PM</td>
+				<td class='step-details'>
+						Getting s004 question text: What's your contact information?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:16 PM</td>
+				<td class='step-details'>
+						Expected: What's your contact information?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:16 PM</td>
+				<td class='step-details'>
+						Found: What's your contact information?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:16 PM</td>
+				<td class='step-details'>
+						Verified: What's your contact information? on S004
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:18 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_16_5316.png' src='screenshot/PTC151_05_06_2024_14_53_16_5316.png' data-src='screenshot/PTC151_05_06_2024_14_53_16_5316.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:19 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_18_5318.png' src='screenshot/PTC151_05_06_2024_14_53_18_5318.png' data-src='screenshot/PTC151_05_06_2024_14_53_18_5318.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:19 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S005----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:20 PM</td>
+				<td class='step-details'>
+						Getting s005 question text: What's your preferred language?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:20 PM</td>
+				<td class='step-details'>
+						Expected: What's your preferred language?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:20 PM</td>
+				<td class='step-details'>
+						Found: What's your preferred language?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:20 PM</td>
+				<td class='step-details'>
+						Verified: What's your preferred language? on S005
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:21 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_20_5320.png' src='screenshot/PTC151_05_06_2024_14_53_20_5320.png' data-src='screenshot/PTC151_05_06_2024_14_53_20_5320.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:22 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_21_5321.png' src='screenshot/PTC151_05_06_2024_14_53_21_5321.png' data-src='screenshot/PTC151_05_06_2024_14_53_21_5321.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:22 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S006----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:22 PM</td>
+				<td class='step-details'>
+						Getting s006 question text: How would you like to get notices about your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:22 PM</td>
+				<td class='step-details'>
+						Expected: How would you like to get notices about your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:22 PM</td>
+				<td class='step-details'>
+						Found: How would you like to get notices about your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:22 PM</td>
+				<td class='step-details'>
+						Verified: How would you like to get notices about your application? on S006
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:24 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_23_5323.png' src='screenshot/PTC151_05_06_2024_14_53_23_5323.png' data-src='screenshot/PTC151_05_06_2024_14_53_23_5323.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:25 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_24_5324.png' src='screenshot/PTC151_05_06_2024_14_53_24_5324.png' data-src='screenshot/PTC151_05_06_2024_14_53_24_5324.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:25 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S007----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:26 PM</td>
+				<td class='step-details'>
+						Getting s007 question text: Is a professional helping you complete your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:26 PM</td>
+				<td class='step-details'>
+						Expected: Is a professional helping you complete your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:26 PM</td>
+				<td class='step-details'>
+						Found: Is a professional helping you complete your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:26 PM</td>
+				<td class='step-details'>
+						Verified: Is a professional helping you complete your application? on S007
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:27 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_26_5326.png' src='screenshot/PTC151_05_06_2024_14_53_26_5326.png' data-src='screenshot/PTC151_05_06_2024_14_53_26_5326.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:28 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_27_5327.png' src='screenshot/PTC151_05_06_2024_14_53_27_5327.png' data-src='screenshot/PTC151_05_06_2024_14_53_27_5327.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:28 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S008----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:29 PM</td>
+				<td class='step-details'>
+						Getting s008 question text: Do you want to find out if you can get help paying for health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:29 PM</td>
+				<td class='step-details'>
+						Expected: Do you want to find out if you can get help paying for health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:29 PM</td>
+				<td class='step-details'>
+						Found: Do you want to find out if you can get help paying for health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:29 PM</td>
+				<td class='step-details'>
+						Verified: Do you want to find out if you can get help paying for health coverage? on S008
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:33 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_31_5331.png' src='screenshot/PTC151_05_06_2024_14_53_31_5331.png' data-src='screenshot/PTC151_05_06_2024_14_53_31_5331.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:35 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_33_5333.png' src='screenshot/PTC151_05_06_2024_14_53_33_5333.png' data-src='screenshot/PTC151_05_06_2024_14_53_33_5333.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:35 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S010----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:35 PM</td>
+				<td class='step-details'>
+						Getting Application Id:  text: Application ID: 4390319180
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:35 PM</td>
+				<td class='step-details'>
+						Second Person Age Selected: 34
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:35 PM</td>
+				<td class='step-details'>
+						Entering  Date of birth: 05/02/1990
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:36 PM</td>
+				<td class='step-details'>
+						Third Person Age Selected: 34
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:36 PM</td>
+				<td class='step-details'>
+						Entering  first name: Jack
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:36 PM</td>
+				<td class='step-details'>
+						Entering  last name: Miller
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:38 PM</td>
+				<td class='step-details'>
+						Relation selected: Spouse
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:39 PM</td>
+				<td class='step-details'>
+						Second Person Age Selected: 21
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:39 PM</td>
+				<td class='step-details'>
+						Entering  Date of birth: 04/29/2003
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:39 PM</td>
+				<td class='step-details'>
+						Fourth Person Age Selected: 21
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:39 PM</td>
+				<td class='step-details'>
+						Entering  first name: Mark
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:39 PM</td>
+				<td class='step-details'>
+						Entering  last name: Miller
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:42 PM</td>
+				<td class='step-details'>
+						Relation selected: Son/daughter (including adopted child)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:42 PM</td>
+				<td class='step-details'>
+						Relation selected: Son/daughter (including adopted child)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:43 PM</td>
+				<td class='step-details'>
+						Second Person Age Selected: 17
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:43 PM</td>
+				<td class='step-details'>
+						Entering  Date of birth: 04/24/2007
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:43 PM</td>
+				<td class='step-details'>
+						Fifth Person Age Selected: 17
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:43 PM</td>
+				<td class='step-details'>
+						Entering  first name: Park
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:44 PM</td>
+				<td class='step-details'>
+						Entering  last name: Miller
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:46 PM</td>
+				<td class='step-details'>
+						Relation selected: Son/daughter (including adopted child)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:47 PM</td>
+				<td class='step-details'>
+						Relation selected: Son/daughter (including adopted child)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:47 PM</td>
+				<td class='step-details'>
+						Relation selected: Brother/sister (including half & step sibling)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:48 PM</td>
+				<td class='step-details'>
+						Second Person Age Selected: 13
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:48 PM</td>
+				<td class='step-details'>
+						Entering  Date of birth: 04/28/2011
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:48 PM</td>
+				<td class='step-details'>
+						Fifth Person Age Selected: 13
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:48 PM</td>
+				<td class='step-details'>
+						Entering  first name: Carl
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:49 PM</td>
+				<td class='step-details'>
+						Entering  last name: Miller
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:52 PM</td>
+				<td class='step-details'>
+						Relation selected: Son/daughter (including adopted child)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:52 PM</td>
+				<td class='step-details'>
+						Relation selected: Son/daughter (including adopted child)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:52 PM</td>
+				<td class='step-details'>
+						Relation selected: Brother/sister (including half & step sibling)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:52 PM</td>
+				<td class='step-details'>
+						Relation selected: Brother/sister (including half & step sibling)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:57 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_53_53_5353.png' src='screenshot/PTC151_05_06_2024_14_53_53_5353.png' data-src='screenshot/PTC151_05_06_2024_14_53_53_5353.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:53:57 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S010A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:01 PM</td>
+				<td class='step-details'>
+						Getting s010A question text: Remove, or change coverage needs?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:01 PM</td>
+				<td class='step-details'>
+						Expected: Remove, or change coverage needs?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:01 PM</td>
+				<td class='step-details'>
+						Found: Remove, or change coverage needs?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:01 PM</td>
+				<td class='step-details'>
+						Verified: Remove, or change coverage needs? on S010A
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:02 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_01_541.png' src='screenshot/PTC151_05_06_2024_14_54_01_541.png' data-src='screenshot/PTC151_05_06_2024_14_54_01_541.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:04 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_02_542.png' src='screenshot/PTC151_05_06_2024_14_54_02_542.png' data-src='screenshot/PTC151_05_06_2024_14_54_02_542.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:04 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S012----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:04 PM</td>
+				<td class='step-details'>
+						Getting s012 question text: What is Ava Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:04 PM</td>
+				<td class='step-details'>
+						Expected: What is Ava Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:04 PM</td>
+				<td class='step-details'>
+						Found: What is Ava Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:04 PM</td>
+				<td class='step-details'>
+						Verified: What is Ava Miller's Social Security Number (SSN)? on S012
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:05 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_04_544.png' src='screenshot/PTC151_05_06_2024_14_54_04_544.png' data-src='screenshot/PTC151_05_06_2024_14_54_04_544.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:07 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_05_545.png' src='screenshot/PTC151_05_06_2024_14_54_05_545.png' data-src='screenshot/PTC151_05_06_2024_14_54_05_545.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:08 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_07_547.png' src='screenshot/PTC151_05_06_2024_14_54_07_547.png' data-src='screenshot/PTC151_05_06_2024_14_54_07_547.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:08 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S014----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:09 PM</td>
+				<td class='step-details'>
+						Getting s014 question text: Is Ava Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:09 PM</td>
+				<td class='step-details'>
+						Expected: Is Ava Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:09 PM</td>
+				<td class='step-details'>
+						Found: Is Ava Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:09 PM</td>
+				<td class='step-details'>
+						Verified: Is Ava Miller a U.S. citizen or U.S. national? on S014
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:11 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_09_549.png' src='screenshot/PTC151_05_06_2024_14_54_09_549.png' data-src='screenshot/PTC151_05_06_2024_14_54_09_549.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:12 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_11_5411.png' src='screenshot/PTC151_05_06_2024_14_54_11_5411.png' data-src='screenshot/PTC151_05_06_2024_14_54_11_5411.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:12 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S017----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:13 PM</td>
+				<td class='step-details'>
+						Getting s017 question text: Is Ava Miller a naturalized or derived citizen?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:13 PM</td>
+				<td class='step-details'>
+						Expected: Is Ava Miller a naturalized or derived citizen?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:13 PM</td>
+				<td class='step-details'>
+						Found: Is Ava Miller a naturalized or derived citizen?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:13 PM</td>
+				<td class='step-details'>
+						Verified: Is Ava Miller a naturalized or derived citizen? on S017
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:15 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_13_5413.png' src='screenshot/PTC151_05_06_2024_14_54_13_5413.png' data-src='screenshot/PTC151_05_06_2024_14_54_13_5413.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:16 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_15_5415.png' src='screenshot/PTC151_05_06_2024_14_54_15_5415.png' data-src='screenshot/PTC151_05_06_2024_14_54_15_5415.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:16 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S026----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:18 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_16_5416.png' src='screenshot/PTC151_05_06_2024_14_54_16_5416.png' data-src='screenshot/PTC151_05_06_2024_14_54_16_5416.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:19 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_18_5418.png' src='screenshot/PTC151_05_06_2024_14_54_18_5418.png' data-src='screenshot/PTC151_05_06_2024_14_54_18_5418.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:19 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S027----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:22 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_20_5420.png' src='screenshot/PTC151_05_06_2024_14_54_20_5420.png' data-src='screenshot/PTC151_05_06_2024_14_54_20_5420.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:23 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_22_5422.png' src='screenshot/PTC151_05_06_2024_14_54_22_5422.png' data-src='screenshot/PTC151_05_06_2024_14_54_22_5422.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:23 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S041A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:23 PM</td>
+				<td class='step-details'>
+						Getting s041A question text: Do all of these people live together at this address?
+Learn how home address affects coverage.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:23 PM</td>
+				<td class='step-details'>
+						Expected: Do all of these people live together at this address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:23 PM</td>
+				<td class='step-details'>
+						Found: Do all of these people live together at this address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:23 PM</td>
+				<td class='step-details'>
+						Verified: Do all of these people live together at this address? on s041A
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:25 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_23_5423.png' src='screenshot/PTC151_05_06_2024_14_54_23_5423.png' data-src='screenshot/PTC151_05_06_2024_14_54_23_5423.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:27 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_25_5425.png' src='screenshot/PTC151_05_06_2024_14_54_25_5425.png' data-src='screenshot/PTC151_05_06_2024_14_54_25_5425.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:27 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S038----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:31 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_29_5429.png' src='screenshot/PTC151_05_06_2024_14_54_29_5429.png' data-src='screenshot/PTC151_05_06_2024_14_54_29_5429.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:36 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_34_5434.png' src='screenshot/PTC151_05_06_2024_14_54_34_5434.png' data-src='screenshot/PTC151_05_06_2024_14_54_34_5434.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:38 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_36_5436.png' src='screenshot/PTC151_05_06_2024_14_54_36_5436.png' data-src='screenshot/PTC151_05_06_2024_14_54_36_5436.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:41 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_38_5438.png' src='screenshot/PTC151_05_06_2024_14_54_38_5438.png' data-src='screenshot/PTC151_05_06_2024_14_54_38_5438.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:41 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S042A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:43 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_41_5441.png' src='screenshot/PTC151_05_06_2024_14_54_41_5441.png' data-src='screenshot/PTC151_05_06_2024_14_54_41_5441.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:45 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_43_5443.png' src='screenshot/PTC151_05_06_2024_14_54_43_5443.png' data-src='screenshot/PTC151_05_06_2024_14_54_43_5443.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:45 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S043----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:47 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_45_5445.png' src='screenshot/PTC151_05_06_2024_14_54_45_5445.png' data-src='screenshot/PTC151_05_06_2024_14_54_45_5445.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:48 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_47_5447.png' src='screenshot/PTC151_05_06_2024_14_54_47_5447.png' data-src='screenshot/PTC151_05_06_2024_14_54_47_5447.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:48 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S012----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:48 PM</td>
+				<td class='step-details'>
+						Getting s012 question text: What is Jack Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:48 PM</td>
+				<td class='step-details'>
+						Expected: What is Jack Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:48 PM</td>
+				<td class='step-details'>
+						Found: What is Jack Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:48 PM</td>
+				<td class='step-details'>
+						Verified: What is Jack Miller's Social Security Number (SSN)? on S012
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:50 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_49_5449.png' src='screenshot/PTC151_05_06_2024_14_54_49_5449.png' data-src='screenshot/PTC151_05_06_2024_14_54_49_5449.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:51 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_50_5450.png' src='screenshot/PTC151_05_06_2024_14_54_50_5450.png' data-src='screenshot/PTC151_05_06_2024_14_54_50_5450.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:53 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_51_5451.png' src='screenshot/PTC151_05_06_2024_14_54_51_5451.png' data-src='screenshot/PTC151_05_06_2024_14_54_51_5451.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:53 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S014----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:54 PM</td>
+				<td class='step-details'>
+						Getting s014 question text: Is Jack Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:54 PM</td>
+				<td class='step-details'>
+						Expected: Is Jack Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:54 PM</td>
+				<td class='step-details'>
+						Found: Is Jack Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:54 PM</td>
+				<td class='step-details'>
+						Verified: Is Jack Miller a U.S. citizen or U.S. national? on S014
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:56 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_55_5455.png' src='screenshot/PTC151_05_06_2024_14_54_55_5455.png' data-src='screenshot/PTC151_05_06_2024_14_54_55_5455.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:57 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_56_5456.png' src='screenshot/PTC151_05_06_2024_14_54_56_5456.png' data-src='screenshot/PTC151_05_06_2024_14_54_56_5456.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:57 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S017----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:54:59 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_58_5458.png' src='screenshot/PTC151_05_06_2024_14_54_58_5458.png' data-src='screenshot/PTC151_05_06_2024_14_54_58_5458.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:01 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_54_59_5459.png' src='screenshot/PTC151_05_06_2024_14_54_59_5459.png' data-src='screenshot/PTC151_05_06_2024_14_54_59_5459.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:01 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S038----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:06 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_04_554.png' src='screenshot/PTC151_05_06_2024_14_55_04_554.png' data-src='screenshot/PTC151_05_06_2024_14_55_04_554.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:10 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_08_558.png' src='screenshot/PTC151_05_06_2024_14_55_08_558.png' data-src='screenshot/PTC151_05_06_2024_14_55_08_558.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:13 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_10_5510.png' src='screenshot/PTC151_05_06_2024_14_55_10_5510.png' data-src='screenshot/PTC151_05_06_2024_14_55_10_5510.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:15 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_13_5513.png' src='screenshot/PTC151_05_06_2024_14_55_13_5513.png' data-src='screenshot/PTC151_05_06_2024_14_55_13_5513.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:15 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S042A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:18 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_15_5515.png' src='screenshot/PTC151_05_06_2024_14_55_15_5515.png' data-src='screenshot/PTC151_05_06_2024_14_55_15_5515.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:20 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_18_5518.png' src='screenshot/PTC151_05_06_2024_14_55_18_5518.png' data-src='screenshot/PTC151_05_06_2024_14_55_18_5518.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:20 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S043----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:22 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_20_5520.png' src='screenshot/PTC151_05_06_2024_14_55_20_5520.png' data-src='screenshot/PTC151_05_06_2024_14_55_20_5520.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:23 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_22_5522.png' src='screenshot/PTC151_05_06_2024_14_55_22_5522.png' data-src='screenshot/PTC151_05_06_2024_14_55_22_5522.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:23 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S012----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:23 PM</td>
+				<td class='step-details'>
+						Getting s012 question text: What is Mark Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:23 PM</td>
+				<td class='step-details'>
+						Expected: What is Mark Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:23 PM</td>
+				<td class='step-details'>
+						Found: What is Mark Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:23 PM</td>
+				<td class='step-details'>
+						Verified: What is Mark Miller's Social Security Number (SSN)? on S012
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:25 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_23_5523.png' src='screenshot/PTC151_05_06_2024_14_55_23_5523.png' data-src='screenshot/PTC151_05_06_2024_14_55_23_5523.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:26 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_25_5525.png' src='screenshot/PTC151_05_06_2024_14_55_25_5525.png' data-src='screenshot/PTC151_05_06_2024_14_55_25_5525.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:27 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_26_5526.png' src='screenshot/PTC151_05_06_2024_14_55_26_5526.png' data-src='screenshot/PTC151_05_06_2024_14_55_26_5526.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:27 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S014----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:28 PM</td>
+				<td class='step-details'>
+						Getting s014 question text: Is Mark Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:28 PM</td>
+				<td class='step-details'>
+						Expected: Is Mark Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:28 PM</td>
+				<td class='step-details'>
+						Found: Is Mark Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:28 PM</td>
+				<td class='step-details'>
+						Verified: Is Mark Miller a U.S. citizen or U.S. national? on S014
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:30 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_29_5529.png' src='screenshot/PTC151_05_06_2024_14_55_29_5529.png' data-src='screenshot/PTC151_05_06_2024_14_55_29_5529.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:31 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_30_5530.png' src='screenshot/PTC151_05_06_2024_14_55_30_5530.png' data-src='screenshot/PTC151_05_06_2024_14_55_30_5530.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:31 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S017----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:33 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_32_5532.png' src='screenshot/PTC151_05_06_2024_14_55_32_5532.png' data-src='screenshot/PTC151_05_06_2024_14_55_32_5532.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:34 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_33_5533.png' src='screenshot/PTC151_05_06_2024_14_55_33_5533.png' data-src='screenshot/PTC151_05_06_2024_14_55_33_5533.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:34 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S026----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:36 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_35_5535.png' src='screenshot/PTC151_05_06_2024_14_55_35_5535.png' data-src='screenshot/PTC151_05_06_2024_14_55_35_5535.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:37 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_36_5536.png' src='screenshot/PTC151_05_06_2024_14_55_36_5536.png' data-src='screenshot/PTC151_05_06_2024_14_55_36_5536.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:37 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S038----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:39 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_37_5537.png' src='screenshot/PTC151_05_06_2024_14_55_37_5537.png' data-src='screenshot/PTC151_05_06_2024_14_55_37_5537.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:39 PM</td>
+				<td class='step-details'>
+						Clicking None of these  for recent changes
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:44 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_42_5542.png' src='screenshot/PTC151_05_06_2024_14_55_42_5542.png' data-src='screenshot/PTC151_05_06_2024_14_55_42_5542.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:46 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_44_5544.png' src='screenshot/PTC151_05_06_2024_14_55_44_5544.png' data-src='screenshot/PTC151_05_06_2024_14_55_44_5544.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:46 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S042A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:49 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_47_5547.png' src='screenshot/PTC151_05_06_2024_14_55_47_5547.png' data-src='screenshot/PTC151_05_06_2024_14_55_47_5547.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:51 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_49_5549.png' src='screenshot/PTC151_05_06_2024_14_55_49_5549.png' data-src='screenshot/PTC151_05_06_2024_14_55_49_5549.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:51 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S043----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:53 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_51_5551.png' src='screenshot/PTC151_05_06_2024_14_55_51_5551.png' data-src='screenshot/PTC151_05_06_2024_14_55_51_5551.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:54 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_53_5553.png' src='screenshot/PTC151_05_06_2024_14_55_53_5553.png' data-src='screenshot/PTC151_05_06_2024_14_55_53_5553.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:54 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S012----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:54 PM</td>
+				<td class='step-details'>
+						Getting s012 question text: What is Park Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:54 PM</td>
+				<td class='step-details'>
+						Expected: What is Park Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:54 PM</td>
+				<td class='step-details'>
+						Found: What is Park Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:54 PM</td>
+				<td class='step-details'>
+						Verified: What is Park Miller's Social Security Number (SSN)? on S012
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:56 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_55_5555.png' src='screenshot/PTC151_05_06_2024_14_55_55_5555.png' data-src='screenshot/PTC151_05_06_2024_14_55_55_5555.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:57 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_56_5556.png' src='screenshot/PTC151_05_06_2024_14_55_56_5556.png' data-src='screenshot/PTC151_05_06_2024_14_55_56_5556.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:59 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_55_57_5557.png' src='screenshot/PTC151_05_06_2024_14_55_57_5557.png' data-src='screenshot/PTC151_05_06_2024_14_55_57_5557.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:55:59 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S014----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:00 PM</td>
+				<td class='step-details'>
+						Getting s014 question text: Is Park Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:00 PM</td>
+				<td class='step-details'>
+						Expected: Is Park Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:00 PM</td>
+				<td class='step-details'>
+						Found: Is Park Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:00 PM</td>
+				<td class='step-details'>
+						Verified: Is Park Miller a U.S. citizen or U.S. national? on S014
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:02 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_01_561.png' src='screenshot/PTC151_05_06_2024_14_56_01_561.png' data-src='screenshot/PTC151_05_06_2024_14_56_01_561.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:03 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_02_562.png' src='screenshot/PTC151_05_06_2024_14_56_02_562.png' data-src='screenshot/PTC151_05_06_2024_14_56_02_562.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:03 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S017----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:05 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_04_564.png' src='screenshot/PTC151_05_06_2024_14_56_04_564.png' data-src='screenshot/PTC151_05_06_2024_14_56_04_564.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:06 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_05_565.png' src='screenshot/PTC151_05_06_2024_14_56_05_565.png' data-src='screenshot/PTC151_05_06_2024_14_56_05_565.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:06 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S026----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:08 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_06_566.png' src='screenshot/PTC151_05_06_2024_14_56_06_566.png' data-src='screenshot/PTC151_05_06_2024_14_56_06_566.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:10 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_08_568.png' src='screenshot/PTC151_05_06_2024_14_56_08_568.png' data-src='screenshot/PTC151_05_06_2024_14_56_08_568.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:10 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S042A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:12 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_10_5610.png' src='screenshot/PTC151_05_06_2024_14_56_10_5610.png' data-src='screenshot/PTC151_05_06_2024_14_56_10_5610.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:15 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_12_5612.png' src='screenshot/PTC151_05_06_2024_14_56_12_5612.png' data-src='screenshot/PTC151_05_06_2024_14_56_12_5612.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:15 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S043----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:17 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_15_5615.png' src='screenshot/PTC151_05_06_2024_14_56_15_5615.png' data-src='screenshot/PTC151_05_06_2024_14_56_15_5615.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:18 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_17_5617.png' src='screenshot/PTC151_05_06_2024_14_56_17_5617.png' data-src='screenshot/PTC151_05_06_2024_14_56_17_5617.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:18 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S012----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:18 PM</td>
+				<td class='step-details'>
+						Getting s012 question text: What is Carl Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:18 PM</td>
+				<td class='step-details'>
+						Expected: What is Carl Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:18 PM</td>
+				<td class='step-details'>
+						Found: What is Carl Miller's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:18 PM</td>
+				<td class='step-details'>
+						Verified: What is Carl Miller's Social Security Number (SSN)? on S012
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:20 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_18_5618.png' src='screenshot/PTC151_05_06_2024_14_56_18_5618.png' data-src='screenshot/PTC151_05_06_2024_14_56_18_5618.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:21 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_20_5620.png' src='screenshot/PTC151_05_06_2024_14_56_20_5620.png' data-src='screenshot/PTC151_05_06_2024_14_56_20_5620.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:22 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_21_5621.png' src='screenshot/PTC151_05_06_2024_14_56_21_5621.png' data-src='screenshot/PTC151_05_06_2024_14_56_21_5621.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:22 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S014----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:23 PM</td>
+				<td class='step-details'>
+						Getting s014 question text: Is Carl Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:23 PM</td>
+				<td class='step-details'>
+						Expected: Is Carl Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:23 PM</td>
+				<td class='step-details'>
+						Found: Is Carl Miller a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:23 PM</td>
+				<td class='step-details'>
+						Verified: Is Carl Miller a U.S. citizen or U.S. national? on S014
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:25 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_24_5624.png' src='screenshot/PTC151_05_06_2024_14_56_24_5624.png' data-src='screenshot/PTC151_05_06_2024_14_56_24_5624.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:26 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_25_5625.png' src='screenshot/PTC151_05_06_2024_14_56_25_5625.png' data-src='screenshot/PTC151_05_06_2024_14_56_25_5625.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:26 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S017----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:28 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_27_5627.png' src='screenshot/PTC151_05_06_2024_14_56_27_5627.png' data-src='screenshot/PTC151_05_06_2024_14_56_27_5627.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:31 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_28_5628.png' src='screenshot/PTC151_05_06_2024_14_56_28_5628.png' data-src='screenshot/PTC151_05_06_2024_14_56_28_5628.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:31 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S042A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:33 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_31_5631.png' src='screenshot/PTC151_05_06_2024_14_56_31_5631.png' data-src='screenshot/PTC151_05_06_2024_14_56_31_5631.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:35 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_33_5633.png' src='screenshot/PTC151_05_06_2024_14_56_33_5633.png' data-src='screenshot/PTC151_05_06_2024_14_56_33_5633.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:35 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S043----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:37 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_35_5635.png' src='screenshot/PTC151_05_06_2024_14_56_35_5635.png' data-src='screenshot/PTC151_05_06_2024_14_56_35_5635.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:39 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_37_5637.png' src='screenshot/PTC151_05_06_2024_14_56_37_5637.png' data-src='screenshot/PTC151_05_06_2024_14_56_37_5637.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:39 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S045----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:42 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_40_5640.png' src='screenshot/PTC151_05_06_2024_14_56_40_5640.png' data-src='screenshot/PTC151_05_06_2024_14_56_40_5640.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:44 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_42_5642.png' src='screenshot/PTC151_05_06_2024_14_56_42_5642.png' data-src='screenshot/PTC151_05_06_2024_14_56_42_5642.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:44 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S049----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:44 PM</td>
+				<td class='step-details'>
+						Getting s049 question text: Did Ava Miller have TennCare (Medicaid) or CoverKids (CHIP) that will end soon or that recently ended?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:44 PM</td>
+				<td class='step-details'>
+						Verified: Did Ava Miller have TennCare (Medicaid) or CoverKids (CHIP) that will end soon or that recently ended? on s049
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:45 PM</td>
+				<td class='step-details'>
+						Getting s049 question text: Did Jack Miller have TennCare (Medicaid) or CoverKids (CHIP) that will end soon or that recently ended?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:45 PM</td>
+				<td class='step-details'>
+						Verified: Did Jack Miller have TennCare (Medicaid) or CoverKids (CHIP) that will end soon or that recently ended? on s049
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:49 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_47_5647.png' src='screenshot/PTC151_05_06_2024_14_56_47_5647.png' data-src='screenshot/PTC151_05_06_2024_14_56_47_5647.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:50 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_49_5649.png' src='screenshot/PTC151_05_06_2024_14_56_49_5649.png' data-src='screenshot/PTC151_05_06_2024_14_56_49_5649.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:50 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S046----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:51 PM</td>
+				<td class='step-details'>
+						Getting s046 question text: Were any of these people found not eligible for TennCare (Medicaid) or CoverKids (CHIP) by TN since Mar 7, 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:51 PM</td>
+				<td class='step-details'>
+						Verified: Were any of these people found not eligible for TennCare (Medicaid) or CoverKids (CHIP) by TN since Mar 7, 2024? on s046
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:52 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_51_5651.png' src='screenshot/PTC151_05_06_2024_14_56_51_5651.png' data-src='screenshot/PTC151_05_06_2024_14_56_51_5651.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:53 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_52_5652.png' src='screenshot/PTC151_05_06_2024_14_56_52_5652.png' data-src='screenshot/PTC151_05_06_2024_14_56_52_5652.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:53 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S050A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:54 PM</td>
+				<td class='step-details'>
+						Getting s050A question text: Do any of these situations apply to any of the people in your household?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:54 PM</td>
+				<td class='step-details'>
+						Expected: Do any of these situations apply to any of the people in your household?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:54 PM</td>
+				<td class='step-details'>
+						Found: Do any of these situations apply to any of the people in your household?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:54 PM</td>
+				<td class='step-details'>
+						Verified: Do any of these situations apply to any of the people in your household? on S050A
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:55 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_54_5654.png' src='screenshot/PTC151_05_06_2024_14_56_54_5654.png' data-src='screenshot/PTC151_05_06_2024_14_56_54_5654.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_55_5655.png' src='screenshot/PTC151_05_06_2024_14_56_55_5655.png' data-src='screenshot/PTC151_05_06_2024_14_56_55_5655.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S057----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Getting s057 question text: Will Ava Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Expected: Will Ava Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Found: Will Ava Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Verified: Will Ava Miller have income this month? on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Getting s057 question2 text: Select a type of income Ava Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Expected: Select a type of income Ava Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Found: Select a type of income Ava Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Verified: Select a type of income Ava Miller currently gets this month. on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Job type selected: Job (like salary, wages, commissions, or tips)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Entering  first name: ABC corp
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Getting s057 question3 text: How often does Ava Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Expected: How often does Ava Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Found: How often does Ava Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:57 PM</td>
+				<td class='step-details'>
+						Verified: How often does Ava Miller get this income? on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:58 PM</td>
+				<td class='step-details'>
+						Getting s057 question3 text: Enter the amount Ava Miller gets monthly.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:58 PM</td>
+				<td class='step-details'>
+						Verified: Enter the amount Ava Miller gets monthly. on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:56:58 PM</td>
+				<td class='step-details'>
+						Amount enter: 2500
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:00 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_56_58_5658.png' src='screenshot/PTC151_05_06_2024_14_56_58_5658.png' data-src='screenshot/PTC151_05_06_2024_14_56_58_5658.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:02 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_00_570.png' src='screenshot/PTC151_05_06_2024_14_57_00_570.png' data-src='screenshot/PTC151_05_06_2024_14_57_00_570.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:02 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S058----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:02 PM</td>
+				<td class='step-details'>
+						Getting s058 question text: Does Ava Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:02 PM</td>
+				<td class='step-details'>
+						Expected: Does Ava Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:02 PM</td>
+				<td class='step-details'>
+						Found: Does Ava Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:02 PM</td>
+				<td class='step-details'>
+						Verified: Does Ava Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024? on S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:04 PM</td>
+				<td class='step-details'>
+						Clicking No for S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:06 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_04_574.png' src='screenshot/PTC151_05_06_2024_14_57_04_574.png' data-src='screenshot/PTC151_05_06_2024_14_57_04_574.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:08 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_06_576.png' src='screenshot/PTC151_05_06_2024_14_57_06_576.png' data-src='screenshot/PTC151_05_06_2024_14_57_06_576.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:08 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S059----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:09 PM</td>
+				<td class='step-details'>
+						Clicking Yes for S059
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:11 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_09_579.png' src='screenshot/PTC151_05_06_2024_14_57_09_579.png' data-src='screenshot/PTC151_05_06_2024_14_57_09_579.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_11_5711.png' src='screenshot/PTC151_05_06_2024_14_57_11_5711.png' data-src='screenshot/PTC151_05_06_2024_14_57_11_5711.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S057----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Getting s057 question text: Will Jack Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Expected: Will Jack Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Found: Will Jack Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Verified: Will Jack Miller have income this month? on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Getting s057 question2 text: Select a type of income Jack Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Expected: Select a type of income Jack Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Found: Select a type of income Jack Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Verified: Select a type of income Jack Miller currently gets this month. on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Job type selected: Job (like salary, wages, commissions, or tips)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:12 PM</td>
+				<td class='step-details'>
+						Entering  first name: ABCD corp
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:13 PM</td>
+				<td class='step-details'>
+						Getting s057 question3 text: How often does Jack Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:13 PM</td>
+				<td class='step-details'>
+						Expected: How often does Jack Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:13 PM</td>
+				<td class='step-details'>
+						Found: How often does Jack Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:13 PM</td>
+				<td class='step-details'>
+						Verified: How often does Jack Miller get this income? on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:13 PM</td>
+				<td class='step-details'>
+						Getting s057 question3 text: Enter the amount Jack Miller gets monthly.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:13 PM</td>
+				<td class='step-details'>
+						Verified: Enter the amount Jack Miller gets monthly. on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:13 PM</td>
+				<td class='step-details'>
+						Amount enter: 2500
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:15 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_13_5713.png' src='screenshot/PTC151_05_06_2024_14_57_13_5713.png' data-src='screenshot/PTC151_05_06_2024_14_57_13_5713.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:16 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_15_5715.png' src='screenshot/PTC151_05_06_2024_14_57_15_5715.png' data-src='screenshot/PTC151_05_06_2024_14_57_15_5715.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:16 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S058----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:16 PM</td>
+				<td class='step-details'>
+						Getting s058 question text: Does Jack Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:16 PM</td>
+				<td class='step-details'>
+						Expected: Does Jack Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:16 PM</td>
+				<td class='step-details'>
+						Found: Does Jack Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:16 PM</td>
+				<td class='step-details'>
+						Verified: Does Jack Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024? on S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:19 PM</td>
+				<td class='step-details'>
+						Clicking No for S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:20 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_19_5719.png' src='screenshot/PTC151_05_06_2024_14_57_19_5719.png' data-src='screenshot/PTC151_05_06_2024_14_57_19_5719.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:22 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_20_5720.png' src='screenshot/PTC151_05_06_2024_14_57_20_5720.png' data-src='screenshot/PTC151_05_06_2024_14_57_20_5720.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:22 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S059----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:23 PM</td>
+				<td class='step-details'>
+						Clicking Yes for S059
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:25 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_23_5723.png' src='screenshot/PTC151_05_06_2024_14_57_23_5723.png' data-src='screenshot/PTC151_05_06_2024_14_57_23_5723.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_25_5725.png' src='screenshot/PTC151_05_06_2024_14_57_25_5725.png' data-src='screenshot/PTC151_05_06_2024_14_57_25_5725.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S057----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Getting s057 question text: Will Mark Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Expected: Will Mark Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Found: Will Mark Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Verified: Will Mark Miller have income this month? on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Getting s057 question2 text: Select a type of income Mark Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Expected: Select a type of income Mark Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Found: Select a type of income Mark Miller currently gets this month.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Verified: Select a type of income Mark Miller currently gets this month. on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Job type selected: Job (like salary, wages, commissions, or tips)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Entering  first name: ABCDE corp
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Getting s057 question3 text: How often does Mark Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Expected: How often does Mark Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Found: How often does Mark Miller get this income?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Verified: How often does Mark Miller get this income? on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Getting s057 question3 text: Enter the amount Mark Miller gets monthly.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:27 PM</td>
+				<td class='step-details'>
+						Verified: Enter the amount Mark Miller gets monthly. on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:28 PM</td>
+				<td class='step-details'>
+						Amount enter: 2,583.33
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:30 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_28_5728.png' src='screenshot/PTC151_05_06_2024_14_57_28_5728.png' data-src='screenshot/PTC151_05_06_2024_14_57_28_5728.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:31 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_30_5730.png' src='screenshot/PTC151_05_06_2024_14_57_30_5730.png' data-src='screenshot/PTC151_05_06_2024_14_57_30_5730.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:31 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S058----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:31 PM</td>
+				<td class='step-details'>
+						Getting s058 question text: Does Mark Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:31 PM</td>
+				<td class='step-details'>
+						Expected: Does Mark Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:31 PM</td>
+				<td class='step-details'>
+						Found: Does Mark Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:31 PM</td>
+				<td class='step-details'>
+						Verified: Does Mark Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024? on S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:33 PM</td>
+				<td class='step-details'>
+						Clicking No for S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:35 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_33_5733.png' src='screenshot/PTC151_05_06_2024_14_57_33_5733.png' data-src='screenshot/PTC151_05_06_2024_14_57_33_5733.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:37 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_35_5735.png' src='screenshot/PTC151_05_06_2024_14_57_35_5735.png' data-src='screenshot/PTC151_05_06_2024_14_57_35_5735.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:37 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S059----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:38 PM</td>
+				<td class='step-details'>
+						Clicking Yes for S059
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:40 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_38_5738.png' src='screenshot/PTC151_05_06_2024_14_57_38_5738.png' data-src='screenshot/PTC151_05_06_2024_14_57_38_5738.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:41 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_40_5740.png' src='screenshot/PTC151_05_06_2024_14_57_40_5740.png' data-src='screenshot/PTC151_05_06_2024_14_57_40_5740.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:41 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S057----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:41 PM</td>
+				<td class='step-details'>
+						Getting s057 question text: Will Park Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:41 PM</td>
+				<td class='step-details'>
+						Expected: Will Park Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:41 PM</td>
+				<td class='step-details'>
+						Found: Will Park Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:41 PM</td>
+				<td class='step-details'>
+						Verified: Will Park Miller have income this month? on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:43 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_42_5742.png' src='screenshot/PTC151_05_06_2024_14_57_42_5742.png' data-src='screenshot/PTC151_05_06_2024_14_57_42_5742.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:44 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_43_5743.png' src='screenshot/PTC151_05_06_2024_14_57_43_5743.png' data-src='screenshot/PTC151_05_06_2024_14_57_43_5743.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:44 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S058----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:44 PM</td>
+				<td class='step-details'>
+						Getting s058 question text: Does Park Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:44 PM</td>
+				<td class='step-details'>
+						Expected: Does Park Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:44 PM</td>
+				<td class='step-details'>
+						Found: Does Park Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:44 PM</td>
+				<td class='step-details'>
+						Verified: Does Park Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024? on S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:46 PM</td>
+				<td class='step-details'>
+						Clicking No for S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:48 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_47_5747.png' src='screenshot/PTC151_05_06_2024_14_57_47_5747.png' data-src='screenshot/PTC151_05_06_2024_14_57_47_5747.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:50 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_48_5748.png' src='screenshot/PTC151_05_06_2024_14_57_48_5748.png' data-src='screenshot/PTC151_05_06_2024_14_57_48_5748.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:50 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S059----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:51 PM</td>
+				<td class='step-details'>
+						Clicking Yes for S059
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:53 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_51_5751.png' src='screenshot/PTC151_05_06_2024_14_57_51_5751.png' data-src='screenshot/PTC151_05_06_2024_14_57_51_5751.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:55 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_53_5753.png' src='screenshot/PTC151_05_06_2024_14_57_53_5753.png' data-src='screenshot/PTC151_05_06_2024_14_57_53_5753.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:55 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S057----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:55 PM</td>
+				<td class='step-details'>
+						Getting s057 question text: Will Carl Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:55 PM</td>
+				<td class='step-details'>
+						Expected: Will Carl Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:55 PM</td>
+				<td class='step-details'>
+						Found: Will Carl Miller have income this month?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:55 PM</td>
+				<td class='step-details'>
+						Verified: Will Carl Miller have income this month? on s057
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:56 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_55_5755.png' src='screenshot/PTC151_05_06_2024_14_57_55_5755.png' data-src='screenshot/PTC151_05_06_2024_14_57_55_5755.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:58 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_57_56_5756.png' src='screenshot/PTC151_05_06_2024_14_57_56_5756.png' data-src='screenshot/PTC151_05_06_2024_14_57_56_5756.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:58 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S058----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:58 PM</td>
+				<td class='step-details'>
+						Getting s058 question text: Does Carl Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:58 PM</td>
+				<td class='step-details'>
+						Expected: Does Carl Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:58 PM</td>
+				<td class='step-details'>
+						Found: Does Carl Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:57:58 PM</td>
+				<td class='step-details'>
+						Verified: Does Carl Miller pay student loan interest, alimony, educator expenses, or contribute to an IRA in 2024? on S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:00 PM</td>
+				<td class='step-details'>
+						Clicking No for S058
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:01 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_00_580.png' src='screenshot/PTC151_05_06_2024_14_58_00_580.png' data-src='screenshot/PTC151_05_06_2024_14_58_00_580.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:03 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_01_581.png' src='screenshot/PTC151_05_06_2024_14_58_01_581.png' data-src='screenshot/PTC151_05_06_2024_14_58_01_581.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:03 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S059----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:04 PM</td>
+				<td class='step-details'>
+						Clicking Yes for S059
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:06 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_04_584.png' src='screenshot/PTC151_05_06_2024_14_58_04_584.png' data-src='screenshot/PTC151_05_06_2024_14_58_04_584.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:09 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_06_586.png' src='screenshot/PTC151_05_06_2024_14_58_06_586.png' data-src='screenshot/PTC151_05_06_2024_14_58_06_586.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:09 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S068----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:09 PM</td>
+				<td class='step-details'>
+						Getting s068 question text: Are any of these people currently enrolled in health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:09 PM</td>
+				<td class='step-details'>
+						Expected: Are any of these people currently enrolled in health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:09 PM</td>
+				<td class='step-details'>
+						Found: Are any of these people currently enrolled in health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:09 PM</td>
+				<td class='step-details'>
+						Verified: Are any of these people currently enrolled in health coverage? on S068
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:14 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_12_5812.png' src='screenshot/PTC151_05_06_2024_14_58_12_5812.png' data-src='screenshot/PTC151_05_06_2024_14_58_12_5812.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:16 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_14_5814.png' src='screenshot/PTC151_05_06_2024_14_58_14_5814.png' data-src='screenshot/PTC151_05_06_2024_14_58_14_5814.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:16 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S069----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:21 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_19_5819.png' src='screenshot/PTC151_05_06_2024_14_58_19_5819.png' data-src='screenshot/PTC151_05_06_2024_14_58_19_5819.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:23 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_21_5821.png' src='screenshot/PTC151_05_06_2024_14_58_21_5821.png' data-src='screenshot/PTC151_05_06_2024_14_58_21_5821.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:23 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S069A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:23 PM</td>
+				<td class='step-details'>
+						Getting s069A question text: Do any of these people have an individual coverage Health Reimbursement Arrangement (HRA) through their job, or through the job of another person, like a spouse or parent?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:23 PM</td>
+				<td class='step-details'>
+						Expected: Do any of these people have an individual coverage Health Reimbursement Arrangement (HRA) through their job, or through the job of another person, like a spouse or parent?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:23 PM</td>
+				<td class='step-details'>
+						Found: Do any of these people have an individual coverage Health Reimbursement Arrangement (HRA) through their job, or through the job of another person, like a spouse or parent?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:23 PM</td>
+				<td class='step-details'>
+						Verified: Do any of these people have an individual coverage Health Reimbursement Arrangement (HRA) through their job, or through the job of another person, like a spouse or parent? on s069A
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:25 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_24_5824.png' src='screenshot/PTC151_05_06_2024_14_58_24_5824.png' data-src='screenshot/PTC151_05_06_2024_14_58_24_5824.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:27 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_25_5825.png' src='screenshot/PTC151_05_06_2024_14_58_25_5825.png' data-src='screenshot/PTC151_05_06_2024_14_58_25_5825.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:27 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S069B----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:27 PM</td>
+				<td class='step-details'>
+						Getting s069B question text: Have any of these people been offered an individual coverage Health Reimbursement Arrangement (HRA) they haven't yet accepted through their job, or through the job of another person, like a spouse or parent?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:27 PM</td>
+				<td class='step-details'>
+						Expected: Have any of these people been offered an individual coverage Health Reimbursement Arrangement (HRA) they haven't yet accepted through their job, or through the job of another person, like a spouse or parent?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:27 PM</td>
+				<td class='step-details'>
+						Found: Have any of these people been offered an individual coverage Health Reimbursement Arrangement (HRA) they haven't yet accepted through their job, or through the job of another person, like a spouse or parent?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:27 PM</td>
+				<td class='step-details'>
+						Verified: Have any of these people been offered an individual coverage Health Reimbursement Arrangement (HRA) they haven't yet accepted through their job, or through the job of another person, like a spouse or parent? on s069B
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:39 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_37_5837.png' src='screenshot/PTC151_05_06_2024_14_58_37_5837.png' data-src='screenshot/PTC151_05_06_2024_14_58_37_5837.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:40 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_39_5839.png' src='screenshot/PTC151_05_06_2024_14_58_39_5839.png' data-src='screenshot/PTC151_05_06_2024_14_58_39_5839.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:40 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S082----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:42 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_40_5840.png' src='screenshot/PTC151_05_06_2024_14_58_40_5840.png' data-src='screenshot/PTC151_05_06_2024_14_58_40_5840.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:43 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_42_5842.png' src='screenshot/PTC151_05_06_2024_14_58_42_5842.png' data-src='screenshot/PTC151_05_06_2024_14_58_42_5842.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:44 PM</td>
+				<td class='step-details'>
+						Getting s069C question text: On Aug 4, 2024, will Jack Miller be able to use this HRA?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:44 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S069C----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:46 PM</td>
+				<td class='step-details'>
+						Getting s069C question2 text: Which employers offer Jack Miller an individual coverage HRA?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:46 PM</td>
+				<td class='step-details'>
+						Expected: Which employers offer Jack Miller an individual coverage HRA?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:46 PM</td>
+				<td class='step-details'>
+						Found: Which employers offer Jack Miller an individual coverage HRA?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:46 PM</td>
+				<td class='step-details'>
+						Verified: Which employers offer Jack Miller an individual coverage HRA? on s069C
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:49 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_48_5848.png' src='screenshot/PTC151_05_06_2024_14_58_48_5848.png' data-src='screenshot/PTC151_05_06_2024_14_58_48_5848.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:50 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_49_5849.png' src='screenshot/PTC151_05_06_2024_14_58_49_5849.png' data-src='screenshot/PTC151_05_06_2024_14_58_49_5849.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:50 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S069E----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:51 PM</td>
+				<td class='step-details'>
+						Getting s069E question text: Tell us about the ICHRA offered by ABCD corp (Jack Miller's job).
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:51 PM</td>
+				<td class='step-details'>
+						Verified: Tell us about the ICHRA offered by ABCD corp (Jack Miller's job). on s069E
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:52 PM</td>
+				<td class='step-details'>
+						Entering  start date: 06/05/2024
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:53 PM</td>
+				<td class='step-details'>
+						Entering  end date: 08/09/2024
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:54 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_53_5853.png' src='screenshot/PTC151_05_06_2024_14_58_53_5853.png' data-src='screenshot/PTC151_05_06_2024_14_58_53_5853.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:56 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_58_54_5854.png' src='screenshot/PTC151_05_06_2024_14_58_54_5854.png' data-src='screenshot/PTC151_05_06_2024_14_58_54_5854.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:58:56 PM</td>
+				<td class='step-details'>
+						---------------------SCREEN S069C----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>2:59:29 PM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC151_05_06_2024_14_59_28_5928.png' src='screenshot/PTC151_05_06_2024_14_59_28_5928.png' data-src='screenshot/PTC151_05_06_2024_14_59_28_5928.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Wednesday, June 05, 2024, 02:52 PM (EDT)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Wednesday, June 05, 2024, 02:59 PM (EDT)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 6m 55s+494ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows</td>
+							</tr>
+							<tr>
+								<td>AUT</td>
+								<td>QA</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 1,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "PTC151":415.345
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>

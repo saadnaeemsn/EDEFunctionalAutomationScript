@@ -1,0 +1,1293 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='EEEE, MMMM dd, yyyy, hh:mm a '('zzz')''/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>EDE-QA_05_06_2024_09_48_51_4851.html</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>EDE-QA_05_06_2024_09_48_51_4851.html</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Wednesday, June 05, 2024, 09:48 AM (EDT)</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>PTC108</span>
+						<span class='test-time'>Wednesday, June 05, 2024, 09:48 AM (EDT)</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Wednesday, June 05, 2024, 09:48 AM (EDT)</span>
+	<span class='label end-time'>Wednesday, June 05, 2024, 09:51 AM (EDT)</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 12s+664ms</span>
+</div>
+<div class='test-desc'>Partner Test Case 108 </div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:48:52 AM</td>
+				<td class='step-details'>
+						Opening URL: https://enhanceqa.jet-insure.com/qoutedeeplink?PartnerCode=ENHANCE
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:48:54 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_48_52_4852.png' src='screenshot/PTC108_05_06_2024_09_48_52_4852.png' data-src='screenshot/PTC108_05_06_2024_09_48_52_4852.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:48:55 AM</td>
+				<td class='step-details'>
+						Entering Email EDE: harrylarry76@yopmail.com
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:48:55 AM</td>
+				<td class='step-details'>
+						Entering password EDE: 123456789@Aaaa
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:48:59 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_48_58_4858.png' src='screenshot/PTC108_05_06_2024_09_48_58_4858.png' data-src='screenshot/PTC108_05_06_2024_09_48_58_4858.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:04 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_01_491.png' src='screenshot/PTC108_05_06_2024_09_49_01_491.png' data-src='screenshot/PTC108_05_06_2024_09_49_01_491.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:06 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_04_494.png' src='screenshot/PTC108_05_06_2024_09_49_04_494.png' data-src='screenshot/PTC108_05_06_2024_09_49_04_494.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:09 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_07_497.png' src='screenshot/PTC108_05_06_2024_09_49_07_497.png' data-src='screenshot/PTC108_05_06_2024_09_49_07_497.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:11 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_09_499.png' src='screenshot/PTC108_05_06_2024_09_49_09_499.png' data-src='screenshot/PTC108_05_06_2024_09_49_09_499.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:11 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S001----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:11 AM</td>
+				<td class='step-details'>
+						Getting s001 question text: Do you need coverage for yourself?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:11 AM</td>
+				<td class='step-details'>
+						Entering  first name: Steve
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:12 AM</td>
+				<td class='step-details'>
+						Entering  Date of birth: 04/28/1985
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:12 AM</td>
+				<td class='step-details'>
+						Entering  middle name:
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:12 AM</td>
+				<td class='step-details'>
+						Entering  last name: Smith
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:15 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_13_4913.png' src='screenshot/PTC108_05_06_2024_09_49_13_4913.png' data-src='screenshot/PTC108_05_06_2024_09_49_13_4913.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:17 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_15_4915.png' src='screenshot/PTC108_05_06_2024_09_49_15_4915.png' data-src='screenshot/PTC108_05_06_2024_09_49_15_4915.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:17 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S002----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:18 AM</td>
+				<td class='step-details'>
+						Entering  street address: 440 Cross Park Dr
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:18 AM</td>
+				<td class='step-details'>
+						Getting s002 question text: What's your home address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:18 AM</td>
+				<td class='step-details'>
+						Expected: What's your home address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:18 AM</td>
+				<td class='step-details'>
+						Found: What's your home address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:18 AM</td>
+				<td class='step-details'>
+						Verified: What's your home address? on S002
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:18 AM</td>
+				<td class='step-details'>
+						State selected: MS
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:18 AM</td>
+				<td class='step-details'>
+						Entering  city: Pearl
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:18 AM</td>
+				<td class='step-details'>
+						Entering  zipCode: 25456
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:19 AM</td>
+				<td class='step-details'>
+						Entering zip code: 39208
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:19 AM</td>
+				<td class='step-details'>
+						Clicking  county drop down
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:20 AM</td>
+				<td class='step-details'>
+						Clicking  county
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:22 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_20_4920.png' src='screenshot/PTC108_05_06_2024_09_49_20_4920.png' data-src='screenshot/PTC108_05_06_2024_09_49_20_4920.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:23 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_22_4922.png' src='screenshot/PTC108_05_06_2024_09_49_22_4922.png' data-src='screenshot/PTC108_05_06_2024_09_49_22_4922.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:29 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S003----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:29 AM</td>
+				<td class='step-details'>
+						Getting s003 question text: Is this also your mailing address?
+Learn how mailing address affects coverage.
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:29 AM</td>
+				<td class='step-details'>
+						Expected: Is this also your mailing address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:29 AM</td>
+				<td class='step-details'>
+						Found: Is this also your mailing address?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:29 AM</td>
+				<td class='step-details'>
+						Verified: Is this also your mailing address? on S003
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:31 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_29_4929.png' src='screenshot/PTC108_05_06_2024_09_49_29_4929.png' data-src='screenshot/PTC108_05_06_2024_09_49_29_4929.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:33 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_31_4931.png' src='screenshot/PTC108_05_06_2024_09_49_31_4931.png' data-src='screenshot/PTC108_05_06_2024_09_49_31_4931.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:33 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S004----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:33 AM</td>
+				<td class='step-details'>
+						Entering  phone number: 9865745451
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:33 AM</td>
+				<td class='step-details'>
+						Getting s004 question text: What's your contact information?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:33 AM</td>
+				<td class='step-details'>
+						Expected: What's your contact information?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:33 AM</td>
+				<td class='step-details'>
+						Found: What's your contact information?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:33 AM</td>
+				<td class='step-details'>
+						Verified: What's your contact information? on S004
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:35 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_34_4934.png' src='screenshot/PTC108_05_06_2024_09_49_34_4934.png' data-src='screenshot/PTC108_05_06_2024_09_49_34_4934.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:36 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_35_4935.png' src='screenshot/PTC108_05_06_2024_09_49_35_4935.png' data-src='screenshot/PTC108_05_06_2024_09_49_35_4935.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:36 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S005----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:36 AM</td>
+				<td class='step-details'>
+						Getting s005 question text: What's your preferred language?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:36 AM</td>
+				<td class='step-details'>
+						Expected: What's your preferred language?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:36 AM</td>
+				<td class='step-details'>
+						Found: What's your preferred language?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:36 AM</td>
+				<td class='step-details'>
+						Verified: What's your preferred language? on S005
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:38 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_36_4936.png' src='screenshot/PTC108_05_06_2024_09_49_36_4936.png' data-src='screenshot/PTC108_05_06_2024_09_49_36_4936.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:39 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_38_4938.png' src='screenshot/PTC108_05_06_2024_09_49_38_4938.png' data-src='screenshot/PTC108_05_06_2024_09_49_38_4938.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:39 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S006----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:39 AM</td>
+				<td class='step-details'>
+						Getting s006 question text: How would you like to get notices about your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:39 AM</td>
+				<td class='step-details'>
+						Expected: How would you like to get notices about your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:39 AM</td>
+				<td class='step-details'>
+						Found: How would you like to get notices about your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:39 AM</td>
+				<td class='step-details'>
+						Verified: How would you like to get notices about your application? on S006
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:41 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_40_4940.png' src='screenshot/PTC108_05_06_2024_09_49_40_4940.png' data-src='screenshot/PTC108_05_06_2024_09_49_40_4940.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:43 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_41_4941.png' src='screenshot/PTC108_05_06_2024_09_49_41_4941.png' data-src='screenshot/PTC108_05_06_2024_09_49_41_4941.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:43 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S007----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:43 AM</td>
+				<td class='step-details'>
+						Getting s007 question text: Is a professional helping you complete your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:43 AM</td>
+				<td class='step-details'>
+						Expected: Is a professional helping you complete your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:43 AM</td>
+				<td class='step-details'>
+						Found: Is a professional helping you complete your application?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:43 AM</td>
+				<td class='step-details'>
+						Verified: Is a professional helping you complete your application? on S007
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:44 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_43_4943.png' src='screenshot/PTC108_05_06_2024_09_49_43_4943.png' data-src='screenshot/PTC108_05_06_2024_09_49_43_4943.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:46 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_44_4944.png' src='screenshot/PTC108_05_06_2024_09_49_44_4944.png' data-src='screenshot/PTC108_05_06_2024_09_49_44_4944.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:46 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S008----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:46 AM</td>
+				<td class='step-details'>
+						Getting s008 question text: Do you want to find out if you can get help paying for health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:46 AM</td>
+				<td class='step-details'>
+						Expected: Do you want to find out if you can get help paying for health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:46 AM</td>
+				<td class='step-details'>
+						Found: Do you want to find out if you can get help paying for health coverage?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:46 AM</td>
+				<td class='step-details'>
+						Verified: Do you want to find out if you can get help paying for health coverage? on S008
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:50 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_49_4949.png' src='screenshot/PTC108_05_06_2024_09_49_49_4949.png' data-src='screenshot/PTC108_05_06_2024_09_49_49_4949.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:52 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_50_4950.png' src='screenshot/PTC108_05_06_2024_09_49_50_4950.png' data-src='screenshot/PTC108_05_06_2024_09_49_50_4950.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:52 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S010----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:52 AM</td>
+				<td class='step-details'>
+						Getting Application Id:  text: Application ID: 4390325960
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:52 AM</td>
+				<td class='step-details'>
+						Second Person Age Selected: 39
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:52 AM</td>
+				<td class='step-details'>
+						Entering  Date of birth: 04/30/1985
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:53 AM</td>
+				<td class='step-details'>
+						Third Person Age Selected: 39
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:53 AM</td>
+				<td class='step-details'>
+						Entering  first name: Safina
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:53 AM</td>
+				<td class='step-details'>
+						Entering  last name: Steve
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:54 AM</td>
+				<td class='step-details'>
+						Relation selected: Spouse
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:56 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_54_4954.png' src='screenshot/PTC108_05_06_2024_09_49_54_4954.png' data-src='screenshot/PTC108_05_06_2024_09_49_54_4954.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:57 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_56_4956.png' src='screenshot/PTC108_05_06_2024_09_49_56_4956.png' data-src='screenshot/PTC108_05_06_2024_09_49_56_4956.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:57 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S010A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:57 AM</td>
+				<td class='step-details'>
+						Getting s010A question text: Remove, or change coverage needs?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:58 AM</td>
+				<td class='step-details'>
+						Expected: Remove, or change coverage needs?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:58 AM</td>
+				<td class='step-details'>
+						Found: Remove, or change coverage needs?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:58 AM</td>
+				<td class='step-details'>
+						Verified: Remove, or change coverage needs? on S010A
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:49:59 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_58_4958.png' src='screenshot/PTC108_05_06_2024_09_49_58_4958.png' data-src='screenshot/PTC108_05_06_2024_09_49_58_4958.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:01 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_49_59_4959.png' src='screenshot/PTC108_05_06_2024_09_49_59_4959.png' data-src='screenshot/PTC108_05_06_2024_09_49_59_4959.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:01 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S012-----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Getting s012 question text: What is Steve Smith's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Expected: What is Steve Smith's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Found: What is Steve Smith's Social Security Number (SSN)?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Verified: What is Steve Smith's Social Security Number (SSN)? on S012
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Entering  SSN number: 298188493
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Getting s012 same name question text: Is Steve Smith the same name that appears on his Social Security card?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Expected: Is Steve Smith the same name that appears on his Social Security card?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Found: Is Steve Smith the same name that appears on his Social Security card?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:03 AM</td>
+				<td class='step-details'>
+						Verified: Is Steve Smith the same name that appears on his Social Security card? on S012
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:05 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_50_03_503.png' src='screenshot/PTC108_05_06_2024_09_50_03_503.png' data-src='screenshot/PTC108_05_06_2024_09_50_03_503.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:06 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_50_05_505.png' src='screenshot/PTC108_05_06_2024_09_50_05_505.png' data-src='screenshot/PTC108_05_06_2024_09_50_05_505.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:06 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S014----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:06 AM</td>
+				<td class='step-details'>
+						Getting s014 question text: Is Steve Smith a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:06 AM</td>
+				<td class='step-details'>
+						Expected: Is Steve Smith a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:06 AM</td>
+				<td class='step-details'>
+						Found: Is Steve Smith a U.S. citizen or U.S. national?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:06 AM</td>
+				<td class='step-details'>
+						Verified: Is Steve Smith a U.S. citizen or U.S. national? on S014
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:08 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_50_06_506.png' src='screenshot/PTC108_05_06_2024_09_50_06_506.png' data-src='screenshot/PTC108_05_06_2024_09_50_06_506.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:09 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_50_08_508.png' src='screenshot/PTC108_05_06_2024_09_50_08_508.png' data-src='screenshot/PTC108_05_06_2024_09_50_08_508.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:19 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S026----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:20 AM</td>
+				<td class='step-details'>
+						Getting s026 question text: What’s Steve Smith's marital status?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:20 AM</td>
+				<td class='step-details'>
+						Expected: What’s Steve Smith's marital status?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:20 AM</td>
+				<td class='step-details'>
+						Found: What’s Steve Smith's marital status?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:20 AM</td>
+				<td class='step-details'>
+						Verified: What’s Steve Smith's marital status? on s026
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:21 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_50_20_5020.png' src='screenshot/PTC108_05_06_2024_09_50_20_5020.png' data-src='screenshot/PTC108_05_06_2024_09_50_20_5020.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:23 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_50_21_5021.png' src='screenshot/PTC108_05_06_2024_09_50_21_5021.png' data-src='screenshot/PTC108_05_06_2024_09_50_21_5021.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:23 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S027----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:25 AM</td>
+				<td class='step-details'>
+						Second Person Age Selected: 21
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:25 AM</td>
+				<td class='step-details'>
+						Entering  first name: James
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:25 AM</td>
+				<td class='step-details'>
+						Entering  last name: Steve
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:26 AM</td>
+				<td class='step-details'>
+						Relation selected: Son/daughter (including adopted child)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:26 AM</td>
+				<td class='step-details'>
+						Relation selected: Son/daughter (including adopted child)
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:29 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_50_26_5026.png' src='screenshot/PTC108_05_06_2024_09_50_26_5026.png' data-src='screenshot/PTC108_05_06_2024_09_50_26_5026.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:31 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_50_29_5029.png' src='screenshot/PTC108_05_06_2024_09_50_29_5029.png' data-src='screenshot/PTC108_05_06_2024_09_50_29_5029.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:50:31 AM</td>
+				<td class='step-details'>
+						---------------------SCREEN S041A----------------------------
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>9:51:04 AM</td>
+				<td class='step-details'>
+						Screen Capture
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='screenshot/PTC108_05_06_2024_09_51_02_512.png' src='screenshot/PTC108_05_06_2024_09_51_02_512.png' data-src='screenshot/PTC108_05_06_2024_09_51_02_512.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>1</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Wednesday, June 05, 2024, 09:48 AM (EDT)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Wednesday, June 05, 2024, 09:51 AM (EDT)</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 2m 12s+814ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows</td>
+							</tr>
+							<tr>
+								<td>AUT</td>
+								<td>QA</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 1,
+				passParent: 1,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "PTC108":132.664
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
